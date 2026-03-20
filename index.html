@@ -241,7 +241,7 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 
 /* ── PAPELERA TABS ── */
 .pap-tabs{display:flex;gap:6px;margin-bottom:16px}
-.pap-tab{padding:7px 16px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;background:var(--dark2);border:1px solid var(--border-soft);color:var(--text-muted);transition:all .15px}
+.pap-tab{padding:7px 16px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;background:var(--dark2);border:1px solid var(--border-soft);color:var(--text-muted);transition:all .15s}
 .pap-tab.active{background:var(--gold);color:var(--black);border-color:var(--gold)}
 
 /* ── ACCESO DENEGADO ── */
@@ -276,38 +276,7 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
     <div class="lfield"><input type="password" id="loginPass" placeholder="Contraseña"></div>
     <button class="btn-login" onclick="login()">Iniciar Sesión →</button>
 
-    <div class="roles-hint">
-      <div class="roles-hint-title">Acceso rápido</div>
-      <div class="role-cards">
-        <div class="role-card" onclick="autoLogin('jefe','jefe123')">
-          <span class="role-card-icon">👔</span>
-          <div class="role-card-info">
-            <div class="role-card-name">Jefe Principal</div>
-            <div class="role-card-desc">Acceso total al sistema</div>
-            <div class="role-card-cred">jefe / jefe123</div>
-          </div>
-          <span class="role-badge rb-jefe">Jefe</span>
-        </div>
-        <div class="role-card" onclick="autoLogin('admin','admin123')">
-          <span class="role-card-icon">👨‍💼</span>
-          <div class="role-card-info">
-            <div class="role-card-name">Administrador</div>
-            <div class="role-card-desc">Cotizaciones y gestión</div>
-            <div class="role-card-cred">admin / admin123</div>
-          </div>
-          <span class="role-badge rb-admin">Admin</span>
-        </div>
-        <div class="role-card" onclick="autoLogin('contadora','conta123')">
-          <span class="role-card-icon">💼</span>
-          <div class="role-card-info">
-            <div class="role-card-name">Contadora</div>
-            <div class="role-card-desc">Pagos y resumen financiero</div>
-            <div class="role-card-cred">contadora / conta123</div>
-          </div>
-          <span class="role-badge rb-conta">Contadora</span>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
 
@@ -496,7 +465,7 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
                 <div class="field"><label>Teléfono</label><input type="text" id="pTel"></div>
                 <div class="field"><label>WhatsApp</label><input type="text" id="pWa" placeholder="573001234567"></div>
                 <div class="field"><label>Dirección</label><input type="text" id="pDir"></div>
-                <div class="field"><label>Banco</label><select id="pBanco"><option value="">— Seleccione banco —</option><optgroup label="Bancos Principales"><option>Bancolombia</option><option>Banco de Bogotá</option><option>Davivienda</option><option>BBVA Colombia</option><option>Banco Popular</option><option>Banco de Occidente</option><option>Scotiabank Colpatria</option><option>Banco AV Villas</option><option>Banco Caja Social</option><option>Bancamía</option></optgroup><optgroup label="Otros Bancos y Financieras"><option>Banco Agrario de Colombia</option><option>Nequi</option><option>Nu Colombia (Nubank)</option><option>Daviplata</option><option>Lulo Bank</option></optgroup></select></div>
+                <div class="field"><label>Banco</label><select id="pBanco"><option value="">— Seleccione banco —</option><optgroup label="Bancos Principales"><option>Bancolombia</option><option>Banco de Bogotá</option><option>Davivienda</option><option>BBVA Colombia</option><option>Banco Popular</option><option>Banco de Occidente</option><option>Scotiabank Colpatria</option><option>Banco AV Villas</option><option>Banco Caja Social</option><option>Bancamía</option></optgroup><optgroup label="Otros Bancos y Financieras"><option>Banco Agrario de Colombia</option><option>Banco Cooperativo Coopcentral</option><option>Banco Credifinanciera</option><option>Banco Finandina</option><option>Banco GNB Sudameris</option><option>Banco Itaú Colombia</option><option>Banco J.P. Morgan Colombia</option><option>Banco Multibank</option><option>Banco Pichincha</option><option>Banco Santander de Negocios</option><option>Banco Serfinanza</option><option>Banco W</option><option>BancoCompartir</option><option>Bancoomeva</option><option>CFA Cooperativa Financiera</option><option>Citibank Colombia</option><option>Confiar Cooperativa Financiera</option><option>Coofinep Cooperativa Financiera</option><option>Cotrafa Cooperativa Financiera</option><option>Daviplata</option><option>Falabella</option><option>Financiera Juriscoop</option><option>Iris (antes Movii)</option><option>JFK Cooperativa Financiera</option><option>Lulo Bank</option><option>Mibanco</option><option>Nequi</option><option>Nu Colombia (Nubank)</option><option>RappiPay</option><option>Sistecredito</option><option>Uniminuto</option></optgroup></select></div>
                 <div class="field"><label>Número de Cuenta</label><input type="text" id="pNumeroCuenta" placeholder="Ej: 123-456789-00"></div>
                 <div class="field"><label>Tipo de Cuenta</label><select id="pTipoCuenta"><option value="">— Seleccione —</option><option value="Ahorros">Ahorros</option><option value="Corriente">Corriente</option></select></div>
               </div>
@@ -532,7 +501,7 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
               </div>
               <hr class="divider">
             </div>
-            <input type="text" id="catBuscar" placeholder="🔍 Buscar producto..." style="width:100%;margin-bottom:12px;padding:11px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-family:inherit;font-size:13px;outline:none;" oninput="renderCatalogo()">
+            <input type="text" id="catBuscar" placeholder="🔍 Buscar producto..." style="width:100%;margin-bottom:12px;" oninput="renderCatalogo()">
             <div class="tbl-wrap"><table><thead><tr><th>Producto</th><th>Descripción</th><th>Unidad</th><th>Precio Unitario</th><th>Creado por</th><th>Acciones</th></tr></thead><tbody id="tblCatalogo"></tbody></table></div>
           </div>
         </div>
@@ -715,19 +684,32 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
 </div>
 
 <div id="mDetalles" class="modal-overlay"><div class="modal-box lg"><div id="mDetallesBody"></div><button class="btn btn-ghost" onclick="closeModal('mDetalles')" style="margin-top:16px;">Cerrar</button></div></div>
-<div id="mProvDetalle" class="modal-overlay"><div class="modal-box lg"><div id="mProvDetalleBody"></div><button class="btn btn-ghost" onclick="closeModal('mProvDetalle')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button></div></div>
+
+<div id="mProvDetalle" class="modal-overlay">
+  <div class="modal-box lg">
+    <div id="mProvDetalleBody"></div>
+    <button class="btn btn-ghost" onclick="closeModal('mProvDetalle')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button>
+  </div>
+</div>
+
 <div id="mPago" class="modal-overlay"><div class="modal-box"><div class="modal-title">💰 Registrar Pago</div><div id="mPagoBody"></div></div></div>
 
 <div id="mCatalogoPicker" class="modal-overlay">
   <div class="modal-box lg">
     <div class="modal-title">🗂️ Seleccionar del Catálogo</div>
-    <input type="text" id="catPickerBuscar" placeholder="🔍 Buscar producto..." style="width:100%;margin-bottom:12px;padding:11px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-family:inherit;font-size:13px;outline:none;" oninput="renderCatalogoPicker()">
+    <input type="text" id="catPickerBuscar" placeholder="🔍 Buscar producto..." style="width:100%;margin-bottom:12px;" oninput="renderCatalogoPicker()">
     <div id="catPickerLista" style="max-height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;"></div>
     <button class="btn btn-ghost" onclick="closeModal('mCatalogoPicker')" style="margin-top:14px;width:100%;">Cancelar</button>
   </div>
 </div>
 
-<div id="mComprobante" class="modal-overlay"><div class="modal-box lg"><div class="modal-title">🧾 Comprobante de Pago</div><div id="mComprobanteBody"></div><button class="btn btn-ghost" onclick="closeModal('mComprobante')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button></div></div>
+<div id="mComprobante" class="modal-overlay">
+  <div class="modal-box lg">
+    <div class="modal-title">🧾 Comprobante de Pago</div>
+    <div id="mComprobanteBody"></div>
+    <button class="btn btn-ghost" onclick="closeModal('mComprobante')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button>
+  </div>
+</div>
 
 <div id="mResumen" class="modal-overlay">
   <div class="modal-box">
@@ -771,7 +753,10 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
 <div id="mWAInstr" class="modal-overlay">
   <div class="modal-box lg">
     <div style="font-size:36px;margin-bottom:8px;">📲</div>
-    <div class="confirm-title" style="color:#25D366;">Enviar Cotización al Grupo</div>
+    <div class="confirm-title" style="color:#25D366;">Enviar Cotización por WhatsApp</div>
+    <div style="background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.3);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text-muted);text-align:left;">
+      💡 Al hacer clic en <strong style="color:#25D366;">Enviar por WhatsApp</strong>, se abrirá WhatsApp con el mensaje <strong>ya escrito</strong>. Solo seleccione el grupo o contacto y presione <strong>Enviar ▶</strong>.
+    </div>
     <div id="waEnlaceApro" style="background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:12px;padding:12px 14px;margin-bottom:14px;">
       <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--success);margin-bottom:6px;">🔗 Enlace de Aprobación</div>
       <div id="waEnlaceTexto" style="font-size:10px;color:var(--text-muted);font-family:var(--mono);word-break:break-all;line-height:1.4;margin-bottom:8px;"></div>
@@ -779,8 +764,8 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
     </div>
     <div style="background:var(--dark2);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:11px;text-align:left;border:1px solid var(--border-soft);max-height:160px;overflow-y:auto;white-space:pre-wrap;font-family:var(--mono);color:var(--gold);" id="waPreviewMsg"></div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;">
-      <button class="btn btn-info btn-sm" onclick="copiarMsgWA()" style="flex:1;justify-content:center;padding:11px;">📋 Copiar mensaje</button>
-      <button class="btn btn-wa" id="btnAbrirWA" style="flex:1;justify-content:center;padding:11px;font-size:13px;font-weight:800;">💬 Abrir WhatsApp</button>
+      <button class="btn btn-info btn-sm" onclick="copiarMsgWA()" style="flex:1;justify-content:center;padding:11px;">📋 Solo copiar</button>
+      <button class="btn btn-wa" id="btnAbrirWA" style="flex:2;justify-content:center;padding:13px;font-size:14px;font-weight:800;">📲 Enviar por WhatsApp</button>
       <button class="btn btn-ghost btn-sm" onclick="closeModal('mWAInstr')" style="padding:11px 14px;">Cerrar</button>
     </div>
   </div>
@@ -790,7 +775,7 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 
 <script>
-const DB = {
+const DB_DEFAULT = {
   usuarios: [
     {id:1,nombre:'Jefe Principal',usuario:'jefe',password:'jefe123',rol:'jefe',activo:true},
     {id:2,nombre:'Administrador',usuario:'admin',password:'admin123',rol:'admin',activo:true},
@@ -799,6 +784,35 @@ const DB = {
   proveedores:[],cotizaciones:[],productos:[],papelera:[],papProv:[],papUsr:[],waHistorial:[],
   config:{waLink:'',waNombre:''}
 };
+
+function guardarDB(){
+  try{localStorage.setItem('oroconstruccion_db',JSON.stringify(DB));}
+  catch(e){console.warn('Error guardando DB',e);}
+}
+
+function cargarDB(){
+  try{
+    const raw=localStorage.getItem('oroconstruccion_db');
+    if(raw){
+      const saved=JSON.parse(raw);
+      // Restaurar todo completamente desde localStorage
+      const campos=['usuarios','proveedores','cotizaciones','productos','papelera','papProv','papUsr','waHistorial','config'];
+      campos.forEach(k=>{
+        if(saved[k]!==undefined) DB[k]=saved[k];
+      });
+      // Garantizar campos mínimos
+      if(!DB.usuarios||!DB.usuarios.length) DB.usuarios=JSON.parse(JSON.stringify(DB_DEFAULT.usuarios));
+      if(!DB.productos) DB.productos=[];
+      if(!DB.papUsr) DB.papUsr=[];
+      if(!DB.papProv) DB.papProv=[];
+      if(!DB.waHistorial) DB.waHistorial=[];
+      if(!DB.config) DB.config={waLink:'',waNombre:''};
+    }
+  }catch(e){console.warn('Error cargando DB',e);}
+}
+
+const DB = JSON.parse(JSON.stringify(DB_DEFAULT));
+cargarDB();
 
 let usuario=null,prodCount=0,rechId_=null,_resumenId=null,_cotWAselId=null,_comprobanteTemp=null;
 
@@ -810,6 +824,7 @@ const PERMISOS={
 
 function puede(p){return usuario&&PERMISOS[usuario.rol]?.[p]===true;}
 
+// ── Utilidades ──
 function toast(msg,tipo='success',ms=3200){const t=document.createElement('div');t.className=`toast ${tipo}`;t.innerHTML=`${tipo==='success'?'✅':tipo==='error'?'❌':tipo==='warning'?'⚠️':'ℹ️'} ${msg}`;document.getElementById('toastContainer').appendChild(t);setTimeout(()=>t.remove(),ms);}
 function v(id){return document.getElementById(id)?.value?.trim()||'';}
 function openModal(id){document.getElementById(id).classList.add('active');}
@@ -822,6 +837,7 @@ function badgePago(s){const m={pagado:'badge-paid',abono:'badge-partial',debe:'b
 function rolBadgeHtml(rol){if(rol==='jefe')return '<span class="badge badge-jefe">👔 Jefe</span>';if(rol==='admin')return '<span class="badge badge-admin">👨‍💼 Admin</span>';return '<span class="badge badge-contadora">💼 Contadora</span>';}
 function confirmarEliminar(titulo,info,nota,fn){document.getElementById('cElimTitle').textContent=titulo;document.getElementById('cElimInfo').innerHTML=info;document.getElementById('cElimNote').textContent=nota||'Podrás restaurarlo desde Papelera.';document.getElementById('cElimBtn').onclick=()=>{fn();closeModal('mConfirmElim');};openModal('mConfirmElim');}
 
+// ── Login / Logout ──
 function autoLogin(u,p){document.getElementById('loginUser').value=u;document.getElementById('loginPass').value=p;login();}
 
 function login(){
@@ -852,6 +868,7 @@ function mostrarApp(){
   if(window.innerWidth<=800)document.getElementById('menuBtn').style.display='block';
 }
 
+// ── Sidebar ──
 const NAV_ITEMS=[
   {tab:'dashboard',icon:'📊',label:'Dashboard',roles:['jefe','admin','contadora']},
   {tab:'cotizaciones',icon:'📝',label:'Nueva Cotización',roles:['jefe','admin','contadora']},
@@ -915,6 +932,7 @@ function toggleNotif(){
   document.getElementById('notifOverlay').classList.toggle('open');
 }
 
+// ── Notificaciones ──
 function genNotifs(){
   const ns=[];
   DB.cotizaciones.forEach(c=>{
@@ -950,6 +968,7 @@ function updateNotifs(){
     :'<div style="color:var(--text-muted);text-align:center;padding:16px;">Sin notificaciones ✅</div>';
 }
 
+// ── Dashboard ──
 function updateDashboard(){
   const stats=document.getElementById('dashStats');
   const montoTotal=DB.cotizaciones.reduce((s,c)=>s+c.total,0);
@@ -992,9 +1011,15 @@ function renderCatalogoPicker(){
 function seleccionarDesdePicker(prodId){
   const p=DB.productos.find(x=>Number(x.id)===Number(prodId));if(!p)return;
   const row=document.getElementById(`pr${_catPickerRowId}`);
-  if(row){row.querySelector('.pnom').value=p.nombre;row.querySelector('.ppre').value=p.precio.toLocaleString('es-CO');calcTotal();}
-  closeModal('mCatalogoPicker');toast(`✅ "${p.nombre}" seleccionado`,'success');
+  if(row){
+    row.querySelector('.pnom').value=p.nombre;
+    row.querySelector('.ppre').value=p.precio.toLocaleString('es-CO');
+    calcTotal();
+  }
+  closeModal('mCatalogoPicker');
+  toast(`✅ "${p.nombre}" seleccionado`,'success');
 }
+
 
 function crearProductoCat(){
   const nom=document.getElementById('catNombre')?.value?.trim();
@@ -1020,6 +1045,7 @@ function editarProductoCat(id){
   document.getElementById('catPrecio').value=p.precio.toLocaleString('es-CO');
   DB.productos.splice(DB.productos.indexOf(p),1);
   renderCatalogo();
+  document.querySelector('[data-tab="catalogo"]')&&navTo('catalogo',document.querySelector('[data-tab="catalogo"]'));
 }
 function renderCatalogo(){
   const tb=document.getElementById('tblCatalogo');if(!tb)return;
@@ -1041,15 +1067,16 @@ function renderCatalogo(){
 function usarProductoCat(id){
   const p=DB.productos.find(x=>Number(x.id)===Number(id));if(!p)return;
   navTo('cotizaciones',document.querySelector('[data-tab="cotizaciones"]'));
-  setTimeout(()=>addProdDesde(p),200);
+  setTimeout(()=>{addProdDesde(p);},200);
 }
 function addProdDesde(p){
   prodCount++;
   const d=document.createElement('div');d.className='prod-row';d.id=`pr${prodCount}`;
   d.innerHTML=`<input type="text" placeholder="Descripción" class="pnom" value="${p.nombre}"><input type="number" placeholder="Cant." class="pcant" value="1" min="1" onchange="calcTotal()"><input type="text" placeholder="Precio" class="ppre" value="${p.precio.toLocaleString('es-CO')}" oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/\\B(?=(\\d{3})+(?!\\d))/g,'.');calcTotal()"><input type="text" placeholder="Subtotal" class="psub" readonly><button class="btn btn-danger btn-icon" onclick="delProd(${prodCount})">🗑</button>`;
   document.getElementById('prodContainer').appendChild(d);calcTotal();
-  toast(`✅ "${p.nombre}" agregado`,'success');
+  toast(`✅ "${p.nombre}" agregado a la cotización`,'success');
 }
+
 
 function crearProveedor(){
   if(!puede('puedeCrearProveedores')){toast('No tienes permiso','error');return;}
@@ -1071,13 +1098,15 @@ function eliminarProveedor(id){
   const p=DB.proveedores[idx];
   confirmarEliminar('¿Eliminar proveedor?',`<strong>${p.nombre}</strong>`,''  ,()=>{
     p.eliminadoPor=usuario.nombre;p.fechaEliminacion=new Date().toISOString();
-    DB.papProv.push(p);DB.proveedores.splice(idx,1);toast(`${p.nombre} movido a papelera`,'info');updateUI();
+    DB.papProv.push(p);DB.proveedores.splice(idx,1);
+    toast(`${p.nombre} movido a papelera`,'info');updateUI();
   });
 }
 
 function restaurarProveedor(id){const idx=DB.papProv.findIndex(p=>Number(p.id)===Number(id));if(idx===-1)return;const p=DB.papProv[idx];delete p.eliminadoPor;delete p.fechaEliminacion;DB.proveedores.push(p);DB.papProv.splice(idx,1);toast('Restaurado','success');updateUI();}
 function eliminarPermanenteProv(id){confirmarEliminar('⚠️ Eliminar permanentemente','Irreversible.',''  ,()=>{DB.papProv=DB.papProv.filter(p=>Number(p.id)!==Number(id));toast('Eliminado','error');updateUI();});}
 
+// ── Usuarios ──
 function crearUsuario(){
   if(!puede('puedeGestionarUsuarios')){toast('Solo el jefe','error');return;}
   const n=v('uNombre'),uname=v('uUser'),p=v('uPass'),r=v('uRol');
@@ -1101,6 +1130,7 @@ function eliminarUsuario(id){
 
 function restaurarUsuario(id){const idx=DB.papUsr.findIndex(u=>Number(u.id)===Number(id));if(idx===-1)return;const u=DB.papUsr[idx];if(DB.usuarios.find(x=>x.usuario===u.usuario)){toast('Ya existe ese usuario','error');return;}delete u.eliminadoPor;delete u.fechaEliminacion;DB.usuarios.push(u);DB.papUsr.splice(idx,1);toast('Restaurado','success');updateUI();}
 function eliminarPermanenteUsr(id){confirmarEliminar('⚠️ Eliminar permanentemente','Irreversible.',''  ,()=>{DB.papUsr=DB.papUsr.filter(u=>Number(u.id)!==Number(id));toast('Eliminado','error');updateUI();});}
+
 function toggleActivoUsuario(id){
   if(!puede('puedeGestionarUsuarios')){toast('Solo el jefe','error');return;}
   if(Number(id)===Number(usuario.id)){toast('No puedes desactivarte','error');return;}
@@ -1108,6 +1138,7 @@ function toggleActivoUsuario(id){
   u.activo=!u.activo;toast(`"${u.nombre}" ${u.activo?'activado':'desactivado'}`,u.activo?'success':'info');updateUI();
 }
 
+// ── Productos / Cotizaciones ──
 function addProd(){
   prodCount++;
   const d=document.createElement('div');d.className='prod-row';d.id=`pr${prodCount}`;
@@ -1166,10 +1197,11 @@ function crearCotizacion(){
   const cot={id:Date.now(),referencia:generarRef(),proveedor:prov,productos:prods,subtotal,descuento,total,medioPago:med,notas,esNotaCredito:med==='Nota Crédito',fechaVencimiento:fechaVenc,diasAlerta,estadoAprobacion:'pendiente',estadoPago:'debe',montoPagado:0,montoRestante:total,fecha:new Date().toISOString(),pagos:[],creadoPor:usuario.nombre};
   DB.cotizaciones.push(cot);
   const diasFaltan=Math.ceil((new Date(fechaVenc)-Date.now())/(864e5));
-  toast(`✅ ${cot.referencia} creada`,'success',5000);
+  toast(`✅ ${cot.referencia} creada — Vence ${new Date(fechaVenc).toLocaleDateString('es-CO')} (${diasFaltan}d)`,'success',5000);
   ['selProv','selPago','notasCot','totalCot','totalFinalCot','descuentoCot','fechaVencCot'].forEach(i=>{try{document.getElementById(i).value='';}catch(e){}});
   const nc=document.getElementById('notaCreditoInfo');if(nc)nc.style.display='none';
   const inf=document.getElementById('provInfoMedios');if(inf)inf.style.display='none';
+  const fvi=document.getElementById('fechaVencInfo');if(fvi)fvi.textContent='';
   document.getElementById('prodContainer').innerHTML='';prodCount=0;
   updateUI();navTo('lista',document.querySelector('.nav-item[data-tab="lista"]'));
 }
@@ -1211,6 +1243,7 @@ function eliminarCotizacion(id){
 function restaurarCotizacion(id){const idx=DB.papelera.findIndex(c=>Number(c.id)===Number(id));if(idx===-1)return;const c=DB.papelera[idx];delete c.eliminadoPor;delete c.fechaEliminacion;DB.cotizaciones.push(c);DB.papelera.splice(idx,1);toast('Restaurada','success');updateUI();}
 function eliminarPermanenteCot(id){confirmarEliminar('⚠️ Eliminar permanentemente','Irreversible.',''  ,()=>{DB.papelera=DB.papelera.filter(c=>Number(c.id)!==Number(id));toast('Eliminada','error');updateUI();});}
 
+// ── Pagos ──
 function mostrarResumen(id){
   if(!puede('puedePagar')){toast('No tienes permiso','error');return;}
   _resumenId=Number(id);
@@ -1239,16 +1272,48 @@ function abrirPago(id){
   const ops=provPagos.length?provPagos:['Transferencia Bancaria','Efectivo','Cheque','PSE','Nequi','Daviplata'];
   const provFull=DB.proveedores.find(p=>Number(p.id)===Number(c.proveedor.id))||c.proveedor;
   const tieneCuenta=provFull.banco||provFull.numeroCuenta||provFull.tipoCuenta;
-  const cuentaCard=tieneCuenta?`<div style="background:linear-gradient(135deg,rgba(245,166,35,.08),rgba(245,166,35,.03));border:1px solid rgba(245,166,35,.35);border-radius:12px;padding:13px 16px;margin-bottom:14px;"><div style="font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🏦 Datos Bancarios</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;">${provFull.banco?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Banco</span><span style="font-size:13px;font-weight:700;">${provFull.banco}</span></div>`:''} ${provFull.tipoCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Tipo</span><span style="font-size:13px;font-weight:700;color:var(--info);">${provFull.tipoCuenta}</span></div>`:''} ${provFull.numeroCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Número</span><span style="font-size:14px;font-weight:800;color:var(--gold);font-family:monospace;">${provFull.numeroCuenta}</span></div>`:''}</div></div>`:'';
-  document.getElementById('mPagoBody').innerHTML=`${cuentaCard}<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;"><div class="fin-row total"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div><div class="fin-row paid"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div><div class="fin-row owed"><span class="fin-row-label">Pendiente</span><span class="fin-row-val">$${c.montoRestante.toLocaleString()}</span></div></div>
-    <div class="form-row c2"><div class="field"><label>Monto *</label><input type="text" id="pMonto" placeholder="0" value="${c.montoRestante.toLocaleString('es-CO')}" oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/\B(?=(\d{3})+(?!\d))/g,'.')"></div><div class="field"><label>Fecha *</label><input type="date" id="pFecha" value="${new Date().toISOString().split('T')[0]}"></div><div class="field"><label>Método *</label><select id="pMetodo">${ops.map(op=>`<option value="${op}">${op}</option>`).join('')}</select></div><div class="field"><label>No. Referencia</label><input type="text" id="pRef" placeholder="Ej: TXN-001"></div></div>
+  const cuentaCard=tieneCuenta?`
+    <div style="background:linear-gradient(135deg,rgba(245,166,35,.08),rgba(245,166,35,.03));border:1px solid rgba(245,166,35,.35);border-radius:12px;padding:13px 16px;margin-bottom:14px;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🏦 Datos Bancarios del Proveedor</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;">
+        <div><span style="font-size:10px;color:var(--text-muted);display:block;">Proveedor</span><span style="font-size:13px;font-weight:700;color:var(--text);">${provFull.nombre}</span></div>
+        ${provFull.banco?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Banco</span><span style="font-size:13px;font-weight:700;color:var(--text);">${provFull.banco}</span></div>`:''}
+        ${provFull.tipoCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Tipo de Cuenta</span><span style="font-size:13px;font-weight:700;color:var(--info);">${provFull.tipoCuenta}</span></div>`:''}
+        ${provFull.numeroCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Número de Cuenta</span><span style="font-size:14px;font-weight:800;color:var(--gold);font-family:monospace;letter-spacing:.5px;">${provFull.numeroCuenta}</span></div>`:''}
+        ${provFull.nit?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">NIT</span><span style="font-size:12px;color:var(--text-muted);">${provFull.nit}</span></div>`:''}
+      </div>
+    </div>`:'';
+  document.getElementById('mPagoBody').innerHTML=`
+    ${cuentaCard}
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+      <div class="fin-row total"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div>
+      <div class="fin-row paid"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div>
+      <div class="fin-row owed"><span class="fin-row-label">Pendiente</span><span class="fin-row-val">$${c.montoRestante.toLocaleString()}</span></div>
+    </div>
+    <div class="form-row c2">
+      <div class="field"><label>Monto a Pagar * <span style="font-size:10px;color:var(--text-muted);font-weight:400;">(Pendiente: <strong style="color:var(--gold);">$${c.montoRestante.toLocaleString('es-CO')}</strong>)</span></label><input type="text" id="pMonto" placeholder="0" value="${c.montoRestante.toLocaleString('es-CO')}" oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/\B(?=(\d{3})+(?!\d))/g,'.')"></div>
+      <div class="field"><label>Fecha *</label><input type="date" id="pFecha" value="${new Date().toISOString().split('T')[0]}"></div>
+      <div class="field"><label>Método de Pago *</label><select id="pMetodo">${ops.map(op=>`<option value="${op}">${op}</option>`).join('')}</select></div>
+      <div class="field"><label>No. Referencia</label><input type="text" id="pRef" placeholder="Ej: TXN-2024-001"></div>
+    </div>
+    <div class="field" style="margin-bottom:13px;"><label>Banco / Cuenta</label><input type="text" id="pBanco" value="${[provFull.banco,provFull.tipoCuenta,provFull.numeroCuenta].filter(Boolean).join(' · ')}" placeholder="Ej: Bancolombia 123-456789-00"></div>
     <div class="field" style="margin-bottom:13px;"><label>Notas</label><textarea id="pNotas" rows="2"></textarea></div>
     <div style="background:var(--dark2);border:1px dashed rgba(245,166,35,.35);border-radius:12px;padding:14px;margin-bottom:14px;">
       <div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🧾 Comprobante</div>
-      <div id="compPreview" style="display:none;margin-bottom:10px;"><img id="compImg" style="max-width:100%;max-height:220px;border-radius:9px;" /><div id="compNombre" style="font-size:11px;color:var(--success);margin-top:5px;"></div></div>
-      <label id="compLabel" style="display:flex;align-items:center;gap:9px;cursor:pointer;padding:9px 14px;background:var(--dark3);border:1px solid var(--border-soft);border-radius:9px;"><span style="font-size:20px;">📎</span><span style="font-size:12px;color:var(--text-muted);">Adjuntar imagen</span><input type="file" id="compFile" accept="image/*" style="display:none;" onchange="cargarComprobante(event,${c.id})"></label>
+      <div id="compPreview" style="display:none;margin-bottom:10px;">
+        <img id="compImg" style="max-width:100%;max-height:220px;border-radius:9px;border:1px solid var(--border-soft);" />
+        <div id="compNombre" style="font-size:11px;color:var(--success);margin-top:5px;"></div>
+      </div>
+      <label id="compLabel" style="display:flex;align-items:center;gap:9px;cursor:pointer;padding:9px 14px;background:var(--dark3);border:1px solid var(--border-soft);border-radius:9px;">
+        <span style="font-size:20px;">📎</span>
+        <span style="font-size:12px;color:var(--text-muted);">Adjuntar imagen del comprobante</span>
+        <input type="file" id="compFile" accept="image/*" style="display:none;" onchange="cargarComprobante(event,${c.id})">
+      </label>
     </div>
-    <div style="display:flex;gap:8px;"><button class="btn btn-gold" onclick="registrarPago(${c.id})" style="flex:1;justify-content:center;padding:13px;">💰 Confirmar Pago</button><button class="btn btn-ghost" onclick="closeModal('mPago')" style="padding:13px 16px;">Cancelar</button></div>`;
+    <div style="display:flex;gap:8px;">
+      <button class="btn btn-gold" onclick="registrarPago(${c.id})" style="flex:1;justify-content:center;padding:13px;">💰 Confirmar Pago</button>
+      <button class="btn btn-ghost" onclick="closeModal('mPago')" style="padding:13px 16px;">Cancelar</button>
+    </div>`;
   openModal('mPago');
 }
 
@@ -1272,12 +1337,13 @@ function registrarPago(id){
   const fecha=document.getElementById('pFecha').value;
   const metodo=document.getElementById('pMetodo').value;
   const refTx=document.getElementById('pRef')?.value?.trim()||'';
+  const banco=document.getElementById('pBanco')?.value?.trim()||'';
   const notas=document.getElementById('pNotas')?.value?.trim()||'';
   if(!monto||monto<=0){toast('Monto inválido','error');return;}
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(id));if(!c)return;
   if(monto>c.montoRestante+0.01){toast('El monto supera lo pendiente','error');return;}
   if(!c.pagos)c.pagos=[];
-  const pago={id:Date.now(),fecha,monto,metodo,refTx,notas,registradoPor:usuario.nombre,fechaRegistro:new Date().toISOString(),comprobante:_comprobanteTemp?{...(_comprobanteTemp)}:null};
+  const pago={id:Date.now(),fecha,monto,metodo,refTx,banco,notas,registradoPor:usuario.nombre,fechaRegistro:new Date().toISOString(),comprobante:_comprobanteTemp?{...(_comprobanteTemp)}:null};
   c.pagos.push(pago);
   c.montoPagado=parseFloat((c.montoPagado+monto).toFixed(2));
   c.montoRestante=parseFloat((c.montoRestante-monto).toFixed(2));
@@ -1285,6 +1351,7 @@ function registrarPago(id){
   c.estadoPago=c.montoRestante<=0?'pagado':'abono';
   _comprobanteTemp=null;
   closeModal('mPago');
+  mostrarBannerNotif({tipo:c.estadoPago==='pagado'?'success':'info',titulo:c.estadoPago==='pagado'?'✅ Pago completado':'🔄 Abono registrado',desc:`${c.referencia} · $${monto.toLocaleString()} (${metodo})`});
   toast(`💰 Pago de $${monto.toLocaleString()} registrado`,'success');
   updateUI();renderTblPagos();
 }
@@ -1295,13 +1362,65 @@ function renderTblPagos(){
   let lista=DB.cotizaciones.filter(c=>c.estadoAprobacion==='aprobado');
   if(buscar)lista=lista.filter(c=>c.referencia.toLowerCase().includes(buscar)||c.proveedor.nombre.toLowerCase().includes(buscar));
   if(!lista.length){tb.innerHTML='<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">No hay cotizaciones aprobadas</td></tr>';return;}
-  tb.innerHTML=lista.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong></td><td>${c.proveedor.nombre}</td><td><strong>$${c.total.toLocaleString()}</strong></td><td style="color:var(--success);">$${(c.montoPagado||0).toLocaleString()}</td><td style="color:${(c.montoRestante||0)>0?'var(--gold)':'var(--success)'};">$${(c.montoRestante||0).toLocaleString()}</td><td>${badgePago(c.estadoPago)}</td><td><div class="td-actions"><button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button>${c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm" onclick="abrirPago(${c.id})">💰 Pagar</button>`:'<span style="color:var(--success);font-size:12px;font-weight:700;">✅ Pagado</span>'}</div></td></tr>`).join('');
+  tb.innerHTML=lista.slice().reverse().map(c=>`<tr>
+    <td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong></td>
+    <td>${c.proveedor.nombre}</td>
+    <td><strong>$${c.total.toLocaleString()}</strong></td>
+    <td style="color:var(--success);">$${(c.montoPagado||0).toLocaleString()}</td>
+    <td style="color:${(c.montoRestante||0)>0?'var(--gold)':'var(--success)'};">$${(c.montoRestante||0).toLocaleString()}</td>
+    <td>${badgePago(c.estadoPago)}</td>
+    <td><div class="td-actions">
+      <button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button>
+      ${c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm" onclick="abrirPago(${c.id})">💰 Pagar</button>`:'<span style="color:var(--success);font-size:12px;font-weight:700;">✅ Pagado</span>'}
+    </div></td>
+  </tr>`).join('');
 }
 
 function verDetalles(id){
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(id));if(!c)return;
-  const pagosHtml=c.pagos&&c.pagos.length?`<div style="margin:16px 0 9px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">🧾 Pagos</div>${c.pagos.map((p,i)=>`<div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:12px;padding:13px 16px;margin-bottom:8px;"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(46,204,113,.2);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;">${i+1}</div><div><div style="font-size:15px;font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</div><div style="font-size:11px;color:var(--text-muted);">${p.metodo} · ${new Date(p.fecha).toLocaleDateString()} · ${p.registradoPor}</div>${p.refTx?`<div style="font-size:11px;color:var(--info);">Ref: ${p.refTx}</div>`:''}</div></div>${p.comprobante?`<button class="btn btn-success btn-sm" onclick="verComprobante(${c.id},${p.id})">🧾 Ver</button>`:'<span style="font-size:11px;color:var(--text-dim);">Sin comp.</span>'}</div></div>`).join('')}`:'<div style="background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.15);border-radius:10px;padding:12px;margin-top:14px;font-size:13px;color:var(--gold);">⚠️ Sin pagos registrados</div>';
-  document.getElementById('mDetallesBody').innerHTML=`<div class="modal-title">📄 ${c.referencia}</div>${c.estadoAprobacion==='rechazado'?`<div class="alert alert-danger"><strong>RECHAZADA</strong> — ${c.motivoRechazo||'Sin motivo'}</div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;font-size:13px;"><div><span style="color:var(--text-muted);">Proveedor</span><br><strong>${c.proveedor.nombre}</strong></div><div><span style="color:var(--text-muted);">NIT</span><br><strong>${c.proveedor.nit}</strong></div><div><span style="color:var(--text-muted);">Medio de pago</span><br><strong>${c.medioPago||'–'}</strong></div><div><span style="color:var(--text-muted);">Creado por</span><br><strong>${c.creadoPor}</strong></div><div><span style="color:var(--text-muted);">Fecha</span><br><strong>${new Date(c.fecha).toLocaleDateString()}</strong></div>${c.fechaVencimiento?`<div><span style="color:var(--text-muted);">Vence</span><br><strong style="color:var(--danger);">${new Date(c.fechaVencimiento).toLocaleDateString('es-CO')}</strong></div>`:''}</div><div class="tbl-wrap"><table><thead><tr><th>#</th><th>Producto</th><th>Cant.</th><th>Precio</th><th>Subtotal</th></tr></thead><tbody>${c.productos.map((p,i)=>`<tr><td>${i+1}</td><td>${p.nombre}</td><td>${p.cantidad}</td><td>$${p.precio.toLocaleString()}</td><td><strong>$${p.subtotal.toLocaleString()}</strong></td></tr>`).join('')}</tbody></table></div><div style="display:flex;gap:8px;margin-top:13px;flex-wrap:wrap;"><div class="fin-row total" style="flex:1;"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div><div class="fin-row paid" style="flex:1;"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div><div class="fin-row owed" style="flex:1;"><span class="fin-row-label">Pendiente</span><span class="fin-row-val" style="font-size:14px;">$${c.montoRestante.toLocaleString()}</span></div></div>${pagosHtml}${c.notas?`<div style="margin-top:13px;padding:11px;background:var(--dark2);border-radius:10px;font-size:13px;color:var(--text-muted);">📝 ${c.notas}</div>`:''}<div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;"><button class="btn" onclick="exportarPDF(${c.id})" style="background:rgba(255,107,107,.12);color:#FF6B6B;border:1px solid rgba(255,107,107,.3);padding:10px 18px;">📄 Exportar PDF</button>${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal" onclick="closeModal('mDetalles');setTimeout(()=>abrirPago(${c.id}),150)" style="padding:10px 18px;">💰 Registrar Pago</button>`:''}</div>`;
+  const pagosHtml=c.pagos&&c.pagos.length?`
+    <div style="margin:16px 0 9px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">🧾 Pagos Registrados</div>
+    ${c.pagos.map((p,i)=>`
+      <div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:12px;padding:13px 16px;margin-bottom:8px;">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:28px;height:28px;border-radius:50%;background:rgba(46,204,113,.2);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;">${i+1}</div>
+            <div>
+              <div style="font-size:15px;font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</div>
+              <div style="font-size:11px;color:var(--text-muted);">${p.metodo} · ${new Date(p.fecha).toLocaleDateString()} · ${p.registradoPor}</div>
+              ${p.refTx?`<div style="font-size:11px;color:var(--info);">Ref: ${p.refTx}</div>`:''}
+            </div>
+          </div>
+          ${p.comprobante?`<button class="btn btn-success btn-sm" onclick="verComprobante(${c.id},${p.id})">🧾 Ver</button>`:'<span style="font-size:11px;color:var(--text-dim);">Sin comp.</span>'}
+        </div>
+      </div>`).join('')}`
+    :'<div style="background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.15);border-radius:10px;padding:12px;margin-top:14px;font-size:13px;color:var(--gold);">⚠️ Sin pagos registrados</div>';
+
+  document.getElementById('mDetallesBody').innerHTML=`
+    <div class="modal-title">📄 ${c.referencia}</div>
+    ${c.estadoAprobacion==='rechazado'?`<div class="alert alert-danger"><strong>RECHAZADA</strong> — ${c.motivoRechazo||'Sin motivo'}</div>`:''}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;font-size:13px;">
+      <div><span style="color:var(--text-muted);">Proveedor</span><br><strong>${c.proveedor.nombre}</strong></div>
+      <div><span style="color:var(--text-muted);">NIT</span><br><strong>${c.proveedor.nit}</strong></div>
+      <div><span style="color:var(--text-muted);">Medio de pago</span><br><strong>${c.medioPago||'–'}</strong></div>
+      <div><span style="color:var(--text-muted);">Creado por</span><br><strong>${c.creadoPor}</strong></div>
+      <div><span style="color:var(--text-muted);">Fecha</span><br><strong>${new Date(c.fecha).toLocaleDateString()}</strong></div>
+      ${c.fechaVencimiento?`<div><span style="color:var(--text-muted);">Vence</span><br><strong style="color:var(--danger);">${new Date(c.fechaVencimiento).toLocaleDateString('es-CO')}</strong></div>`:''}
+    </div>
+    <div class="tbl-wrap"><table><thead><tr><th>#</th><th>Producto</th><th>Cant.</th><th>Precio</th><th>Subtotal</th></tr></thead><tbody>
+      ${c.productos.map((p,i)=>`<tr><td>${i+1}</td><td>${p.nombre}</td><td>${p.cantidad}</td><td>$${p.precio.toLocaleString()}</td><td><strong>$${p.subtotal.toLocaleString()}</strong></td></tr>`).join('')}
+    </tbody></table></div>
+    <div style="display:flex;gap:8px;margin-top:13px;flex-wrap:wrap;">
+      <div class="fin-row total" style="flex:1;"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div>
+      <div class="fin-row paid" style="flex:1;"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div>
+      <div class="fin-row owed" style="flex:1;"><span class="fin-row-label">Pendiente</span><span class="fin-row-val" style="font-size:14px;">$${c.montoRestante.toLocaleString()}</span></div>
+    </div>
+    ${pagosHtml}
+    ${c.notas?`<div style="margin-top:13px;padding:11px;background:var(--dark2);border-radius:10px;font-size:13px;color:var(--text-muted);">📝 ${c.notas}</div>`:''}
+    <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;">
+      <button class="btn" onclick="exportarPDF(${c.id})" style="background:rgba(255,107,107,.12);color:#FF6B6B;border:1px solid rgba(255,107,107,.3);padding:10px 18px;">📄 Exportar PDF</button>
+      ${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal" onclick="closeModal('mDetalles');setTimeout(()=>abrirPago(${c.id}),150)" style="padding:10px 18px;">💰 Registrar Pago</button>`:''}
+    </div>`;
   openModal('mDetalles');
 }
 
@@ -1309,10 +1428,20 @@ function verComprobante(cotId,pagoId){
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(cotId));if(!c)return;
   const p=c.pagos?.find(x=>Number(x.id)===Number(pagoId));if(!p||!p.comprobante)return;
   const comp=p.comprobante;
-  document.getElementById('mComprobanteBody').innerHTML=`<div style="font-size:13px;margin-bottom:14px;"><strong style="color:var(--gold);">${c.referencia}</strong> · ${c.proveedor.nombre}<br><strong style="color:var(--success);">$${p.monto.toLocaleString()}</strong> · ${p.metodo} · ${new Date(p.fecha).toLocaleDateString()}</div>${comp.tipo&&comp.tipo.startsWith('image/')?`<img src="${comp.dataUrl}" style="max-width:100%;border-radius:9px;" /><div style="margin-top:12px;text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre||'comprobante'}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar</a></div>`:`<div style="text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar ${comp.nombre}</a></div>`}`;
+  document.getElementById('mComprobanteBody').innerHTML=`
+    <div style="font-size:13px;margin-bottom:14px;">
+      <strong style="color:var(--gold);">${c.referencia}</strong> · ${c.proveedor.nombre}<br>
+      <strong style="color:var(--success);">$${p.monto.toLocaleString()}</strong> · ${p.metodo} · ${new Date(p.fecha).toLocaleDateString()}
+    </div>
+    ${comp.tipo&&comp.tipo.startsWith('image/')?
+      `<img src="${comp.dataUrl}" style="max-width:100%;border-radius:9px;border:1px solid var(--border-soft);" />
+       <div style="margin-top:12px;text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre||'comprobante'}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar</a></div>`
+      :`<div style="text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar ${comp.nombre}</a></div>`
+    }`;
   openModal('mComprobante');
 }
 
+// ── Búsqueda ──
 function buscarCot(){
   const t=document.getElementById('buscarRef').value.trim().toUpperCase();
   const tag=document.getElementById('searchTag');
@@ -1325,31 +1454,58 @@ function buscarCot(){
 
 function limpiarBusqueda(){document.getElementById('buscarRef').value='';document.getElementById('searchTag').className='search-tag';renderTblCot(DB.cotizaciones);}
 
+// ── WhatsApp ──
 function renderWASection(){
   const configSec=document.getElementById('waConfigSection'),estadoEl=document.getElementById('waGrupoEstado');
   if(!configSec||!estadoEl)return;
-  if(puede('puedeConfigWA')){configSec.style.display='';const el=document.getElementById('cfgWaLink'),elN=document.getElementById('cfgWaNombre');if(el)el.value=DB.config.waLink||'';if(elN)elN.value=DB.config.waNombre||'';}else configSec.style.display='none';
+  if(puede('puedeConfigWA')){
+    configSec.style.display='';
+    const el=document.getElementById('cfgWaLink'),elN=document.getElementById('cfgWaNombre');
+    if(el)el.value=DB.config.waLink||'';if(elN)elN.value=DB.config.waNombre||'';
+  }else configSec.style.display='none';
   const tieneGrupo=!!DB.config.waLink;
-  estadoEl.innerHTML=tieneGrupo?`<div style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.25);border-radius:12px;margin-bottom:18px;"><span style="font-size:22px;">🟢</span><div style="flex:1;"><div style="font-weight:700;color:var(--success);">Grupo: ${DB.config.waNombre||'WhatsApp Activo'}</div><div style="font-size:11px;color:var(--text-muted);">${DB.config.waLink}</div></div><a href="${DB.config.waLink}" target="_blank" class="btn btn-success btn-sm" style="text-decoration:none;">Abrir 📲</a></div>`:`<div class="alert alert-warning" style="margin-bottom:18px;">⚠️ No hay grupo configurado.</div>`;
+  estadoEl.innerHTML=tieneGrupo
+    ?`<div style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.25);border-radius:12px;margin-bottom:18px;"><span style="font-size:22px;">🟢</span><div style="flex:1;"><div style="font-weight:700;color:var(--success);">Grupo conectado: ${DB.config.waNombre||'WhatsApp Activo'}</div><div style="font-size:11px;color:var(--text-muted);">${DB.config.waLink}</div></div><a href="${DB.config.waLink}" target="_blank" class="btn btn-success btn-sm" style="text-decoration:none;">Abrir 📲</a></div>`
+    :`<div class="alert alert-warning" style="margin-bottom:18px;">⚠️ No hay grupo configurado. ${puede('puedeConfigWA')?'Configúralo abajo.':'Pídele al jefe que configure el enlace.'}</div>`;
   renderHistorialWA();poblarSelCotWA();
 }
 
-function validarEnlaceWA(){const inp=document.getElementById('cfgWaLink'),hint=document.getElementById('cfgWaLinkHint');if(!inp||!hint)return;const val=inp.value.trim();if(!val){hint.textContent='Pega el enlace de invitación.';hint.style.color='var(--text-muted)';return;}if(val.startsWith('https://chat.whatsapp.com/')){hint.textContent='✅ Enlace válido';hint.style.color='var(--success)';}else{hint.textContent='⚠️ Debe empezar con https://chat.whatsapp.com/';hint.style.color='var(--danger)';}}
-function guardarConfigWA(){if(!puede('puedeConfigWA')){toast('Solo el jefe','error');return;}const link=document.getElementById('cfgWaLink').value.trim();if(!link){toast('Pega el enlace del grupo','error');return;}if(!link.startsWith('https://chat.whatsapp.com/')){toast('Enlace inválido','error');return;}DB.config.waLink=link;DB.config.waNombre=document.getElementById('cfgWaNombre').value.trim();toast('✅ Grupo configurado','success');renderWASection();}
-function testWa(){if(!DB.config.waLink){toast('Primero guarda el enlace','error');return;}window.open(DB.config.waLink,'_blank');}
+function validarEnlaceWA(){
+  const inp=document.getElementById('cfgWaLink'),hint=document.getElementById('cfgWaLinkHint');
+  if(!inp||!hint)return;
+  const val=inp.value.trim();
+  if(!val){hint.textContent='Pega el enlace de invitación.';hint.style.color='var(--text-muted)';return;}
+  if(val.startsWith('https://chat.whatsapp.com/')){hint.textContent='✅ Enlace válido';hint.style.color='var(--success)';}
+  else{hint.textContent='⚠️ Debe empezar con https://chat.whatsapp.com/';hint.style.color='var(--danger)';}
+}
+
+function guardarConfigWA(){
+  if(!puede('puedeConfigWA')){toast('Solo el jefe','error');return;}
+  const link=document.getElementById('cfgWaLink').value.trim();
+  if(!link){toast('Pega el enlace del grupo','error');return;}
+  if(!link.startsWith('https://chat.whatsapp.com/')){toast('Enlace inválido','error');return;}
+  DB.config.waLink=link;DB.config.waNombre=document.getElementById('cfgWaNombre').value.trim();
+  guardarDB();toast('✅ Grupo configurado','success');renderWASection();
+}
+
+function testWa(){if(!DB.config.waLink){toast('Primero guarda el enlace','error');return;}window.open(DB.config.waLink,'_blank');toast('✅ Grupo abierto','success');}
+
 function generarEnlaceAprobacion(cotId){const base=window.location.href.split('?')[0].split('#')[0];const token=btoa(JSON.stringify({cotId,ts:Date.now(),action:'aprobar'}));return `${base}#aprobar=${token}`;}
 
 function buildMsgCot(cot){
   const lineas=cot.productos.map(p=>`   • ${p.nombre} × ${p.cantidad} = $${p.subtotal.toLocaleString()}`).join('\n');
   const enlace=generarEnlaceAprobacion(cot.id);
   const venc=cot.fechaVencimiento?`\n📅 *Vence:* ${new Date(cot.fechaVencimiento).toLocaleDateString('es-CO')}`:'';
-  return `🏗️ *OROCONSTRUCCIÓN S.A.S*\n📄 *Cotización:* ${cot.referencia}\n🏢 *Proveedor:* ${cot.proveedor.nombre}\n💰 *Total:* $${cot.total.toLocaleString()}\n💳 *Pago:* ${cot.medioPago||'–'}${venc}\n\n📦 *Productos:*\n${lineas}\n\n✅ *Enlace de aprobación:*\n${enlace}`;
+  return `🏗️ *OROCONSTRUCCIÓN S.A.S*\n📄 *Cotización:* ${cot.referencia}\n🏢 *Proveedor:* ${cot.proveedor.nombre}\n💼 *NIT:* ${cot.proveedor.nit}\n📦 *Productos:*\n${lineas}\n💰 *Total:* $${cot.total.toLocaleString()}\n💳 *Medio de pago:* ${cot.medioPago||'–'}\n📅 *Fecha:* ${new Date(cot.fecha).toLocaleDateString('es-CO')}${venc}\n📋 *Estado:* ${cot.estadoAprobacion.toUpperCase()}\n👤 *Creado por:* ${cot.creadoPor}\n\n✅ *APROBAR / RECHAZAR:*\n${enlace}`;
 }
 
 function poblarSelCotWA(filtro=''){
   const sel=document.getElementById('selCotWA');if(!sel)return;
   const lista=filtro?DB.cotizaciones.filter(c=>c.referencia.toUpperCase().includes(filtro.toUpperCase())):DB.cotizaciones;
-  sel.innerHTML='<option value="">— Seleccione —</option>'+lista.slice().reverse().map(c=>{const est={aprobado:'✅',rechazado:'❌',pendiente:'⏳'}[c.estadoAprobacion]||'';return `<option value="${c.id}">${est} ${c.referencia} — ${c.proveedor.nombre}</option>`;}).join('');
+  sel.innerHTML='<option value="">— Seleccione —</option>'+lista.slice().reverse().map(c=>{
+    const est={aprobado:'✅',rechazado:'❌',pendiente:'⏳'}[c.estadoAprobacion]||'';
+    return `<option value="${c.id}">${est} ${c.referencia} — ${c.proveedor.nombre} — $${c.total.toLocaleString()}</option>`;
+  }).join('');
   if(_cotWAselId){sel.value=_cotWAselId;if(!sel.value){_cotWAselId=null;ocultarPrevCotWA();}}
 }
 
@@ -1371,10 +1527,24 @@ function previewCotWA(){
 }
 
 function ocultarPrevCotWA(){_cotWAselId=null;document.getElementById('prevCotWA').style.display='none';const btn=document.getElementById('btnEnviarCotWA');if(btn){btn.style.opacity='.5';btn.style.cursor='not-allowed';}}
-function enviarCotSelAlGrupo(){if(!puede('puedeEnviarWA')){toast('No tienes permiso','error');return;}if(!_cotWAselId){toast('Selecciona una cotización','error');return;}if(!DB.config.waLink){toast('Configura el enlace del grupo primero','error');return;}const cot=DB.cotizaciones.find(x=>Number(x.id)===_cotWAselId);if(!cot)return;const msg=buildMsgCot(cot);abrirModalWA(msg,cot.referencia,cot.id);}
-function enviarMsgManual(){if(!puede('puedeEnviarWA')){toast('No tienes permiso','error');return;}if(!DB.config.waLink){toast('No hay grupo configurado','error');return;}const msg=document.getElementById('msgManual').value.trim();if(!msg){toast('Escribe un mensaje','error');return;}abrirModalWA(msg,'Mensaje manual',null);document.getElementById('msgManual').value='';}
+
+function enviarCotSelAlGrupo(){
+  if(!puede('puedeEnviarWA')){toast('No tienes permiso','error');return;}
+  if(!_cotWAselId){toast('Selecciona una cotización','error');return;}
+  if(!DB.config.waLink){toast('Configura el enlace del grupo primero','error');return;}
+  const cot=DB.cotizaciones.find(x=>Number(x.id)===_cotWAselId);if(!cot)return;
+  const msg=buildMsgCot(cot);abrirModalWA(msg,cot.referencia,cot.id);
+}
+
+function enviarMsgManual(){
+  if(!puede('puedeEnviarWA')){toast('No tienes permiso','error');return;}
+  if(!DB.config.waLink){toast('No hay grupo configurado','error');return;}
+  const msg=document.getElementById('msgManual').value.trim();if(!msg){toast('Escribe un mensaje','error');return;}
+  abrirModalWA(msg,'Mensaje manual',null);document.getElementById('msgManual').value='';
+}
 
 let _msgWAActual='',_enlaceAprobacionActual='';
+
 function abrirModalWA(msg,titulo,cotId){
   _msgWAActual=msg;
   document.getElementById('waPreviewMsg').textContent=msg;
@@ -1382,18 +1552,30 @@ function abrirModalWA(msg,titulo,cotId){
   if(cotId){_enlaceAprobacionActual=generarEnlaceAprobacion(cotId);enlaceTexto.textContent=_enlaceAprobacionActual;enlaceDiv.style.display='';}
   else{_enlaceAprobacionActual='';enlaceDiv.style.display='none';}
   document.getElementById('btnAbrirWA').onclick=()=>{
-    try{navigator.clipboard.writeText(msg).then(()=>toast('📋 Copiado','info',3000));}catch(e){}
-    window.open(DB.config.waLink,'_blank');
+    // Abre WhatsApp con el mensaje ya escrito listo para enviar
+    const msgCodificado=encodeURIComponent(msg);
+    const urlWA=`https://wa.me/?text=${msgCodificado}`;
+    window.open(urlWA,'_blank');
+    // También copia al portapapeles como respaldo
+    try{navigator.clipboard.writeText(msg);}catch(e){}
     DB.waHistorial.unshift({fecha:new Date().toISOString(),msg:titulo,usuario:usuario?.nombre});
     if(DB.waHistorial.length>50)DB.waHistorial.length=50;
-    renderHistorialWA();closeModal('mWAInstr');toast('✅ WhatsApp abierto','success');
+    guardarDB();renderHistorialWA();closeModal('mWAInstr');
+    toast('✅ WhatsApp abierto con el mensaje listo','success',5000);
   };
   openModal('mWAInstr');
 }
-function copiarMsgWA(){try{navigator.clipboard.writeText(_msgWAActual).then(()=>toast('📋 Copiado','success'));}catch(e){toast('No se pudo copiar','warning');}}
-function copiarEnlaceApro(){if(!_enlaceAprobacionActual)return;try{navigator.clipboard.writeText(_enlaceAprobacionActual).then(()=>toast('🔗 Enlace copiado','success'));}catch(e){toast('No se pudo copiar','warning');}}
-function renderHistorialWA(){const el=document.getElementById('historialWa');if(!el)return;if(!DB.waHistorial.length){el.innerHTML='<div style="text-align:center;padding:24px;color:var(--text-muted);">Sin historial</div>';return;}el.innerHTML=DB.waHistorial.map(n=>`<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border-soft);"><span style="font-size:18px;">📲</span><div><div style="font-size:12px;color:var(--text);">${n.msg}</div><div style="font-size:10px;color:var(--text-dim);margin-top:2px;">${new Date(n.fecha).toLocaleString()} · ${n.usuario}</div></div></div>`).join('');}
 
+function copiarMsgWA(){try{navigator.clipboard.writeText(_msgWAActual).then(()=>toast('📋 Mensaje copiado','success'));}catch(e){toast('No se pudo copiar','warning');}}
+function copiarEnlaceApro(){if(!_enlaceAprobacionActual)return;try{navigator.clipboard.writeText(_enlaceAprobacionActual).then(()=>toast('🔗 Enlace copiado','success'));}catch(e){toast('No se pudo copiar','warning');}}
+
+function renderHistorialWA(){
+  const el=document.getElementById('historialWa');if(!el)return;
+  if(!DB.waHistorial.length){el.innerHTML='<div style="text-align:center;padding:24px;color:var(--text-muted);">Sin notificaciones enviadas aún</div>';return;}
+  el.innerHTML=DB.waHistorial.map(n=>`<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border-soft);"><span style="font-size:18px;">📲</span><div><div style="font-size:12px;color:var(--text);">${n.msg}</div><div style="font-size:10px;color:var(--text-dim);margin-top:2px;">${new Date(n.fecha).toLocaleString()} · ${n.usuario}</div></div></div>`).join('');
+}
+
+// ── Inventario ──
 function iniciarInventario(){
   const selAnio=document.getElementById('invAnio');if(!selAnio)return;
   const anios=[...new Set(DB.cotizaciones.map(c=>new Date(c.fecha).getFullYear()))].sort((a,b)=>b-a);
@@ -1426,26 +1608,59 @@ function renderInventario(){
   const grupos=calcGruposInv();const todaCots=grupos.flatMap(g=>g.cots);
   const totG=todaCots.reduce((s,c)=>s+c.total,0),pagG=todaCots.reduce((s,c)=>s+(c.montoPagado||0),0),pendG=todaCots.reduce((s,c)=>s+(c.montoRestante||0),0);
   if(kpisEl)kpisEl.innerHTML=`<div class="stat-box gold"><div class="stat-num">${grupos.length}</div><div class="stat-label">Proveedores</div></div><div class="stat-box blue"><div class="stat-num">${todaCots.length}</div><div class="stat-label">Cotizaciones</div></div><div class="stat-box green"><div class="stat-num" style="font-size:18px;">$${totG.toLocaleString()}</div><div class="stat-label">Total General</div></div><div class="stat-box teal"><div class="stat-num" style="font-size:18px;">$${pagG.toLocaleString()}</div><div class="stat-label">Total Pagado</div></div><div class="stat-box red"><div class="stat-num" style="font-size:18px;">$${pendG.toLocaleString()}</div><div class="stat-label">Por Cobrar</div></div>`;
-  if(!grupos.length){cuerpoEl.innerHTML='<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">📭 Sin cotizaciones</div>';return;}
-  const rankColor=['var(--gold)','#C0C0C0','#CD7F32','var(--dark4)'];
+  if(!grupos.length){cuerpoEl.innerHTML='<div style="text-align:center;padding:60px 20px;color:var(--text-muted);">📭 Sin cotizaciones que mostrar</div>';return;}
   cuerpoEl.innerHTML=grupos.map((g,gi)=>{
     const montoG=g.cots.reduce((s,c)=>s+c.total,0),pagadoG=g.cots.reduce((s,c)=>s+(c.montoPagado||0),0),pendG_=montoG-pagadoG,pctG=montoG>0?Math.min(pagadoG/montoG*100,100):0;
-    const rC=rankColor[gi]||'var(--dark4)',rT=gi<3?'#000':'var(--text-muted)';
+    const rankColor=gi===0?'var(--gold)':gi===1?'#C0C0C0':gi===2?'#CD7F32':'var(--dark4)';
+    const rankTxt=gi<3?'#000':'var(--text-muted)';
     const cotRows=g.cots.slice().sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).map(c=>{
       const stA={aprobado:{bg:'rgba(46,204,113,.15)',cl:'var(--success)',bdr:'rgba(46,204,113,.35)',ic:'✅ Aprobado'},pendiente:{bg:'rgba(245,166,35,.15)',cl:'var(--gold)',bdr:'rgba(245,166,35,.35)',ic:'⏳ Pendiente'},rechazado:{bg:'rgba(231,76,60,.15)',cl:'#FF8A80',bdr:'rgba(231,76,60,.35)',ic:'❌ Rechazado'}}[c.estadoAprobacion];
       const stP={pagado:{cl:'var(--success)',ic:'💚 Pagado'},abono:{cl:'#C39BD3',ic:'🔄 Abono'},debe:{cl:'var(--gold)',ic:'🔴 Debe'}}[c.estadoPago]||{cl:'var(--text-muted)',ic:c.estadoPago};
       const uid=`cot-${g.id}-${c.id}`;
       const prodRows=c.productos.map((p,pi)=>`<tr style="background:rgba(0,0,0,.25);"><td style="padding:7px 13px 7px 36px;font-size:11px;color:var(--text-muted);">${pi+1}</td><td style="padding:7px 13px;font-size:12px;">${p.nombre}</td><td style="padding:7px 13px;text-align:center;color:var(--info);font-weight:700;">${p.cantidad}</td><td style="padding:7px 13px;text-align:right;color:var(--text-muted);">$${p.precio.toLocaleString()}</td><td style="padding:7px 13px;text-align:right;font-weight:700;color:var(--gold);">$${p.subtotal.toLocaleString()}</td><td></td></tr>`).join('');
-      return `<tr id="hdr-${uid}" style="cursor:pointer;border-top:1px solid var(--border-soft);" onclick="toggleCotInv('${uid}')"><td style="padding:11px 13px;"><div style="display:flex;align-items:center;gap:6px;"><span id="arr-${uid}" style="color:var(--text-dim);font-size:10px;transition:transform .2s;">▶</span><strong style="font-family:var(--mono);font-size:12px;color:var(--gold);">${c.referencia}</strong></div></td><td style="padding:11px 13px;font-size:12px;color:var(--text-muted);">${new Date(c.fecha).toLocaleDateString()}</td><td style="padding:11px 13px;text-align:center;"><span style="background:${stA.bg};color:${stA.cl};border:1px solid ${stA.bdr};border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;">${stA.ic}</span></td><td style="padding:11px 13px;text-align:center;font-size:11px;font-weight:700;color:${stP.cl};">${stP.ic}</td><td style="padding:11px 13px;text-align:right;font-size:13px;font-weight:800;">$${c.total.toLocaleString()}</td><td style="padding:11px 13px;"><button class="btn btn-info btn-sm btn-icon" onclick="event.stopPropagation();verDetalles(${c.id})">👁</button></td></tr><tr id="prods-${uid}" style="display:none;"><td colspan="6" style="padding:0;"><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:rgba(245,166,35,.05);"><th style="padding:6px 13px 6px 36px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:left;">#</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:left;">Producto</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:center;">Cant.</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Precio</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Subtotal</th><th style="width:32px;"></th></tr></thead><tbody>${prodRows}<tr style="background:rgba(245,166,35,.07);border-top:1px solid rgba(245,166,35,.2);"><td colspan="4" style="padding:8px 13px 8px 36px;font-size:11px;font-weight:700;color:var(--text-muted);text-align:right;">TOTAL</td><td style="padding:8px 13px;font-size:14px;font-weight:900;text-align:right;color:var(--gold);">$${c.total.toLocaleString()}</td><td></td></tr></tbody></table></td></tr>`;
+      return `<tr id="hdr-${uid}" style="cursor:pointer;border-top:1px solid var(--border-soft);" onclick="toggleCotInv('${uid}')"><td style="padding:11px 13px;"><div style="display:flex;align-items:center;gap:6px;"><span id="arr-${uid}" style="color:var(--text-dim);font-size:10px;transition:transform .2s;">▶</span><strong style="font-family:var(--mono);font-size:12px;color:var(--gold);">${c.referencia}</strong></div></td><td style="padding:11px 13px;font-size:12px;color:var(--text-muted);">${new Date(c.fecha).toLocaleDateString()}</td><td style="padding:11px 13px;text-align:center;"><span style="background:${stA.bg};color:${stA.cl};border:1px solid ${stA.bdr};border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;">${stA.ic}</span></td><td style="padding:11px 13px;text-align:center;font-size:11px;font-weight:700;color:${stP.cl};">${stP.ic}</td><td style="padding:11px 13px;text-align:right;font-size:13px;font-weight:800;">$${c.total.toLocaleString()}</td><td style="padding:11px 13px;"><button class="btn btn-info btn-sm btn-icon" onclick="event.stopPropagation();verDetalles(${c.id})">👁</button></td></tr>
+      <tr id="prods-${uid}" style="display:none;"><td colspan="6" style="padding:0;"><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:rgba(245,166,35,.05);"><th style="padding:6px 13px 6px 36px;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);text-align:left;width:40px;">#</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:left;">Producto</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:center;">Cant.</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Precio</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Subtotal</th><th style="width:32px;"></th></tr></thead><tbody>${prodRows}<tr style="background:rgba(245,166,35,.07);border-top:1px solid rgba(245,166,35,.2);"><td colspan="4" style="padding:8px 13px 8px 36px;font-size:11px;font-weight:700;color:var(--text-muted);text-align:right;">TOTAL</td><td style="padding:8px 13px;font-size:14px;font-weight:900;text-align:right;color:var(--gold);">$${c.total.toLocaleString()}</td><td></td></tr></tbody></table></td></tr>`;
     }).join('');
     const pm={};g.cots.forEach(c=>c.productos.forEach(p=>{const k=p.nombre.toLowerCase().trim();if(!pm[k])pm[k]={nom:p.nombre,qty:0,tot:0};pm[k].qty+=p.cantidad;pm[k].tot+=p.subtotal;}));
-    return `<div style="margin-bottom:20px;border:1px solid var(--border-soft);border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3);"><div style="background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(245,166,35,.03));padding:18px 22px;border-bottom:1px solid var(--border-soft);"><div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;"><div style="display:flex;align-items:center;gap:14px;"><div style="width:36px;height:36px;border-radius:50%;background:${rC};color:${rT};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div><div><div style="font-size:17px;font-weight:900;color:var(--gold);">🏢 ${g.nombre}</div><div style="font-size:11px;color:var(--text-muted);">NIT: ${g.nit}</div></div></div><div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;"><div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);">$${montoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Total</div></div><div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:var(--success);">$${pagadoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pagado</div></div><div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">$${pendG_.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pendiente</div></div><div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);color:var(--info);">${g.cots.length}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Cotizaciones</div></div></div></div><div style="margin-top:14px;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">${pctG.toFixed(1)}%</span></div><div style="background:var(--dark3);border-radius:20px;height:6px;overflow:hidden;"><div style="width:${pctG}%;height:100%;background:${pendG_<=0?'var(--success)':pctG>60?'var(--gold)':'var(--danger)'};border-radius:20px;"></div></div></div></div><div style="background:var(--dark2);"><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:var(--dark3);"><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Referencia</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Fecha</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Aprobación</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Pago</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:right;">Total</th><th style="padding:10px 13px;width:70px;"></th></tr></thead><tbody>${cotRows}</tbody></table></div><div style="background:var(--dark);border-top:1px solid var(--border-soft);padding:16px 22px;"><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px;">📦 Productos totales</div><div style="display:flex;flex-wrap:wrap;gap:8px;">${Object.values(pm).sort((a,b)=>b.tot-a.tot).map(p=>`<div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:11px;padding:10px 13px;"><div style="font-size:12px;font-weight:700;margin-bottom:5px;">${p.nom}</div><div style="display:flex;gap:10px;"><span style="font-size:11px;color:var(--info);font-weight:700;">📦 ${p.qty}</span><span style="font-size:11px;color:var(--gold);font-weight:700;">$${p.tot.toLocaleString()}</span></div></div>`).join('')}</div></div></div>`;
+    return `<div style="margin-bottom:20px;border:1px solid var(--border-soft);border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3);">
+      <div style="background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(245,166,35,.03));padding:18px 22px;border-bottom:1px solid var(--border-soft);">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:${rankColor};color:${rankTxt};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div>
+            <div>
+              <div style="font-size:17px;font-weight:900;color:var(--gold);">🏢 ${g.nombre}</div>
+              <div style="font-size:11px;color:var(--text-muted);">NIT: ${g.nit}${g.correo?' · '+g.correo:''}</div>
+              ${(g.mediosPago&&g.mediosPago.length)?`<div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap;">${g.mediosPago.map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}
+            </div>
+          </div>
+          <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
+            <div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);">$${montoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Total</div></div>
+            <div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:var(--success);">$${pagadoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Pagado</div></div>
+            <div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">$${pendG_.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Pendiente</div></div>
+            <div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);color:var(--info);">${g.cots.length}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Cotizaciones</div></div>
+          </div>
+        </div>
+        <div style="margin-top:14px;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">${pctG.toFixed(1)}%</span></div><div style="background:var(--dark3);border-radius:20px;height:6px;overflow:hidden;"><div style="width:${pctG}%;height:100%;background:${pendG_<=0?'var(--success)':pctG>60?'var(--gold)':'var(--danger)'};border-radius:20px;transition:width .8s;"></div></div></div>
+      </div>
+      <div style="background:var(--dark2);"><table style="width:100%;border-collapse:collapse;">
+        <thead><tr style="background:var(--dark3);"><th style="padding:10px 13px;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Referencia</th><th style="padding:10px 13px;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Fecha</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Aprobación</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Pago</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:right;">Total</th><th style="padding:10px 13px;width:70px;"></th></tr></thead>
+        <tbody>${cotRows}</tbody>
+      </table></div>
+      <div style="background:var(--dark);border-top:1px solid var(--border-soft);padding:16px 22px;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px;">📦 Productos totales</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          ${Object.values(pm).sort((a,b)=>b.tot-a.tot).map(p=>`<div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:11px;padding:10px 13px;"><div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:5px;">${p.nom}</div><div style="display:flex;gap:10px;"><span style="font-size:11px;color:var(--info);font-weight:700;">📦 ${p.qty} uds.</span><span style="font-size:11px;color:var(--gold);font-weight:700;">$${p.tot.toLocaleString()}</span></div></div>`).join('')}
+        </div>
+      </div>
+    </div>`;
   }).join('');
 }
 
 function toggleCotInv(uid){const body=document.getElementById('prods-'+uid),arr=document.getElementById('arr-'+uid);if(!body)return;const open=body.style.display!=='none'&&body.style.display!=='';body.style.display=open?'none':'table-row';if(arr)arr.style.transform=open?'rotate(0deg)':'rotate(90deg)';}
 
+// ── Excel ──
 function cargarSheetJS(cb){if(window.XLSX){cb();return;}const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';s.onload=cb;s.onerror=()=>toast('No se pudo cargar SheetJS','error');document.head.appendChild(s);}
+
 function exportarExcelInventario(){
   const grupos=calcGruposInv();if(!grupos.length){toast('No hay datos','warning');return;}
   cargarSheetJS(()=>{
@@ -1455,30 +1670,53 @@ function exportarExcelInventario(){
     const ws=XLSX.utils.aoa_to_sheet(resRows);ws['!cols']=[{wch:35},{wch:18},{wch:14},{wch:18},{wch:18},{wch:18}];
     XLSX.utils.book_append_sheet(WB,ws,'RESUMEN');
     const fecha=new Date().toISOString().split('T')[0];XLSX.writeFile(WB,`OROC_Inventario_${fecha}.xlsx`);
-    toast('✅ Excel descargado','success');
+    toast(`✅ Excel descargado`,'success');
   });
 }
 
+// ── Update UI Principal ──
 function renderTblCot(arr){
   const tb=document.getElementById('tblCot');
   if(!arr.length){tb.innerHTML='<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">No hay cotizaciones</td></tr>';return;}
-  tb.innerHTML=arr.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong>${c.esNotaCredito?'<br><span style="background:rgba(46,204,113,.15);color:var(--success);border-radius:5px;padding:1px 6px;font-size:9px;font-weight:700;">🏷️ NC</span>':''}</td><td>${c.proveedor.nombre}</td><td><strong>$${c.total.toLocaleString()}</strong>${(c.descuento&&c.descuento>0)?`<br><span style="font-size:10px;color:var(--success);">-$${c.descuento.toLocaleString()}</span>`:''}</td><td>${badgeApro(c.estadoAprobacion)}</td><td>${badgePago(c.estadoPago)}</td><td style="color:var(--text-muted);font-size:11px;">${new Date(c.fecha).toLocaleDateString()}</td><td><div class="td-actions"><button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button><button class="btn btn-sm btn-icon" onclick="exportarPDF(${c.id})" style="color:#FF6B6B;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.1);">📄</button>${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm btn-icon" onclick="mostrarResumen(${c.id})">💰</button>`:''}${puede('puedeEnviarWA')?`<button class="btn btn-wa btn-sm btn-icon" onclick="abrirModalWA(buildMsgCot(DB.cotizaciones.find(x=>x.id===${c.id})),'${c.referencia}',${c.id})">📲</button>`:''}${puede('puedeEliminar')?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarCotizacion(${c.id})">🗑</button>`:''}</div></td></tr>`).join('');
+  tb.innerHTML=arr.slice().reverse().map(c=>`<tr>
+    <td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong>${c.esNotaCredito?'<br><span style="background:rgba(46,204,113,.15);color:var(--success);border-radius:5px;padding:1px 6px;font-size:9px;font-weight:700;">🏷️ NC</span>':''}</td>
+    <td>${c.proveedor.nombre}</td>
+    <td><strong>$${c.total.toLocaleString()}</strong>${(c.descuento&&c.descuento>0)?`<br><span style="font-size:10px;color:var(--success);">-$${c.descuento.toLocaleString()}</span>`:''}</td>
+    <td>${badgeApro(c.estadoAprobacion)}</td>
+    <td>${badgePago(c.estadoPago)}</td>
+    <td style="color:var(--text-muted);font-size:11px;">${new Date(c.fecha).toLocaleDateString()}</td>
+    <td><div class="td-actions">
+      <button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button>
+      <button class="btn btn-sm btn-icon" onclick="exportarPDF(${c.id})" style="color:#FF6B6B;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.1);">📄</button>
+      ${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm btn-icon" onclick="mostrarResumen(${c.id})">💰</button>`:''}
+      ${puede('puedeEnviarWA')?`<button class="btn btn-wa btn-sm btn-icon" onclick="abrirModalWA(buildMsgCot(DB.cotizaciones.find(x=>x.id===${c.id})),'${c.referencia}',${c.id})">📲</button>`:''}
+      ${puede('puedeEliminar')?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarCotizacion(${c.id})">🗑</button>`:''}
+    </div></td>
+  </tr>`).join('');
 }
 
 function updateUI(){
+  guardarDB();
   updateDashboard();
   const sel=document.getElementById('selProv');
   if(sel)sel.innerHTML='<option value="">Seleccione proveedor</option>'+DB.proveedores.map(p=>`<option value="${p.id}">${p.nombre}</option>`).join('');
   const provForm=document.getElementById('provFormSection');if(provForm)provForm.style.display=puede('puedeCrearProveedores')?'':'none';
   const tbProv=document.getElementById('tblProv');
-  if(tbProv)tbProv.innerHTML=DB.proveedores.length?DB.proveedores.map(p=>{const medBadges=(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 6px;font-size:10px;font-weight:700;">${m}</span>`).join(' ');const cuentaInfo=p.banco?`<div style="font-size:11px;"><strong>${p.banco}</strong>${p.tipoCuenta?` · <span style="color:var(--text-muted);">${p.tipoCuenta}</span>`:''}</div>${p.numeroCuenta?`<div style="font-size:11px;color:var(--text-muted);font-family:monospace;">${p.numeroCuenta}</div>`:''}`:'–';return `<tr><td><strong>${p.nombre}</strong></td><td>${p.nit}</td><td>${p.correo}</td><td>${p.telefono||'–'}</td><td>${cuentaInfo}</td><td>${medBadges||'–'}</td><td>${puede('puedeEliminarProveedores')?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarProveedor(${p.id})">🗑</button>`:'–'}</td></tr>`;}).join(''):'<tr><td colspan="7" style="text-align:center;padding:28px;color:var(--text-muted);">Sin proveedores</td></tr>';
+  if(tbProv)tbProv.innerHTML=DB.proveedores.length
+    ?DB.proveedores.map(p=>{const medBadges=(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 6px;font-size:10px;font-weight:700;">${m}</span>`).join(' ');const cuentaInfo=p.banco?`<div style="font-size:11px;"><strong style="color:var(--text);">${p.banco}</strong>${p.tipoCuenta?` · <span style="color:var(--text-muted);">${p.tipoCuenta}</span>`:''}</div>${p.numeroCuenta?`<div style="font-size:11px;color:var(--text-muted);font-family:monospace;">${p.numeroCuenta}</div>`:''}`:'–';return `<tr><td><strong>${p.nombre}</strong></td><td>${p.nit}</td><td>${p.correo}</td><td>${p.telefono||'–'}</td><td>${cuentaInfo}</td><td>${medBadges||'–'}</td><td>${puede('puedeEliminarProveedores')?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarProveedor(${p.id})">🗑</button>`:'–'}</td></tr>`;}).join('')
+    :'<tr><td colspan="7" style="text-align:center;padding:28px;color:var(--text-muted);">Sin proveedores</td></tr>';
   renderTblCot(DB.cotizaciones);
   const papTabUsr=document.getElementById('papTabUsr');if(papTabUsr)papTabUsr.style.display=puede('puedeGestionarUsuarios')?'':'none';
-  const tbPC=document.getElementById('tblPapCot');if(tbPC)tbPC.innerHTML=DB.papelera.length?DB.papelera.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-size:12px;">${c.referencia}</strong></td><td>${c.proveedor.nombre}</td><td>$${c.total.toLocaleString()}</td><td>${badgeApro(c.estadoAprobacion)}</td><td style="color:var(--text-muted);font-size:11px;">${c.eliminadoPor}</td><td>${diasRestantes(c.fechaEliminacion)}d</td><td><div class="td-actions"><button class="btn btn-success btn-sm" onclick="restaurarCotizacion(${c.id})">♻️</button><button class="btn btn-danger btn-sm" onclick="eliminarPermanenteCot(${c.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="7" style="text-align:center;padding:28px;color:var(--text-muted);">Papelera vacía</td></tr>';
-  const tbPP=document.getElementById('tblPapProv');if(tbPP)tbPP.innerHTML=DB.papProv.length?DB.papProv.slice().reverse().map(p=>`<tr><td><strong>${p.nombre}</strong></td><td>${p.nit}</td><td>${p.correo}</td><td style="font-size:11px;color:var(--text-muted);">${p.eliminadoPor}</td><td>${diasRestantes(p.fechaEliminacion)}d</td><td><div class="td-actions"><button class="btn btn-success btn-sm" onclick="restaurarProveedor(${p.id})">♻️</button><button class="btn btn-danger btn-sm" onclick="eliminarPermanenteProv(${p.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--text-muted);">Papelera vacía</td></tr>';
-  const tbPU=document.getElementById('tblPapUsr');if(tbPU)tbPU.innerHTML=DB.papUsr.length?DB.papUsr.slice().reverse().map(u=>`<tr><td><strong>${u.nombre}</strong></td><td>${u.usuario}</td><td>${rolBadgeHtml(u.rol)}</td><td style="font-size:11px;color:var(--text-muted);">${u.eliminadoPor}</td><td>${diasRestantes(u.fechaEliminacion)}d</td><td><div class="td-actions"><button class="btn btn-success btn-sm" onclick="restaurarUsuario(${u.id})">♻️</button><button class="btn btn-danger btn-sm" onclick="eliminarPermanenteUsr(${u.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--text-muted);">Papelera vacía</td></tr>';
-  const tbApro=document.getElementById('tblApro');if(tbApro)tbApro.innerHTML=DB.cotizaciones.length?DB.cotizaciones.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong></td><td>${c.proveedor.nombre}</td><td>$${c.total.toLocaleString()}</td><td style="color:var(--text-muted);">${c.creadoPor}</td><td>${badgeApro(c.estadoAprobacion)}</td><td style="font-size:11px;">${new Date(c.fecha).toLocaleDateString()}</td><td><div class="td-actions">${c.estadoAprobacion==='pendiente'?`<button class="btn btn-success btn-sm btn-icon" onclick="aprobarCotizacion(${c.id})">👍</button><button class="btn btn-danger btn-sm btn-icon" onclick="rechazarCotizacion(${c.id})">👎</button>`:''}<button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button><button class="btn btn-danger btn-sm btn-icon" onclick="eliminarCotizacion(${c.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="7" style="text-align:center;padding:28px;color:var(--text-muted);">Sin cotizaciones</td></tr>';
-  const tbUsr=document.getElementById('tblUsr');if(tbUsr)tbUsr.innerHTML=DB.usuarios.map(u=>{const esSelf=Number(u.id)===Number(usuario?.id);const selfTag=esSelf?'<span style="font-size:9px;color:var(--gold);margin-left:4px;">(tú)</span>':'';const btnToggle=!esSelf?`<button class="btn btn-sm" onclick="toggleActivoUsuario(${u.id})" style="background:${u.activo?'rgba(231,76,60,.15)':'rgba(46,204,113,.15)'};color:${u.activo?'#FF8A80':'var(--success)'};border:1px solid ${u.activo?'rgba(231,76,60,.3)':'rgba(46,204,113,.3)'};">${u.activo?'🔒':'🔓'}</button>`:'';const btnElim=!esSelf&&u.id!==1&&u.id!==2&&u.id!==3?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarUsuario(${u.id})">🗑</button>`:'';return `<tr style="${!u.activo?'opacity:.5':''}"><td><strong>${u.nombre}</strong>${selfTag}</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:11px;">${u.usuario}</td><td>${rolBadgeHtml(u.rol)}</td><td><span style="color:${u.activo?'var(--success)':'var(--danger)'};font-weight:600;font-size:12px;">● ${u.activo?'Activo':'Inactivo'}</span></td><td><div class="td-actions">${btnToggle}${btnElim}</div></td></tr>`;}).join('');
+  const tbPC=document.getElementById('tblPapCot');
+  if(tbPC)tbPC.innerHTML=DB.papelera.length?DB.papelera.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-size:12px;">${c.referencia}</strong></td><td>${c.proveedor.nombre}</td><td>$${c.total.toLocaleString()}</td><td>${badgeApro(c.estadoAprobacion)}</td><td style="color:var(--text-muted);font-size:11px;">${c.eliminadoPor}</td><td>${diasRestantes(c.fechaEliminacion)}d</td><td><div class="td-actions"><button class="btn btn-success btn-sm" onclick="restaurarCotizacion(${c.id})">♻️</button><button class="btn btn-danger btn-sm" onclick="eliminarPermanenteCot(${c.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="7" style="text-align:center;padding:28px;color:var(--text-muted);">Papelera vacía</td></tr>';
+  const tbPP=document.getElementById('tblPapProv');
+  if(tbPP)tbPP.innerHTML=DB.papProv.length?DB.papProv.slice().reverse().map(p=>`<tr><td><strong>${p.nombre}</strong></td><td>${p.nit}</td><td>${p.correo}</td><td style="font-size:11px;color:var(--text-muted);">${p.eliminadoPor}</td><td>${diasRestantes(p.fechaEliminacion)}d</td><td><div class="td-actions"><button class="btn btn-success btn-sm" onclick="restaurarProveedor(${p.id})">♻️</button><button class="btn btn-danger btn-sm" onclick="eliminarPermanenteProv(${p.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--text-muted);">Papelera vacía</td></tr>';
+  const tbPU=document.getElementById('tblPapUsr');
+  if(tbPU)tbPU.innerHTML=DB.papUsr.length?DB.papUsr.slice().reverse().map(u=>`<tr><td><strong>${u.nombre}</strong></td><td>${u.usuario}</td><td>${rolBadgeHtml(u.rol)}</td><td style="font-size:11px;color:var(--text-muted);">${u.eliminadoPor}</td><td>${diasRestantes(u.fechaEliminacion)}d</td><td><div class="td-actions"><button class="btn btn-success btn-sm" onclick="restaurarUsuario(${u.id})">♻️</button><button class="btn btn-danger btn-sm" onclick="eliminarPermanenteUsr(${u.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="6" style="text-align:center;padding:28px;color:var(--text-muted);">Papelera vacía</td></tr>';
+  const tbApro=document.getElementById('tblApro');
+  if(tbApro)tbApro.innerHTML=DB.cotizaciones.length?DB.cotizaciones.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong></td><td>${c.proveedor.nombre}</td><td>$${c.total.toLocaleString()}</td><td style="color:var(--text-muted);">${c.creadoPor}</td><td>${badgeApro(c.estadoAprobacion)}</td><td style="font-size:11px;">${new Date(c.fecha).toLocaleDateString()}</td><td><div class="td-actions">${c.estadoAprobacion==='pendiente'?`<button class="btn btn-success btn-sm btn-icon" onclick="aprobarCotizacion(${c.id})">👍</button><button class="btn btn-danger btn-sm btn-icon" onclick="rechazarCotizacion(${c.id})">👎</button>`:''}<button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button><button class="btn btn-danger btn-sm btn-icon" onclick="eliminarCotizacion(${c.id})">🗑</button></div></td></tr>`).join(''):'<tr><td colspan="7" style="text-align:center;padding:28px;color:var(--text-muted);">Sin cotizaciones</td></tr>';
+  const tbUsr=document.getElementById('tblUsr');
+  if(tbUsr)tbUsr.innerHTML=DB.usuarios.map(u=>{const esSelf=Number(u.id)===Number(usuario?.id);const selfTag=esSelf?'<span style="font-size:9px;color:var(--gold);margin-left:4px;">(tú)</span>':'';const btnToggle=!esSelf?`<button class="btn btn-sm" onclick="toggleActivoUsuario(${u.id})" style="background:${u.activo?'rgba(231,76,60,.15)':'rgba(46,204,113,.15)'};color:${u.activo?'#FF8A80':'var(--success)'};border:1px solid ${u.activo?'rgba(231,76,60,.3)':'rgba(46,204,113,.3)'};">${u.activo?'🔒':'🔓'}</button>`:'';const btnElim=!esSelf&&u.id!==1&&u.id!==2&&u.id!==3?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarUsuario(${u.id})">🗑</button>`:'';return `<tr style="${!u.activo?'opacity:.5':''}"><td><strong>${u.nombre}</strong>${selfTag}</td><td style="color:var(--text-muted);font-family:var(--mono);font-size:11px;">${u.usuario}</td><td>${rolBadgeHtml(u.rol)}</td><td><span style="color:${u.activo?'var(--success)':'var(--danger)'};font-weight:600;font-size:12px;">● ${u.activo?'Activo':'Inactivo'}</span></td><td><div class="td-actions">${btnToggle}${btnElim}</div></td></tr>`;}).join('');
   if(document.getElementById('tab-inventario')?.classList.contains('active'))iniciarInventario();
   if(document.getElementById('tab-panel-prov')?.classList.contains('active'))renderPanelProv();
   if(document.getElementById('tab-resumen')?.classList.contains('active'))renderResumen();
@@ -1487,6 +1725,7 @@ function updateUI(){
   updateNotifs();
 }
 
+// ── PDF Export ──
 function exportarPDF(id){
   if(typeof window.jspdf==='undefined'){toast('Cargando PDF…','info',2000);setTimeout(()=>exportarPDF(id),1500);return;}
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(id));if(!c){toast('No encontrada','error');return;}
@@ -1498,9 +1737,9 @@ function exportarPDF(id){
   doc.setFillColor(...DARK);doc.circle(18,16,10,'F');
   doc.setTextColor(...GOLD);doc.setFontSize(10);doc.setFont('helvetica','bold');doc.text('OC',18,19,{align:'center'});
   doc.setTextColor(...DARK);doc.setFontSize(18);doc.setFont('helvetica','bold');doc.text('OROCONSTRUCCIÓN S.A.S',32,12);
-  doc.setFontSize(8);doc.setFont('helvetica','normal');doc.text('Sistema de Gestión',32,18);
+  doc.setFontSize(8);doc.setFont('helvetica','normal');doc.text('Sistema de Gestión — Cotización Oficial',32,18);
   doc.setFontSize(10);doc.setFont('helvetica','bold');doc.text(c.referencia,W-10,12,{align:'right'});
-  doc.setFontSize(7);doc.setFont('helvetica','normal');doc.text(new Date(c.fecha).toLocaleDateString('es-CO'),W-10,18,{align:'right'});
+  doc.setFontSize(7);doc.setFont('helvetica','normal');doc.text(new Date(c.fecha).toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'}),W-10,18,{align:'right'});
   const estColor=c.estadoAprobacion==='aprobado'?GREEN:c.estadoAprobacion==='rechazado'?RED:GOLD;
   doc.setFillColor(...estColor);doc.roundedRect(W-46,22,36,8,2,2,'F');
   doc.setTextColor(...DARK);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text(c.estadoAprobacion.toUpperCase(),W-28,27.5,{align:'center'});
@@ -1509,27 +1748,41 @@ function exportarPDF(id){
   doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text('PROVEEDOR',15,y+7);
   doc.setTextColor(...WHITE);doc.setFontSize(10);doc.setFont('helvetica','bold');doc.text(c.proveedor.nombre,15,y+16);
   doc.setFontSize(7.5);doc.setFont('helvetica','normal');doc.setTextColor(...MUTED);
-  doc.text(`NIT: ${c.proveedor.nit}`,15,y+23);doc.text(`Correo: ${c.proveedor.correo||'—'}`,15,y+29);
+  doc.text(`NIT: ${c.proveedor.nit}`,15,y+23);doc.text(`Correo: ${c.proveedor.correo||'—'}`,15,y+29);doc.text(`Tel: ${c.proveedor.telefono||'—'}`,15,y+35);
   doc.setFillColor(...DARK2);doc.roundedRect(102,y,98,38,3,3,'F');doc.setDrawColor(...GOLD);doc.roundedRect(102,y,98,38,3,3,'S');
-  doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text('COTIZACIÓN',107,y+7);
-  [['Referencia:',c.referencia],['Creado por:',c.creadoPor],['Medio de pago:',c.medioPago||'—'],['Fecha:',new Date(c.fecha).toLocaleDateString('es-CO')]].forEach((r,i)=>{doc.setTextColor(...MUTED);doc.setFontSize(7);doc.setFont('helvetica','normal');doc.text(r[0],107,y+16+(i*5.5));doc.setTextColor(...WHITE);doc.setFont('helvetica','bold');doc.text(String(r[1]),140,y+16+(i*5.5));});
+  doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text('DATOS DE LA COTIZACIÓN',107,y+7);
+  [['Referencia:',c.referencia],['Creado por:',c.creadoPor],['Medio de pago:',c.medioPago||'—'],['Fecha:',new Date(c.fecha).toLocaleDateString('es-CO')]].forEach((r,i)=>{
+    doc.setTextColor(...MUTED);doc.setFontSize(7);doc.setFont('helvetica','normal');doc.text(r[0],107,y+16+(i*5.5));
+    doc.setTextColor(...WHITE);doc.setFont('helvetica','bold');doc.text(String(r[1]),140,y+16+(i*5.5));
+  });
   y+=50;
-  doc.setTextColor(...GOLD);doc.setFontSize(8);doc.setFont('helvetica','bold');doc.text('PRODUCTOS',10,y+5);
+  doc.setTextColor(...GOLD);doc.setFontSize(8);doc.setFont('helvetica','bold');doc.text('PRODUCTOS / SERVICIOS',10,y+5);
   doc.setDrawColor(...GOLD);doc.setLineWidth(0.4);doc.line(10,y+7,200,y+7);y+=10;
-  doc.autoTable({startY:y,head:[['#','Producto','Cant.','Precio','Subtotal']],body:c.productos.map((p,i)=>[i+1,p.nombre,p.cantidad,`$${p.precio.toLocaleString()}`,`$${p.subtotal.toLocaleString()}`]),margin:{left:10,right:10},styles:{font:'helvetica',fontSize:8.5,textColor:WHITE,fillColor:DARK3,lineColor:[50,50,50],lineWidth:0.2,cellPadding:3},headStyles:{fillColor:DARK2,textColor:GOLD,fontStyle:'bold',fontSize:7.5,halign:'center'},columnStyles:{0:{halign:'center',cellWidth:10},2:{halign:'center',cellWidth:16},3:{halign:'right',cellWidth:32},4:{halign:'right',cellWidth:32,fontStyle:'bold',textColor:GOLD}},alternateRowStyles:{fillColor:[20,20,20]},theme:'grid'});
+  doc.autoTable({startY:y,head:[['#','Producto / Servicio','Cant.','Precio Unit.','Subtotal']],body:c.productos.map((p,i)=>[i+1,p.nombre,p.cantidad,`$${p.precio.toLocaleString()}`,`$${p.subtotal.toLocaleString()}`]),margin:{left:10,right:10},styles:{font:'helvetica',fontSize:8.5,textColor:WHITE,fillColor:DARK3,lineColor:[50,50,50],lineWidth:0.2,cellPadding:3},headStyles:{fillColor:DARK2,textColor:GOLD,fontStyle:'bold',fontSize:7.5,halign:'center'},columnStyles:{0:{halign:'center',cellWidth:10},2:{halign:'center',cellWidth:16},3:{halign:'right',cellWidth:32},4:{halign:'right',cellWidth:32,fontStyle:'bold',textColor:GOLD}},alternateRowStyles:{fillColor:[20,20,20]},theme:'grid'});
   y=doc.lastAutoTable.finalY+6;
+  if(y+55>H-20){doc.addPage();doc.setFillColor(...DARK);doc.rect(0,0,W,H,'F');y=15;}
   const pct=c.total>0?Math.min(c.montoPagado/c.total,1):0;
   const items=[{l:'TOTAL',v:`$${c.total.toLocaleString()}`,c:WHITE,bg:DARK3},{l:'PAGADO',v:`$${c.montoPagado.toLocaleString()}`,c:GREEN,bg:[15,40,25]},{l:'PENDIENTE',v:`$${c.montoRestante.toLocaleString()}`,c:c.montoRestante<=0?GREEN:GOLD,bg:c.montoRestante<=0?[15,40,25]:[40,30,5]}];
   items.forEach((item,i)=>{const bx=10+i*(63+2.5);doc.setFillColor(...item.bg);doc.roundedRect(bx,y,63,18,2,2,'F');doc.setDrawColor(...item.c);doc.setLineWidth(0.3);doc.roundedRect(bx,y,63,18,2,2,'S');doc.setTextColor(...MUTED);doc.setFontSize(6.5);doc.setFont('helvetica','bold');doc.text(item.l,bx+63/2,y+5.5,{align:'center'});doc.setTextColor(...item.c);doc.setFontSize(11);doc.setFont('helvetica','bold');doc.text(item.v,bx+63/2,y+13.5,{align:'center'});});
   const barX=10,barY=y+22,barW=190,barH=4;
   doc.setFillColor(...DARK3);doc.roundedRect(barX,barY,barW,barH,1,1,'F');
   if(pct>0){const fillW=Math.max(barW*pct,3),bc=pct>=1?GREEN:pct>0.5?GOLD:RED;doc.setFillColor(...bc);doc.roundedRect(barX,barY,fillW,barH,1,1,'F');}
+  doc.setTextColor(...MUTED);doc.setFontSize(6.5);doc.setFont('helvetica','normal');doc.text(`${(pct*100).toFixed(1)}% pagado`,W-10,barY+3.5,{align:'right'});
+  if(c.notas){y+=35;doc.setFillColor(...DARK2);doc.roundedRect(10,y,190,14,2,2,'F');doc.setDrawColor(...MUTED);doc.setLineWidth(0.2);doc.roundedRect(10,y,190,14,2,2,'S');doc.setTextColor(...GOLD);doc.setFontSize(7);doc.setFont('helvetica','bold');doc.text('NOTAS:',15,y+5.5);doc.setTextColor(...MUTED);doc.setFont('helvetica','normal');doc.text(doc.splitTextToSize(c.notas,170)[0],15,y+10.5);}
   const totalPages=doc.internal.getNumberOfPages();for(let pg=1;pg<=totalPages;pg++){doc.setPage(pg);doc.setDrawColor(...DARK3);doc.setLineWidth(0.3);doc.line(10,H-14,W-10,H-14);doc.setTextColor(...MUTED);doc.setFontSize(6.5);doc.setFont('helvetica','normal');doc.text('OROCONSTRUCCIÓN S.A.S — Documento generado por el Sistema de Gestión',10,H-9);doc.text(`Generado: ${new Date().toLocaleString('es-CO')}  |  Pág. ${pg} de ${totalPages}`,W-10,H-9,{align:'right'});doc.setFillColor(...GOLD);doc.rect(0,H-4,W,4,'F');}
-  doc.save(`${c.referencia}.pdf`);toast(`📄 PDF descargado`,'success');
+  doc.save(`${c.referencia}.pdf`);toast(`📄 PDF "${c.referencia}.pdf" descargado`,'success',4000);
 }
 
+// ── Panel Proveedores ──
 let ppModo='tarjeta';
-function setPPModo(modo){ppModo=modo;document.getElementById('ppBtnTarjeta').className='btn btn-sm '+(modo==='tarjeta'?'btn-gold':'btn-ghost');document.getElementById('ppBtnLista').className='btn btn-sm '+(modo==='lista'?'btn-gold':'btn-ghost');document.getElementById('ppTarjetas').style.display=modo==='tarjeta'?'':'none';document.getElementById('ppLista').style.display=modo==='lista'?'':'none';renderPanelProv();}
+function setPPModo(modo){
+  ppModo=modo;
+  document.getElementById('ppBtnTarjeta').className='btn btn-sm '+(modo==='tarjeta'?'btn-gold':'btn-ghost');
+  document.getElementById('ppBtnLista').className='btn btn-sm '+(modo==='lista'?'btn-gold':'btn-ghost');
+  document.getElementById('ppTarjetas').style.display=modo==='tarjeta'?'':'none';
+  document.getElementById('ppLista').style.display=modo==='lista'?'':'none';
+  renderPanelProv();
+}
 
 function calcDatosProv(prov){
   const cots=DB.cotizaciones.filter(c=>String(c.proveedor.id)===String(prov.id));
@@ -1542,7 +1795,13 @@ function calcDatosProv(prov){
 
 function verificarVencimientos(){
   const alertas=[];
-  DB.cotizaciones.forEach(cot=>{if(cot.estadoAprobacion!=='aprobado'||cot.estadoPago==='pagado'||!cot.fechaVencimiento)return;const d=Math.ceil((new Date(cot.fechaVencimiento)-Date.now())/(864e5));if(d<=0)alertas.push({tipo:'danger',icon:'🚨',msg:`<strong>${cot.referencia}</strong> — ${cot.proveedor.nombre} — VENCIDA. Deuda: <strong>$${cot.montoRestante.toLocaleString()}</strong>`,cotId:cot.id});else if(d<=3)alertas.push({tipo:'danger',icon:'⚠️',msg:`<strong>${cot.referencia}</strong> — Vence en <strong>${d}d</strong>. Deuda: <strong>$${cot.montoRestante.toLocaleString()}</strong>`,cotId:cot.id});else if(d<=7)alertas.push({tipo:'warning',icon:'🕐',msg:`<strong>${cot.referencia}</strong> — Vence en <strong>${d} días</strong>. Deuda: <strong>$${cot.montoRestante.toLocaleString()}</strong>`,cotId:cot.id});});
+  DB.cotizaciones.forEach(cot=>{
+    if(cot.estadoAprobacion!=='aprobado'||cot.estadoPago==='pagado'||!cot.fechaVencimiento)return;
+    const d=Math.ceil((new Date(cot.fechaVencimiento)-Date.now())/(864e5));
+    if(d<=0)alertas.push({tipo:'danger',icon:'🚨',msg:`<strong>${cot.referencia}</strong> — ${cot.proveedor.nombre} — VENCIDA hace ${Math.abs(d)}d. Deuda: <strong>$${cot.montoRestante.toLocaleString()}</strong>`,cotId:cot.id});
+    else if(d<=3)alertas.push({tipo:'danger',icon:'⚠️',msg:`<strong>${cot.referencia}</strong> — Vence en <strong>${d}d</strong>. Deuda: <strong>$${cot.montoRestante.toLocaleString()}</strong>`,cotId:cot.id});
+    else if(d<=7)alertas.push({tipo:'warning',icon:'🕐',msg:`<strong>${cot.referencia}</strong> — Vence en <strong>${d} días</strong>. Deuda: <strong>$${cot.montoRestante.toLocaleString()}</strong>`,cotId:cot.id});
+  });
   return alertas;
 }
 
@@ -1553,24 +1812,56 @@ function renderPanelProv(){
   let provs=[...DB.proveedores];if(filtroProvId)provs=provs.filter(p=>String(p.id)===filtroProvId);
   const provsDatos=provs.map(p=>({prov:p,...calcDatosProv(p)})).filter(d=>!filtroE||(filtroE==='deuda'&&d.estadoPago==='deuda')||(filtroE==='abono'&&d.estadoPago==='abono')||(filtroE==='pagado'&&d.estadoPago==='pagado')).sort((a,b)=>b.total-a.total);
   const totG=provsDatos.reduce((s,d)=>s+d.total,0),deudaG=provsDatos.reduce((s,d)=>s+d.deuda,0),pagadoG=provsDatos.reduce((s,d)=>s+d.pagado,0);
-  document.getElementById('ppKpis').innerHTML=`<div class="stat-box gold"><div class="stat-num">${provsDatos.length}</div><div class="stat-label">Proveedores</div></div><div class="stat-box blue"><div class="stat-num">${provsDatos.reduce((s,d)=>s+d.cots.length,0)}</div><div class="stat-label">Pedidos</div></div><div class="stat-box green"><div class="stat-num" style="font-size:16px;">$${pagadoG.toLocaleString()}</div><div class="stat-label">Total Pagado</div></div><div class="stat-box red"><div class="stat-num" style="font-size:16px;">$${deudaG.toLocaleString()}</div><div class="stat-label">Deuda Total</div></div><div class="stat-box purple"><div class="stat-num">${provsDatos.filter(d=>d.deuda>0).length}</div><div class="stat-label">Con Deuda</div></div>`;
+  document.getElementById('ppKpis').innerHTML=`<div class="stat-box gold"><div class="stat-num">${provsDatos.length}</div><div class="stat-label">Proveedores</div></div><div class="stat-box blue"><div class="stat-num">${provsDatos.reduce((s,d)=>s+d.cots.length,0)}</div><div class="stat-label">Pedidos Total</div></div><div class="stat-box green"><div class="stat-num" style="font-size:16px;">$${pagadoG.toLocaleString()}</div><div class="stat-label">Total Pagado</div></div><div class="stat-box red"><div class="stat-num" style="font-size:16px;">$${deudaG.toLocaleString()}</div><div class="stat-label">Deuda Total</div></div><div class="stat-box purple"><div class="stat-num">${provsDatos.filter(d=>d.deuda>0).length}</div><div class="stat-label">Con Deuda</div></div>`;
   const alertas=verificarVencimientos();const alertasEl=document.getElementById('ppAlertas');
-  if(alertasEl)alertasEl.innerHTML=alertas.length?alertas.map(a=>`<div class="alert alert-${a.tipo}" style="cursor:pointer;margin-bottom:8px;" onclick="verDetalles(${a.cotId})">${a.icon} ${a.msg}</div>`).join(''):'';
-  if(!provsDatos.length){document.getElementById('ppTarjetas').innerHTML='<div style="text-align:center;padding:60px;color:var(--text-muted);">Sin proveedores</div>';document.getElementById('ppTblBody').innerHTML='<tr><td colspan="9" style="text-align:center;padding:32px;color:var(--text-muted);">Sin datos</td></tr>';return;}
+  if(alertasEl)alertasEl.innerHTML=alertas.length?alertas.map(a=>`<div class="alert alert-${a.tipo}" style="cursor:pointer;margin-bottom:8px;" onclick="verDetalles(${a.cotId})">${a.icon} ${a.msg} <span style="float:right;font-size:11px;opacity:.6;">Ver →</span></div>`).join(''):'';
+  if(!provsDatos.length){document.getElementById('ppTarjetas').innerHTML='<div style="text-align:center;padding:60px;color:var(--text-muted);">Sin proveedores con datos</div>';document.getElementById('ppTblBody').innerHTML='<tr><td colspan="9" style="text-align:center;padding:32px;color:var(--text-muted);">Sin datos</td></tr>';return;}
   const rankColors=['var(--gold)','#C0C0C0','#CD7F32','var(--dark4)'];
   document.getElementById('ppTarjetas').innerHTML=provsDatos.map((d,gi)=>{
     const p=d.prov,rC=rankColors[gi]||'var(--dark4)',rT=gi<3?'#000':'var(--text-muted)';
     const estC={deuda:'var(--danger)',abono:'var(--gold)',pagado:'var(--success)'}[d.estadoPago];
     const estL={deuda:'🔴 Con deuda',abono:'🔄 Abono parcial',pagado:'✅ Al día'}[d.estadoPago];
-    return `<div style="background:var(--dark);border:1px solid var(--border-soft);border-radius:20px;overflow:hidden;margin-bottom:18px;box-shadow:var(--sh);"><div style="background:linear-gradient(135deg,rgba(245,166,35,.13),rgba(245,166,35,.03));padding:18px 20px;border-bottom:1px solid var(--border-soft);"><div style="display:flex;align-items:flex-start;gap:12px;"><div style="width:38px;height:38px;border-radius:50%;background:${rC};color:${rT};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div><div style="flex:1;min-width:0;"><div style="font-size:16px;font-weight:900;color:var(--gold);">🏢 ${p.nombre}</div><div style="font-size:11px;color:var(--text-muted);">NIT: ${p.nit}</div>${(p.mediosPago||[]).length?`<div style="display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;">${(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}</div><span style="background:${d.deuda>0?'rgba(231,76,60,.15)':'rgba(46,204,113,.15)'};color:${estC};border:1px solid ${d.deuda>0?'rgba(231,76,60,.3)':'rgba(46,204,113,.3)'};border-radius:20px;padding:4px 10px;font-size:10px;font-weight:700;white-space:nowrap;">${estL}</span></div></div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--border-soft);"><div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:20px;font-weight:800;font-family:var(--mono);color:var(--info);">${d.cots.length}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pedidos</div></div><div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);">$${d.total.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Total</div></div><div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:var(--success);">$${d.pagado.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pagado</div></div><div style="padding:13px;text-align:center;"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:${d.deuda>0?'var(--danger)':'var(--success)'};">$${d.deuda.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Deuda</div></div></div><div style="padding:10px 20px;border-bottom:1px solid var(--border-soft);background:var(--dark2);"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso</span><span style="font-size:11px;font-weight:700;color:${d.pct>=100?'var(--success)':'var(--gold)'};">${d.pct.toFixed(1)}%</span></div><div style="background:var(--dark3);border-radius:20px;height:7px;overflow:hidden;"><div style="width:${d.pct}%;height:100%;background:${d.pct>=100?'var(--success)':d.pct>60?'var(--gold)':'var(--danger)'};border-radius:20px;"></div></div></div>${d.vctos.length?`<div style="padding:12px 20px;border-bottom:1px solid var(--border-soft);background:rgba(231,76,60,.04);"><div style="font-size:9px;font-weight:700;text-transform:uppercase;color:var(--danger);margin-bottom:8px;">⏰ Vencimientos</div>${d.vctos.slice(0,3).map(v=>{const color=v.dias<=0?'var(--danger)':v.dias<=3?'#FF6B6B':'var(--gold)';const label=v.dias<=0?`Vencida hace ${Math.abs(v.dias)}d`:`${v.dias}d restantes`;return `<div style="display:flex;justify-content:space-between;padding:5px 10px;background:rgba(0,0,0,.2);border-radius:8px;margin-bottom:4px;"><span style="font-size:11px;color:var(--text-muted);font-family:var(--mono);">${v.ref}</span><span style="font-size:11px;font-weight:700;color:${color};">⏰ ${label}</span><span style="font-size:11px;color:var(--gold);">$${v.monto.toLocaleString()}</span></div>`;}).join('')}</div>`:''}
-    <div style="padding:12px 20px;display:flex;gap:8px;flex-wrap:wrap;"><button class="btn btn-info btn-sm" onclick="verProvCots('${p.id}')" style="flex:1;justify-content:center;">👁 Ver</button>${d.deuda>0&&puede('puedePagar')?`<button class="btn btn-teal btn-sm" onclick="irPagarProv('${p.id}')" style="flex:1;justify-content:center;">💰 Pagar</button>`:''}</div></div>`;
+    return `<div style="background:var(--dark);border:1px solid var(--border-soft);border-radius:20px;overflow:hidden;margin-bottom:18px;box-shadow:var(--sh);">
+      <div style="background:linear-gradient(135deg,rgba(245,166,35,.13),rgba(245,166,35,.03));padding:18px 20px;border-bottom:1px solid var(--border-soft);">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:${rC};color:${rT};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div>
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:16px;font-weight:900;color:var(--gold);">🏢 ${p.nombre}</div>
+            <div style="font-size:11px;color:var(--text-muted);">NIT: ${p.nit}${p.telefono?' · '+p.telefono:''}</div>
+            ${(p.mediosPago||[]).length?`<div style="display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;">${(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}
+          </div>
+          <span style="background:${d.deuda>0?'rgba(231,76,60,.15)':'rgba(46,204,113,.15)'};color:${estC};border:1px solid ${d.deuda>0?'rgba(231,76,60,.3)':'rgba(46,204,113,.3)'};border-radius:20px;padding:4px 10px;font-size:10px;font-weight:700;white-space:nowrap;">${estL}</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--border-soft);">
+        <div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:20px;font-weight:800;font-family:var(--mono);color:var(--info);">${d.cots.length}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pedidos</div></div>
+        <div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);">$${d.total.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Total</div></div>
+        <div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:var(--success);">$${d.pagado.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pagado</div></div>
+        <div style="padding:13px;text-align:center;"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:${d.deuda>0?'var(--danger)':'var(--success)'};">$${d.deuda.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Deuda</div></div>
+      </div>
+      <div style="padding:10px 20px;border-bottom:1px solid var(--border-soft);background:var(--dark2);">
+        <div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;color:${d.pct>=100?'var(--success)':'var(--gold)'};">${d.pct.toFixed(1)}%</span></div>
+        <div style="background:var(--dark3);border-radius:20px;height:7px;overflow:hidden;"><div style="width:${d.pct}%;height:100%;background:${d.pct>=100?'var(--success)':d.pct>60?'var(--gold)':'var(--danger)'};border-radius:20px;"></div></div>
+      </div>
+      ${d.vctos.length?`<div style="padding:12px 20px;border-bottom:1px solid var(--border-soft);background:rgba(231,76,60,.04);"><div style="font-size:9px;font-weight:700;text-transform:uppercase;color:var(--danger);margin-bottom:8px;">⏰ Vencimientos</div>${d.vctos.slice(0,3).map(v=>{const color=v.dias<=0?'var(--danger)':v.dias<=3?'#FF6B6B':'var(--gold)';const label=v.dias<=0?`Vencida hace ${Math.abs(v.dias)}d`:`${v.dias}d restantes`;return `<div style="display:flex;justify-content:space-between;padding:5px 10px;background:rgba(0,0,0,.2);border-radius:8px;margin-bottom:4px;"><span style="font-size:11px;color:var(--text-muted);font-family:var(--mono);">${v.ref}</span><span style="font-size:11px;font-weight:700;color:${color};">⏰ ${label}</span><span style="font-size:11px;color:var(--gold);">$${v.monto.toLocaleString()}</span></div>`;}).join('')}</div>`:''}
+      <div style="padding:12px 20px;display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="btn btn-info btn-sm" onclick="verProvCots('${p.id}')" style="flex:1;justify-content:center;">👁 Ver cotizaciones</button>
+        ${d.deuda>0&&puede('puedePagar')?`<button class="btn btn-teal btn-sm" onclick="irPagarProv('${p.id}')" style="flex:1;justify-content:center;">💰 Registrar pago</button>`:''}
+      </div>
+    </div>`;
   }).join('');
-  document.getElementById('ppTblBody').innerHTML=provsDatos.map(d=>{const p=d.prov;const medBadges=(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:5px;padding:1px 5px;font-size:9px;font-weight:700;">${m}</span>`).join(' ');const estC={deuda:'var(--danger)',abono:'var(--gold)',pagado:'var(--success)'}[d.estadoPago];const estL={deuda:'🔴 Deuda',abono:'🔄 Abono',pagado:'✅ Al día'}[d.estadoPago];return `<tr><td><strong style="color:var(--gold);">${p.nombre}</strong></td><td style="font-family:var(--mono);font-size:11px;">${p.nit}</td><td>${medBadges||'–'}</td><td style="text-align:center;font-weight:700;color:var(--info);">${d.cots.length}</td><td><strong>$${d.total.toLocaleString()}</strong></td><td style="color:var(--success);">$${d.pagado.toLocaleString()}</td><td style="color:${d.deuda>0?'var(--danger)':'var(--success)'};font-weight:700;">$${d.deuda.toLocaleString()}</td><td><span style="color:${estC};font-size:11px;font-weight:700;">${estL}</span></td><td><div class="td-actions"><button class="btn btn-info btn-sm btn-icon" onclick="verProvCots('${p.id}')">👁</button>${d.deuda>0&&puede('puedePagar')?`<button class="btn btn-teal btn-sm btn-icon" onclick="irPagarProv('${p.id}')">💰</button>`:''}</div></td></tr>`;}).join('');
+  document.getElementById('ppTblBody').innerHTML=provsDatos.map(d=>{
+    const p=d.prov;const medBadges=(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:5px;padding:1px 5px;font-size:9px;font-weight:700;">${m}</span>`).join(' ');
+    const estC={deuda:'var(--danger)',abono:'var(--gold)',pagado:'var(--success)'}[d.estadoPago];
+    const estL={deuda:'🔴 Deuda',abono:'🔄 Abono',pagado:'✅ Al día'}[d.estadoPago];
+    return `<tr><td><strong style="color:var(--gold);">${p.nombre}</strong></td><td style="font-family:var(--mono);font-size:11px;">${p.nit}</td><td>${medBadges||'–'}</td><td style="text-align:center;font-weight:700;color:var(--info);">${d.cots.length}</td><td><strong>$${d.total.toLocaleString()}</strong></td><td style="color:var(--success);">$${d.pagado.toLocaleString()}</td><td style="color:${d.deuda>0?'var(--danger)':'var(--success)'};font-weight:700;">$${d.deuda.toLocaleString()}</td><td><span style="color:${estC};font-size:11px;font-weight:700;">${estL}</span></td><td><div class="td-actions"><button class="btn btn-info btn-sm btn-icon" onclick="verProvCots('${p.id}')">👁</button>${d.deuda>0&&puede('puedePagar')?`<button class="btn btn-teal btn-sm btn-icon" onclick="irPagarProv('${p.id}')">💰</button>`:''}</div></td></tr>`;
+  }).join('');
 }
 
 function verProvCots(provId){const cots=DB.cotizaciones.filter(c=>String(c.proveedor.id)===String(provId));if(!cots.length){toast('Sin cotizaciones','info');return;}verDetalles(cots[cots.length-1].id);}
 function irPagarProv(provId){const cot=DB.cotizaciones.find(c=>String(c.proveedor.id)===String(provId)&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado');if(!cot){toast('No hay cotizaciones con deuda','info');return;}abrirPago(cot.id);}
 
+// ── Resumen Financiero ──
 function formatMes(mesKey){if(!mesKey||mesKey==='—')return '—';const[y,m]=mesKey.split('-');const n=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];return `${n[parseInt(m,10)-1]||m} ${y}`;}
 
 function renderResumen(){
@@ -1586,7 +1877,8 @@ function renderResumen(){
   if(filtroMet)pagosFiltrados=pagosFiltrados.filter(p=>p.metodo===filtroMet);
   if(filtroEstado){const ids=new Set(DB.cotizaciones.filter(c=>c.estadoPago===filtroEstado).map(c=>c.id));pagosFiltrados=pagosFiltrados.filter(p=>ids.has(p.cotId));}
   const totalCots=DB.cotizaciones.reduce((s,c)=>s+c.total,0),totalPagado=DB.cotizaciones.reduce((s,c)=>s+(c.montoPagado||0),0),totalDeuda=DB.cotizaciones.reduce((s,c)=>s+(c.montoRestante||0),0),pctPagado=totalCots>0?(totalPagado/totalCots*100).toFixed(1):0;
-  const kpiEl=document.getElementById('resKpis');if(kpiEl)kpiEl.innerHTML=`<div class="stat-box gold"><div class="stat-num" style="font-size:14px;">$${totalCots.toLocaleString()}</div><div class="stat-label">Total Cotizado</div></div><div class="stat-box green"><div class="stat-num" style="font-size:14px;">$${totalPagado.toLocaleString()}</div><div class="stat-label">Total Pagado</div></div><div class="stat-box red"><div class="stat-num" style="font-size:14px;">$${totalDeuda.toLocaleString()}</div><div class="stat-label">Total Deuda</div></div><div class="stat-box blue"><div class="stat-num">${pagosFiltrados.length}</div><div class="stat-label">Pagos</div></div><div class="stat-box purple"><div class="stat-num">${pctPagado}%</div><div class="stat-label">% Cancelado</div></div>`;
+  const kpiEl=document.getElementById('resKpis');
+  if(kpiEl)kpiEl.innerHTML=`<div class="stat-box gold"><div class="stat-num" style="font-size:14px;">$${totalCots.toLocaleString()}</div><div class="stat-label">Total Cotizado</div></div><div class="stat-box green"><div class="stat-num" style="font-size:14px;">$${totalPagado.toLocaleString()}</div><div class="stat-label">Total Pagado</div></div><div class="stat-box red"><div class="stat-num" style="font-size:14px;">$${totalDeuda.toLocaleString()}</div><div class="stat-label">Total Deuda</div></div><div class="stat-box blue"><div class="stat-num">${pagosFiltrados.length}</div><div class="stat-label">Pagos</div></div><div class="stat-box purple"><div class="stat-num">${pctPagado}%</div><div class="stat-label">% Cancelado</div></div>`;
   const porMetodo={};pagosFiltrados.forEach(p=>{const k=p.metodo||'Sin especificar';if(!porMetodo[k])porMetodo[k]={total:0,count:0};porMetodo[k].total+=p.monto;porMetodo[k].count++;});
   const metOrd=Object.entries(porMetodo).sort((a,b)=>b[1].total-a[1].total),metMax=metOrd[0]?metOrd[0][1].total:1;
   const metEl=document.getElementById('resMetodos');if(metEl)metEl.innerHTML=metOrd.length?metOrd.map(([met,d])=>{const pct=(d.total/metMax*100).toFixed(0);return `<div style="margin-bottom:16px;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;"><span style="font-size:13px;font-weight:700;">${met}</span><span style="font-size:13px;color:var(--gold);font-weight:800;">$${d.total.toLocaleString()}</span></div><div style="background:var(--dark3);border-radius:20px;height:10px;overflow:hidden;"><div style="width:${pct}%;height:100%;background:linear-gradient(90deg,var(--gold),#f9a825);border-radius:20px;"></div></div><div style="font-size:10px;color:var(--text-muted);margin-top:3px;">${d.count} pago${d.count!==1?'s':''}</div></div>`;}).join(''):'<div style="padding:24px;text-align:center;color:var(--text-muted);">Sin pagos</div>';
@@ -1597,23 +1889,40 @@ function renderResumen(){
   const porMes={};todosPagos.forEach(p=>{const k=p.fecha?p.fecha.slice(0,7):'—';if(!porMes[k])porMes[k]={pagado:0,count:0};porMes[k].pagado+=p.monto;porMes[k].count++;});
   const mesOrd=Object.entries(porMes).sort((a,b)=>b[0].localeCompare(a[0])),mesMax=mesOrd[0]?mesOrd[0][1].pagado:1;
   const mesEl=document.getElementById('resMeses');if(mesEl)mesEl.innerHTML=mesOrd.length?`<table style="width:100%;border-collapse:collapse;"><thead><tr><th style="text-align:left;padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);">Mes</th><th style="text-align:right;padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);">Total Pagado</th><th style="text-align:center;padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);"># Pagos</th><th style="padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);min-width:120px;">Barra</th></tr></thead><tbody>${mesOrd.map(([mes,d])=>`<tr style="border-bottom:1px solid var(--border-soft);"><td style="padding:10px 12px;font-weight:700;">${formatMes(mes)}</td><td style="padding:10px 12px;text-align:right;font-weight:800;color:var(--success);">$${d.pagado.toLocaleString()}</td><td style="padding:10px 12px;text-align:center;color:var(--info);font-weight:700;">${d.count}</td><td style="padding:10px 12px;"><div style="background:var(--dark3);border-radius:20px;height:7px;overflow:hidden;"><div style="width:${(d.pagado/mesMax*100).toFixed(0)}%;height:100%;background:var(--gold);border-radius:20px;"></div></div></td></tr>`).join('')}</tbody></table>`:'<div style="padding:24px;text-align:center;color:var(--text-muted);">Sin datos</div>';
-  const tblEl=document.getElementById('resTblPagos');if(tblEl)tblEl.innerHTML=pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).length?pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).map(p=>`<tr><td style="font-size:11px;white-space:nowrap;">${new Date(p.fecha).toLocaleDateString('es-CO')}</td><td style="font-family:var(--mono);font-size:11px;color:var(--gold);">${p.cotRef}</td><td style="font-size:12px;">${p.provNombre}</td><td><span style="background:rgba(245,166,35,.1);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;">${p.metodo||'—'}</span></td><td style="font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</td><td style="font-size:10px;color:var(--text-muted);">${p.refTx||'—'}</td><td style="font-size:11px;color:var(--text-muted);">${p.registradoPor}</td><td style="text-align:center;">${p.comprobante?`<button class="btn btn-success btn-sm btn-icon" onclick="verComprobante(${p.cotId},${p.id})">🧾</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--text-muted);">Sin pagos</td></tr>';
+  const tblEl=document.getElementById('resTblPagos');
+  if(tblEl)tblEl.innerHTML=pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).length?pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).map(p=>`<tr><td style="font-size:11px;white-space:nowrap;">${new Date(p.fecha).toLocaleDateString('es-CO')}</td><td style="font-family:var(--mono);font-size:11px;color:var(--gold);">${p.cotRef}</td><td style="font-size:12px;">${p.provNombre}</td><td><span style="background:rgba(245,166,35,.1);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;">${p.metodo||'—'}</span></td><td style="font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</td><td style="font-size:10px;color:var(--text-muted);">${p.refTx||'—'}</td><td style="font-size:11px;color:var(--text-muted);">${p.registradoPor}</td><td style="text-align:center;">${p.comprobante?`<button class="btn btn-success btn-sm btn-icon" onclick="verComprobante(${p.cotId},${p.id})">🧾</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--text-muted);">Sin pagos registrados</td></tr>';
 }
 
-function exportarResumenPDF(){toast('Exportar PDF disponible próximamente','info');}
+function exportarResumenPDF(){toast('Funcionalidad de exportar PDF disponible en la versión completa','info');}
 
-function mostrarBannerNotif(notif){const banner=document.createElement('div');banner.style.cssText=`position:fixed;bottom:80px;right:22px;background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:14px 18px;max-width:340px;box-shadow:var(--sh);z-index:9998;animation:toastIn .3s ease;border-left:4px solid ${notif.tipo==='success'?'var(--success)':notif.tipo==='warning'?'var(--gold)':'var(--info)'};`;banner.innerHTML=`<div style="display:flex;align-items:flex-start;gap:10px;"><span style="font-size:22px;">${notif.tipo==='success'?'💰':'🔔'}</span><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:700;margin-bottom:3px;">${notif.titulo}</div><div style="font-size:11px;color:var(--text-muted);line-height:1.4;">${notif.desc}</div></div><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:15px;padding:0;">×</button></div>`;document.body.appendChild(banner);setTimeout(()=>banner.remove(),6000);}
+// ── Notificaciones banners ──
+function mostrarBannerNotif(notif){
+  const banner=document.createElement('div');
+  banner.style.cssText=`position:fixed;bottom:80px;right:22px;background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:14px 18px;max-width:340px;box-shadow:var(--sh),var(--sh-gold);z-index:9998;animation:toastIn .3s ease;border-left:4px solid ${notif.tipo==='success'?'var(--success)':notif.tipo==='warning'?'var(--gold)':'var(--info)'};`;
+  banner.innerHTML=`<div style="display:flex;align-items:flex-start;gap:10px;"><span style="font-size:22px;">${notif.tipo==='success'?'💰':'🔔'}</span><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;">${notif.titulo}</div><div style="font-size:11px;color:var(--text-muted);line-height:1.4;">${notif.desc}</div></div><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:15px;padding:0;">×</button></div>`;
+  document.body.appendChild(banner);setTimeout(()=>banner.remove(),6000);
+}
 
 const _alarmasActivas=new Set();
-function registrarAlarmaVencimiento(cot){if(_alarmasActivas.has(cot.id))return;_alarmasActivas.add(cot.id);const iv=setInterval(()=>{const c=DB.cotizaciones.find(x=>Number(x.id)===Number(cot.id));if(!c||c.estadoPago==='pagado'){clearInterval(iv);_alarmasActivas.delete(cot.id);return;}if(!c.fechaVencimiento)return;const d=Math.ceil((new Date(c.fechaVencimiento)-Date.now())/(864e5));if(d<=(c.diasAlerta||3)){mostrarBannerNotif({tipo:d<=0?'error':'warning',titulo:d<=0?'🚨 Pago vencido':'⏰ Fecha límite próxima',desc:`${c.referencia} · $${c.montoRestante.toLocaleString()}`});updateNotifs();}},30*60*1000);}
+function registrarAlarmaVencimiento(cot){if(_alarmasActivas.has(cot.id))return;_alarmasActivas.add(cot.id);const iv=setInterval(()=>{const c=DB.cotizaciones.find(x=>Number(x.id)===Number(cot.id));if(!c||c.estadoPago==='pagado'){clearInterval(iv);_alarmasActivas.delete(cot.id);return;}if(!c.fechaVencimiento)return;const d=Math.ceil((new Date(c.fechaVencimiento)-Date.now())/(864e5));if(d<=(c.diasAlerta||3)){mostrarBannerNotif({tipo:d<=0?'error':'warning',titulo:d<=0?'🚨 Pago vencido':'⏰ Fecha límite próxima',desc:`${c.referencia} · ${d<=0?`Vencida hace ${Math.abs(d)}d`:`${d}d restantes`} · $${c.montoRestante.toLocaleString()}`});updateNotifs();}},30*60*1000);}
+
 function revisarTodasLasAlarmas(){DB.cotizaciones.forEach(c=>{if(c.fechaVencimiento&&c.estadoPago!=='pagado')registrarAlarmaVencimiento(c);});updateNotifs();}
 
+// ── Tema ──
 let temaActual='oscuro';
-function setTema(tema){temaActual=tema;document.body.classList.remove('theme-claro','theme-dorado');if(tema!=='oscuro')document.body.classList.add('theme-'+tema);const iconos={oscuro:'🌙',claro:'☀️',dorado:'✨'};const btnTema=document.getElementById('btnTema');if(btnTema)btnTema.textContent=iconos[tema]||'🎨';document.querySelectorAll('.tema-btn').forEach(b=>{const isA=b.id==='tema-'+tema;b.style.background=isA?'rgba(245,166,35,.15)':'';b.style.color=isA?'var(--gold)':'var(--text)';});cerrarTemaMenu();toast(`Tema ${tema} activado`,'info',2000);}
+function setTema(tema){
+  temaActual=tema;document.body.classList.remove('theme-claro','theme-dorado');
+  if(tema!=='oscuro')document.body.classList.add('theme-'+tema);
+  const iconos={oscuro:'🌙',claro:'☀️',dorado:'✨'};
+  const btnTema=document.getElementById('btnTema');if(btnTema)btnTema.textContent=iconos[tema]||'🎨';
+  document.querySelectorAll('.tema-btn').forEach(b=>{const isA=b.id==='tema-'+tema;b.style.background=isA?'rgba(245,166,35,.15)':'';b.style.color=isA?'var(--gold)':'var(--text)';});
+  cerrarTemaMenu();toast(`Tema ${tema.charAt(0).toUpperCase()+tema.slice(1)} activado`,'info',2000);
+}
 function toggleTemaMenu(){const menu=document.getElementById('temaMenu');if(!menu)return;const visible=menu.style.display!=='none';menu.style.display=visible?'none':'block';if(!visible)setTimeout(()=>document.addEventListener('click',cerrarTemaMenuOutside,{once:true}),10);}
 function cerrarTemaMenuOutside(e){const menu=document.getElementById('temaMenu'),btn=document.getElementById('btnTema');if(menu&&!menu.contains(e.target)&&e.target!==btn)cerrarTemaMenu();}
 function cerrarTemaMenu(){const menu=document.getElementById('temaMenu');if(menu)menu.style.display='none';}
 
+// ── Eventos ──
 document.getElementById('loginPass').addEventListener('keypress',e=>{if(e.key==='Enter')login();});
 document.getElementById('loginUser').addEventListener('keypress',e=>{if(e.key==='Enter')document.getElementById('loginPass').focus();});
 window.addEventListener('resize',()=>{const mb=document.getElementById('menuBtn');if(mb)mb.style.display=window.innerWidth<=800?'block':'none';});
@@ -1623,8 +1932,8 @@ document.addEventListener('change',e=>{
     const val=e.target.value;if(!val){fvi.textContent='';return;}
     const dias=Math.ceil((new Date(val)-Date.now())/(864e5));
     if(dias<0)fvi.innerHTML=`<span style="color:var(--danger);font-weight:700;">⚠️ La fecha ya pasó</span>`;
-    else if(dias===0)fvi.innerHTML=`<span style="color:var(--danger);font-weight:700;">⚠️ Vence hoy</span>`;
-    else if(dias<=3)fvi.innerHTML=`<span style="color:#FF6B6B;font-weight:700;">⚠️ Solo ${dias} día${dias!==1?'s':''}</span>`;
+    else if(dias===0)fvi.innerHTML=`<span style="color:var(--danger);font-weight:700;">⚠️ Vence hoy mismo</span>`;
+    else if(dias<=3)fvi.innerHTML=`<span style="color:#FF6B6B;font-weight:700;">⚠️ Solo ${dias} día${dias!==1?'s':''} para pagar</span>`;
     else if(dias<=7)fvi.innerHTML=`<span style="color:var(--gold);font-weight:700;">🕐 ${dias} días para pagar</span>`;
     else fvi.innerHTML=`<span style="color:var(--success);font-weight:700;">✅ ${dias} días para pagar</span>`;
   }
