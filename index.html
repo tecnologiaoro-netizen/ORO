@@ -14,8 +14,6 @@
   --r:14px;--r-lg:20px;--sh:0 8px 32px rgba(0,0,0,.4);--sh-gold:0 4px 20px rgba(245,166,35,.25);
   --font:system-ui,'Segoe UI',sans-serif;--mono:'Courier New',monospace;
 }
-
-/* ── TEMA CLARO ── */
 body.theme-claro {
   --black:#F0F2F5;--dark:#FFFFFF;--dark2:#F5F6FA;--dark3:#EAEDF2;--dark4:#D8DCE5;
   --border:rgba(245,166,35,0.3);--border-soft:rgba(0,0,0,0.09);
@@ -25,27 +23,22 @@ body.theme-claro {
 body.theme-claro ::-webkit-scrollbar-track{background:var(--dark3)}
 body.theme-claro ::-webkit-scrollbar-thumb{background:var(--dark4)}
 body.theme-claro .field select option{background:#fff;color:#1A1A2E;}
-
-/* ── TEMA DORADO ── */
 body.theme-dorado {
   --black:#1A0E00;--dark:#241500;--dark2:#2E1A00;--dark3:#3A2200;--dark4:#4A2D00;
   --border:rgba(245,166,35,0.4);--border-soft:rgba(245,166,35,0.15);
   --text:#FFF0D0;--text-muted:#C4935A;--text-dim:#7A5228;
   --sh:0 8px 32px rgba(0,0,0,.5);--sh-gold:0 6px 28px rgba(245,166,35,.4);
 }
-
-/* ── transición suave al cambiar tema ── */
 body, body *{ transition:background-color .25s ease, border-color .2s ease, color .15s ease !important; }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--font);background:var(--black);color:var(--text);min-height:100vh;overflow-x:hidden}
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--dark2)}::-webkit-scrollbar-thumb{background:var(--dark4);border-radius:3px}
 
-/* ── LOGIN ── */
 #loginScreen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:20px;
   background:radial-gradient(ellipse at 30% 20%,rgba(245,166,35,.12) 0%,transparent 60%),var(--black)}
 .lw{width:100%;max-width:420px;background:var(--dark);border:1px solid var(--border);border-radius:28px;padding:48px 40px;box-shadow:var(--sh),var(--sh-gold);animation:fadeUp .5s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.lbrand{text-align:center;margin-bottom:28px}.lbrand-icon{font-size:52px}
+.lbrand{text-align:center;margin-bottom:28px}
 .lbrand h1{font-size:22px;font-weight:900;color:var(--gold);letter-spacing:2px;margin-top:6px}
 .lbrand p{font-size:11px;color:var(--text-muted);margin-top:2px;letter-spacing:1px}
 .lsubtitle{text-align:center;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-muted);margin-bottom:28px}
@@ -57,23 +50,6 @@ body{font-family:var(--font);background:var(--black);color:var(--text);min-heigh
 .btn-login:hover{background:var(--gold-light);transform:translateY(-1px)}
 .lerror{background:rgba(231,76,60,.15);border:1px solid rgba(231,76,60,.35);color:#FF8A80;padding:11px 14px;border-radius:10px;font-size:13px;margin-bottom:13px;display:none}
 
-/* Tarjetas de roles en login */
-.roles-hint{margin-top:22px;border-top:1px solid var(--border-soft);padding-top:18px}
-.roles-hint-title{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);text-align:center;margin-bottom:12px}
-.role-cards{display:flex;flex-direction:column;gap:7px}
-.role-card{display:flex;align-items:center;gap:10px;padding:9px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:10px;cursor:pointer;transition:border-color .2s}
-.role-card:hover{border-color:var(--gold)}
-.role-card-icon{font-size:20px;flex-shrink:0}
-.role-card-info{flex:1;min-width:0}
-.role-card-name{font-size:13px;font-weight:700;color:var(--text)}
-.role-card-desc{font-size:11px;color:var(--text-muted);margin-top:1px}
-.role-card-cred{font-size:11px;font-family:var(--mono);color:var(--gold);margin-top:2px}
-.role-badge{padding:3px 8px;border-radius:20px;font-size:10px;font-weight:700;flex-shrink:0}
-.rb-jefe{background:rgba(245,166,35,.2);color:var(--gold);border:1px solid rgba(245,166,35,.4)}
-.rb-admin{background:rgba(52,152,219,.15);color:#74B9FF;border:1px solid rgba(52,152,219,.3)}
-.rb-conta{background:rgba(26,188,156,.15);color:var(--teal);border:1px solid rgba(26,188,156,.3)}
-
-/* ── APP SHELL ── */
 #appContainer{display:none}
 .app-shell{display:flex;min-height:100vh}
 .sidebar{width:230px;min-height:100vh;background:var(--dark);border-right:1px solid var(--border-soft);display:flex;flex-direction:column;position:fixed;top:0;left:0;z-index:100;transition:transform .3s}
@@ -109,7 +85,6 @@ body{font-family:var(--font);background:var(--black);color:var(--text);min-heigh
 .tab-pane.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── CARDS ── */
 .card{background:var(--dark);border:1px solid var(--border-soft);border-radius:var(--r-lg);padding:22px;margin-bottom:18px}
 .card-title{font-size:15px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px}
 .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:13px;margin-bottom:18px}
@@ -123,7 +98,6 @@ body{font-family:var(--font);background:var(--black);color:var(--text);min-heigh
 .stat-box.blue .stat-num{color:var(--info)}.stat-box.red .stat-num{color:var(--danger)}.stat-box.purple .stat-num{color:var(--purple)}.stat-box.teal .stat-num{color:var(--teal)}
 .stat-label{font-size:10px;font-weight:700;color:var(--text-muted);letter-spacing:.5px;text-transform:uppercase}
 
-/* ── FORMS ── */
 .form-row{display:grid;gap:13px;margin-bottom:13px}
 .form-row.c2{grid-template-columns:1fr 1fr}.form-row.c3{grid-template-columns:1fr 1fr 1fr}
 .field label{display:block;margin-bottom:6px;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--text-muted)}
@@ -133,7 +107,6 @@ body{font-family:var(--font);background:var(--black);color:var(--text);min-heigh
 .field select option{background:var(--dark3)}
 .field textarea{resize:vertical;min-height:70px}
 
-/* ── BUTTONS ── */
 .btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:none;border-radius:10px;font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;white-space:nowrap}
 .btn:active{transform:scale(.97)}
 .btn-gold{background:var(--gold);color:var(--black)}.btn-gold:hover{background:var(--gold-light)}
@@ -146,7 +119,6 @@ body{font-family:var(--font);background:var(--black);color:var(--text);min-heigh
 .btn-sm{padding:5px 11px;font-size:11px;border-radius:8px}
 .btn-icon{padding:6px;border-radius:8px}
 
-/* ── TABLES ── */
 .tbl-wrap{overflow-x:auto}
 table{width:100%;border-collapse:collapse}
 thead th{padding:10px 13px;background:var(--dark2);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted);text-align:left;border-bottom:1px solid var(--border-soft)}
@@ -155,7 +127,6 @@ tbody tr:last-child td{border-bottom:none}
 tbody tr:hover{background:rgba(255,255,255,.02)}
 .td-actions{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
 
-/* ── BADGES ── */
 .badge{display:inline-flex;align-items:center;padding:3px 8px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
 .badge-pending{background:rgba(245,166,35,.15);color:var(--gold);border:1px solid rgba(245,166,35,.3)}
 .badge-approved{background:rgba(46,204,113,.15);color:var(--success);border:1px solid rgba(46,204,113,.3)}
@@ -167,7 +138,6 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .badge-admin{background:rgba(52,152,219,.15);color:#74B9FF;border:1px solid rgba(52,152,219,.3)}
 .badge-contadora{background:rgba(26,188,156,.15);color:var(--teal);border:1px solid rgba(26,188,156,.3)}
 
-/* ── SEARCH ── */
 .search-bar{display:flex;align-items:center;gap:8px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);padding:0 13px;margin-bottom:16px;transition:border-color .2s}
 .search-bar:focus-within{border-color:var(--gold)}
 .search-bar input{flex:1;background:none;border:none;outline:none;color:var(--text);font-family:inherit;font-size:13px;padding:11px 0}
@@ -176,13 +146,11 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .search-tag.found{background:rgba(46,204,113,.15);color:var(--success);border:1px solid rgba(46,204,113,.3);display:block}
 .search-tag.notfound{background:rgba(231,76,60,.15);color:#FF8A80;border:1px solid rgba(231,76,60,.3);display:block}
 
-/* ── PRODUCTS ── */
 .prod-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:8px;align-items:center;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);padding:11px;margin-bottom:8px}
 .prod-row input{background:var(--dark3);border:1px solid var(--border-soft);border-radius:9px;padding:9px 11px;color:var(--text);font-family:inherit;font-size:13px;outline:none;width:100%}
 .prod-row input:focus{border-color:var(--gold)}
 .prod-row input[readonly]{color:var(--gold);opacity:.9}
 
-/* ── MODALS ── */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);z-index:1000;align-items:center;justify-content:center;padding:20px}
 .modal-overlay.active{display:flex}
 .modal-box{background:var(--dark);border:1px solid var(--border);border-radius:22px;padding:30px;width:90%;max-width:640px;max-height:88vh;overflow-y:auto;box-shadow:var(--sh),var(--sh-gold);animation:modalPop .3s cubic-bezier(.34,1.56,.64,1)}
@@ -209,7 +177,6 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .confirm-btns{display:flex;gap:8px}
 .confirm-btns .btn{flex:1;justify-content:center;padding:12px}
 
-/* ── ALERTS ── */
 .alert{padding:12px 15px;border-radius:11px;font-size:13px;margin-bottom:16px;border-left:3px solid;line-height:1.5}
 .alert-info{background:rgba(52,152,219,.1);color:#74B9FF;border-color:var(--info)}
 .alert-warning{background:rgba(245,166,35,.1);color:var(--gold);border-color:var(--gold)}
@@ -217,13 +184,11 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .alert-danger{background:rgba(231,76,60,.1);color:#FF8A80;border-color:var(--danger)}
 .alert-teal{background:rgba(26,188,156,.1);color:var(--teal);border-color:var(--teal)}
 
-/* ── TOAST ── */
 #toastContainer{position:fixed;bottom:22px;right:22px;display:flex;flex-direction:column;gap:8px;z-index:9999}
 .toast{background:var(--dark2);border:1px solid var(--border);border-radius:11px;padding:12px 16px;font-size:13px;font-weight:600;min-width:230px;box-shadow:var(--sh);animation:toastIn .3s ease;display:flex;align-items:center;gap:8px}
 .toast.success{border-left:4px solid var(--success)}.toast.error{border-left:4px solid var(--danger)}.toast.info{border-left:4px solid var(--info)}.toast.warning{border-left:4px solid var(--gold)}
 @keyframes toastIn{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:translateX(0)}}
 
-/* ── NOTIF PANEL ── */
 .notif-panel{position:fixed;top:0;right:-360px;width:360px;height:100vh;background:var(--dark);border-left:1px solid var(--border-soft);z-index:1001;transition:right .3s;display:flex;flex-direction:column}
 .notif-panel.open{right:0}
 .notif-header{padding:20px;border-bottom:1px solid var(--border-soft);display:flex;justify-content:space-between;align-items:center}
@@ -239,18 +204,15 @@ tbody tr:hover{background:rgba(255,255,255,.02)}
 .notif-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:1000}
 .notif-overlay.open{display:block}
 
-/* ── PAPELERA TABS ── */
 .pap-tabs{display:flex;gap:6px;margin-bottom:16px}
 .pap-tab{padding:7px 16px;border-radius:10px;font-size:12px;font-weight:700;cursor:pointer;background:var(--dark2);border:1px solid var(--border-soft);color:var(--text-muted);transition:all .15s}
 .pap-tab.active{background:var(--gold);color:var(--black);border-color:var(--gold)}
 
-/* ── ACCESO DENEGADO ── */
 .access-denied{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;text-align:center}
 .access-denied .ad-icon{font-size:64px;margin-bottom:16px}
 .access-denied h2{font-size:22px;font-weight:800;color:var(--danger);margin-bottom:8px}
 .access-denied p{font-size:14px;color:var(--text-muted);max-width:320px;line-height:1.6}
 
-/* ── RESPONSIVE ── */
 @media(max-width:800px){
   .sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}
   .main{margin-left:0}.form-row.c2,.form-row.c3{grid-template-columns:1fr}
@@ -262,11 +224,13 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
 <body>
 <div id="toastContainer"></div>
 
-<!-- ════ LOGIN ════ -->
+<!-- LOGIN -->
 <div id="loginScreen">
   <div class="lw">
     <div class="lbrand">
-      <div style="font-size:56px;margin-bottom:6px;">🏗️</div>
+      <div style="margin-bottom:8px;display:flex;justify-content:center;">
+        <img src="data:image/png;base64,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L8cI9pVgT+S301wW9tadKxvJ5wR10LpR7OL6iv0rjjbG0NYA1o5ADAC5Ii/IjVGjtXaUq+o1Hpu72iTm375pXxh3i1xGCPEZWrvF0uV4rjXXavqa+qLGRmaolMjy1jQxoLjuQGtAHgAv2HqIIqiF0M8bJYnjDmPaHNI8QVW2tOgTon1Y7rbno23QVH9vQNNK8+J6sgOP6QKIvy1PJfpz5HG3k4aT/Uzfx5FVmtPIp0zVZl0jqy42tx3MNfC2qYfAObwOaO3fiUk6KbR02dDVpptN1thtuu9KwcXUPtFS2GtpMuLneZNwiUZJ80EnfngYRCvRqLpWa5Q3S3xVkMNVCHgEx1NO+GRhxyc1wBH1dy7qIiIiIiIiIiIiIiIiIiIiIiIiIiIvnUyPihc+OJ0rhyY0gE+/ZYcd0ZKyBnRfRFoanUFRAcOsVx9jA4fQSujPrCVji0WSsyOQf5v2FRE19ooPbdj0P6LoZSSv9kfmFKi4g4Ayjnhoy4gd6g1TqPUtS/horS6AHlmJzz79h9C6TrXqq7SA1jpYmnn1rw1o9gUdJtO1/dpYXvPTA95XTHbSDmV4aOuVK7vqm1UIewTComb/ALOM5+nkonV3y+6jldTWyJ0UOQHtYc4Hi4/Ytva9EUzC19fUvnwciNo4W/zKldJSQUkQip42Rxjk1owuZtFd7prVP7Jn/LePqf50X07alpTmIb7vE8PctBpfTFPbMVFQRUVR/GI2Z6lJAAFndZ7FZqKggoohFC3AH818VHTTvmeXPKwmyDms4XYvkiIiIgRAiIsdqyiIiIiIiIiIiIiIiIiIixhZREREREREREREREREREREREREREREKIiLGE4R4e5ZRY3QixwhOHuKyiYCLGFlEREREWUREREREREQIgREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREX//Z" alt="Oro Construcción S.A.S" style="height:90px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(245,166,35,.35));">
+      </div>
       <h1>OROCONSTRUCCIÓN</h1>
       <p>Sistema de Gestión S.A.S</p>
     </div>
@@ -275,17 +239,17 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
     <div class="lfield"><input type="text" id="loginUser" placeholder="Usuario" autocomplete="off"></div>
     <div class="lfield"><input type="password" id="loginPass" placeholder="Contraseña"></div>
     <button class="btn-login" onclick="login()">Iniciar Sesión →</button>
-
-
   </div>
 </div>
 
-<!-- ════ APP ════ -->
+<!-- APP -->
 <div id="appContainer">
   <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-logo">
-        <div style="font-size:28px;margin-bottom:4px;">🏗️</div>
+        <div style="margin-bottom:6px;">
+          <img src="data:image/png;base64,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L8cI9pVgT+S301wW9tadKxvJ5wR10LpR7OL6iv0rjjbG0NYA1o5ADAC5Ii/IjVGjtXaUq+o1Hpu72iTm375pXxh3i1xGCPEZWrvF0uV4rjXXavqa+qLGRmaolMjy1jQxoLjuQGtAHgAv2HqIIqiF0M8bJYnjDmPaHNI8QVW2tOgTon1Y7rbno23QVH9vQNNK8+J6sgOP6QKIvy1PJfpz5HG3k4aT/Uzfx5FVmtPIp0zVZl0jqy42tx3MNfC2qYfAObwOaO3fiUk6KbR02dDVpptN1thtuu9KwcXUPtFS2GtpMuLneZNwiUZJ80EnfngYRCvRqLpWa5Q3S3xVkMNVCHgEx1NO+GRhxyc1wBH1dy7qIiIiIiIiIiIiIiIiIiIiIiIiIiIvnUyPihc+OJ0rhyY0gE+/ZYcd0ZKyBnRfRFoanUFRAcOsVx9jA4fQSujPrCVji0WSsyOQf5v2FRE19ooPbdj0P6LoZSSv9kfmFKi4g4Ayjnhoy4gd6g1TqPUtS/horS6AHlmJzz79h9C6TrXqq7SA1jpYmnn1rw1o9gUdJtO1/dpYXvPTA95XTHbSDmV4aOuVK7vqm1UIewTComb/ALOM5+nkonV3y+6jldTWyJ0UOQHtYc4Hi4/Ytva9EUzC19fUvnwciNo4W/zKldJSQUkQip42Rxjk1owuZtFd7prVP7Jn/LePqf50X07alpTmIb7vE8PctBpfTFPbMVFQRUVR/GI2Z6lJAAFndZ7FZqKggoohFC3AH818VHTTvmeXPKwmyDms4XYvkiIiIgRAiIsdqyiIiIiIiIiIiIiIiIiIixhZREREREREREREREREREREREREREREKIiLGE4R4e5ZRY3QixwhOHuKyiYCLGFlEREREWUREREREREQIgREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREX//Z" alt="OC" style="height:40px;object-fit:contain;display:block;">
+        </div>
         <div class="sidebar-brand">OROCONSTRUCCIÓN</div>
       </div>
       <div class="sidebar-user">
@@ -329,28 +293,18 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
       </div>
 
       <div class="main-body">
-        <!-- DASHBOARD -->
         <div id="tab-dashboard" class="tab-pane active">
           <div class="stats-row" id="dashStats"></div>
           <div class="card"><div class="card-title">🔔 Notificaciones</div><div id="dashNotifs"></div></div>
           <div class="card" id="dashRolInfo"></div>
         </div>
 
-        <!-- NUEVA COTIZACIÓN -->
         <div id="tab-cotizaciones" class="tab-pane">
           <div class="card">
             <div class="card-title">📝 Crear Nueva Cotización</div>
             <div class="form-row c2">
-              <div class="field">
-                <label>Proveedor *</label>
-                <select id="selProv" onchange="actualizarMediosPagoCot()">
-                  <option value="">Seleccione proveedor</option>
-                </select>
-              </div>
-              <div class="field">
-                <label>Medio de Pago *</label>
-                <select id="selPago"><option value="">— Seleccione proveedor primero —</option></select>
-              </div>
+              <div class="field"><label>Proveedor *</label><select id="selProv" onchange="actualizarMediosPagoCot()"><option value="">Seleccione proveedor</option></select></div>
+              <div class="field"><label>Medio de Pago *</label><select id="selPago"><option value="">— Seleccione proveedor primero —</option></select></div>
             </div>
             <div id="provInfoMedios" style="display:none;background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.2);border-radius:11px;padding:10px 14px;margin-bottom:14px;font-size:12px;">
               <span style="color:var(--gold);font-weight:700;">💳 Este proveedor acepta:</span>
@@ -361,43 +315,21 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
             <button class="btn btn-success" onclick="addProd()" style="margin-bottom:16px;">+ Agregar Producto</button>
             <div class="form-row c2">
               <div class="field"><label>Total Calculado</label><input type="text" id="totalCot" readonly style="font-size:17px;font-weight:800;color:var(--gold);"></div>
-              <div class="field"><label>Descuento / Nota Crédito ($)</label>
-                <input type="number" id="descuentoCot" min="0" step="0.01" placeholder="0.00" oninput="calcTotal()">
-              </div>
+              <div class="field"><label>Descuento / Nota Crédito ($)</label><input type="number" id="descuentoCot" min="0" step="0.01" placeholder="0.00" oninput="calcTotal()"></div>
             </div>
             <div class="form-row c2" style="margin-top:0;">
-              <div class="field"><label>Total Final</label>
-                <input type="text" id="totalFinalCot" readonly style="font-size:19px;font-weight:900;color:var(--success);background:rgba(46,204,113,.07);border-color:rgba(46,204,113,.25);">
-              </div>
+              <div class="field"><label>Total Final</label><input type="text" id="totalFinalCot" readonly style="font-size:19px;font-weight:900;color:var(--success);background:rgba(46,204,113,.07);border-color:rgba(46,204,113,.25);"></div>
               <div id="notaCreditoInfo" style="display:none;align-items:center;gap:9px;padding:10px 13px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.25);border-radius:var(--r);">
                 <span style="font-size:20px;">🏷️</span>
-                <div>
-                  <div style="font-size:11px;font-weight:700;color:var(--success);">Nota Crédito Aplicada</div>
-                  <div id="notaCreditoValor" style="font-size:13px;color:var(--text-muted);"></div>
-                </div>
+                <div><div style="font-size:11px;font-weight:700;color:var(--success);">Nota Crédito Aplicada</div><div id="notaCreditoValor" style="font-size:13px;color:var(--text-muted);"></div></div>
               </div>
             </div>
             <div class="field" style="margin-bottom:14px;"><label>Notas / Observaciones</label><textarea id="notasCot" rows="2" placeholder="Observaciones de la cotización..."></textarea></div>
             <div style="background:rgba(245,166,35,.07);border:1px solid rgba(245,166,35,.2);border-radius:13px;padding:14px 16px;margin-bottom:16px;">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;">
-                <span style="font-size:18px;">⏰</span>
-                <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;">Fecha Límite de Pago</span>
-              </div>
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;"><span style="font-size:18px;">⏰</span><span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;">Fecha Límite de Pago</span></div>
               <div class="form-row c2" style="margin-bottom:8px;">
-                <div class="field">
-                  <label>Fecha límite *</label>
-                  <input type="date" id="fechaVencCot" style="font-size:14px;">
-                </div>
-                <div class="field">
-                  <label>Notificar antes de</label>
-                  <select id="diasAlertaCot" style="font-size:14px;">
-                    <option value="1">1 día antes</option>
-                    <option value="3" selected>3 días antes</option>
-                    <option value="5">5 días antes</option>
-                    <option value="7">1 semana antes</option>
-                    <option value="15">15 días antes</option>
-                  </select>
-                </div>
+                <div class="field"><label>Fecha límite *</label><input type="date" id="fechaVencCot" style="font-size:14px;"></div>
+                <div class="field"><label>Notificar antes de</label><select id="diasAlertaCot" style="font-size:14px;"><option value="1">1 día antes</option><option value="3" selected>3 días antes</option><option value="5">5 días antes</option><option value="7">1 semana antes</option><option value="15">15 días antes</option></select></div>
               </div>
               <div id="fechaVencInfo" style="font-size:11px;color:var(--text-muted);margin-top:4px;"></div>
             </div>
@@ -405,7 +337,6 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- LISTA COTIZACIONES -->
         <div id="tab-lista" class="tab-pane">
           <div class="card">
             <div class="card-title">📋 Cotizaciones</div>
@@ -415,25 +346,13 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- PANEL PROVEEDORES -->
         <div id="tab-panel-prov" class="tab-pane">
           <div class="stats-row" id="ppKpis" style="margin-bottom:18px;"></div>
           <div id="ppAlertas" style="margin-bottom:18px;"></div>
           <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:16px;">
             <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-              <div class="search-bar" style="margin:0;min-width:220px;">
-                <span>🏢</span>
-                <select id="ppBuscar" onchange="renderPanelProv()" style="flex:1;background:none;border:none;outline:none;color:var(--text);font-family:inherit;font-size:13px;padding:11px 0;width:100%;">
-                  <option value="">— Todos los proveedores —</option>
-                </select>
-              </div>
-              <select id="ppFiltroEstado" onchange="renderPanelProv()"
-                style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;">
-                <option value="">— Todos —</option>
-                <option value="deuda">🔴 Con deuda</option>
-                <option value="abono">🔄 Abono parcial</option>
-                <option value="pagado">✅ Al día</option>
-              </select>
+              <div class="search-bar" style="margin:0;min-width:220px;"><span>🏢</span><select id="ppBuscar" onchange="renderPanelProv()" style="flex:1;background:none;border:none;outline:none;color:var(--text);font-family:inherit;font-size:13px;padding:11px 0;width:100%;"><option value="">— Todos los proveedores —</option></select></div>
+              <select id="ppFiltroEstado" onchange="renderPanelProv()" style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;"><option value="">— Todos —</option><option value="deuda">🔴 Con deuda</option><option value="abono">🔄 Abono parcial</option><option value="pagado">✅ Al día</option></select>
             </div>
             <div style="display:flex;gap:8px;">
               <button id="ppBtnTarjeta" class="btn btn-gold btn-sm" onclick="setPPModo('tarjeta')">⊞ Tarjetas</button>
@@ -441,19 +360,9 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
             </div>
           </div>
           <div id="ppTarjetas"></div>
-          <div id="ppLista" style="display:none;">
-            <div class="card" style="padding:0;overflow:hidden;">
-              <div class="tbl-wrap">
-                <table><thead><tr>
-                  <th>Proveedor</th><th>NIT</th><th>Medios de Pago</th>
-                  <th>Pedidos</th><th>Total</th><th>Pagado</th><th>Deuda</th><th>Estado</th><th>Acciones</th>
-                </tr></thead><tbody id="ppTblBody"></tbody></table>
-              </div>
-            </div>
-          </div>
+          <div id="ppLista" style="display:none;"><div class="card" style="padding:0;overflow:hidden;"><div class="tbl-wrap"><table><thead><tr><th>Proveedor</th><th>NIT</th><th>Medios de Pago</th><th>Pedidos</th><th>Total</th><th>Pagado</th><th>Deuda</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="ppTblBody"></tbody></table></div></div></div>
         </div>
 
-        <!-- PROVEEDORES -->
         <div id="tab-proveedores" class="tab-pane">
           <div class="card">
             <div class="card-title">🏢 Proveedores</div>
@@ -465,7 +374,7 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
                 <div class="field"><label>Teléfono</label><input type="text" id="pTel"></div>
                 <div class="field"><label>WhatsApp</label><input type="text" id="pWa" placeholder="573001234567"></div>
                 <div class="field"><label>Dirección</label><input type="text" id="pDir"></div>
-                <div class="field"><label>Banco</label><select id="pBanco"><option value="">— Seleccione banco —</option><optgroup label="Bancos Principales"><option>Bancolombia</option><option>Banco de Bogotá</option><option>Davivienda</option><option>BBVA Colombia</option><option>Banco Popular</option><option>Banco de Occidente</option><option>Scotiabank Colpatria</option><option>Banco AV Villas</option><option>Banco Caja Social</option><option>Bancamía</option></optgroup><optgroup label="Otros Bancos y Financieras"><option>Banco Agrario de Colombia</option><option>Banco Cooperativo Coopcentral</option><option>Banco Credifinanciera</option><option>Banco Finandina</option><option>Banco GNB Sudameris</option><option>Banco Itaú Colombia</option><option>Banco J.P. Morgan Colombia</option><option>Banco Multibank</option><option>Banco Pichincha</option><option>Banco Santander de Negocios</option><option>Banco Serfinanza</option><option>Banco W</option><option>BancoCompartir</option><option>Bancoomeva</option><option>CFA Cooperativa Financiera</option><option>Citibank Colombia</option><option>Confiar Cooperativa Financiera</option><option>Coofinep Cooperativa Financiera</option><option>Cotrafa Cooperativa Financiera</option><option>Daviplata</option><option>Falabella</option><option>Financiera Juriscoop</option><option>Iris (antes Movii)</option><option>JFK Cooperativa Financiera</option><option>Lulo Bank</option><option>Mibanco</option><option>Nequi</option><option>Nu Colombia (Nubank)</option><option>RappiPay</option><option>Sistecredito</option><option>Uniminuto</option></optgroup></select></div>
+                <div class="field"><label>Banco</label><select id="pBanco"><option value="">— Seleccione banco —</option><optgroup label="Bancos Principales"><option>Bancolombia</option><option>Banco de Bogotá</option><option>Davivienda</option><option>BBVA Colombia</option><option>Banco Popular</option><option>Banco de Occidente</option><option>Scotiabank Colpatria</option><option>Banco AV Villas</option><option>Banco Caja Social</option><option>Bancamía</option></optgroup><optgroup label="Otros Bancos y Financieras"><option>Banco Agrario de Colombia</option><option>Daviplata</option><option>Nequi</option><option>Nu Colombia (Nubank)</option><option>RappiPay</option><option>Lulo Bank</option></optgroup></select></div>
                 <div class="field"><label>Número de Cuenta</label><input type="text" id="pNumeroCuenta" placeholder="Ej: 123-456789-00"></div>
                 <div class="field"><label>Tipo de Cuenta</label><select id="pTipoCuenta"><option value="">— Seleccione —</option><option value="Ahorros">Ahorros</option><option value="Corriente">Corriente</option></select></div>
               </div>
@@ -487,7 +396,6 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- CATÁLOGO DE PRODUCTOS -->
         <div id="tab-catalogo" class="tab-pane">
           <div class="card">
             <div class="card-title">🗂️ Catálogo de Productos</div>
@@ -506,7 +414,6 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- INVENTARIO -->
         <div id="tab-inventario" class="tab-pane">
           <div class="stats-row" id="invKpis" style="margin-bottom:18px;"></div>
           <div class="card" style="padding:16px 20px;margin-bottom:18px;">
@@ -514,47 +421,24 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
               <span style="font-size:14px;font-weight:800;">📦 Inventario por Proveedor</span>
               <div style="display:flex;gap:8px;flex-wrap:wrap;">
                 <button class="btn btn-ghost btn-sm" onclick="limpFiltrosInv()">🔄 Limpiar</button>
-                <button class="btn btn-sm" onclick="exportarExcelInventario()"
-                  style="background:linear-gradient(135deg,rgba(46,204,113,.25),rgba(46,204,113,.08));color:var(--success);border:1px solid rgba(46,204,113,.4);font-size:12px;padding:6px 14px;">
-                  📊 Exportar Excel
-                </button>
+                <button class="btn btn-sm" onclick="exportarExcelInventario()" style="background:linear-gradient(135deg,rgba(46,204,113,.25),rgba(46,204,113,.08));color:var(--success);border:1px solid rgba(46,204,113,.4);font-size:12px;padding:6px 14px;">📊 Exportar Excel</button>
               </div>
             </div>
             <div class="form-row c3" style="margin-bottom:0;">
               <div class="field"><label>🔍 Proveedor</label><select id="invBuscar" onchange="renderInventario()"><option value="">— Todos los proveedores —</option></select></div>
-              <div class="field"><label>📋 Estado</label>
-                <select id="invEstado" onchange="renderInventario()">
-                  <option value="">— Todos —</option>
-                  <option value="pendiente">⏳ Pendiente</option>
-                  <option value="aprobado">✅ Aprobado</option>
-                  <option value="rechazado">❌ Rechazado</option>
-                </select>
-              </div>
+              <div class="field"><label>📋 Estado</label><select id="invEstado" onchange="renderInventario()"><option value="">— Todos —</option><option value="pendiente">⏳ Pendiente</option><option value="aprobado">✅ Aprobado</option><option value="rechazado">❌ Rechazado</option></select></div>
               <div class="field"><label>📅 Año</label><select id="invAnio" onchange="renderInventario()"><option value="">— Todos —</option></select></div>
             </div>
           </div>
           <div id="invCuerpo"></div>
         </div>
 
-        <!-- RESUMEN FINANCIERO -->
         <div id="tab-resumen" class="tab-pane">
           <div class="stats-row" id="resKpis" style="margin-bottom:18px;"></div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px;">
-            <select id="resFiltroMes" onchange="renderResumen()"
-              style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;">
-              <option value="">📅 Todos los meses</option>
-            </select>
-            <select id="resFiltroEstado" onchange="renderResumen()"
-              style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;">
-              <option value="">— Todos los estados —</option>
-              <option value="pagado">✅ Pagado</option>
-              <option value="abono">🔄 Abono</option>
-              <option value="debe">🔴 Debe</option>
-            </select>
-            <select id="resFiltroMetodo" onchange="renderResumen()"
-              style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;">
-              <option value="">💳 Todos los métodos</option>
-            </select>
+            <select id="resFiltroMes" onchange="renderResumen()" style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;"><option value="">📅 Todos los meses</option></select>
+            <select id="resFiltroEstado" onchange="renderResumen()" style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;"><option value="">— Todos los estados —</option><option value="pagado">✅ Pagado</option><option value="abono">🔄 Abono</option><option value="debe">🔴 Debe</option></select>
+            <select id="resFiltroMetodo" onchange="renderResumen()" style="padding:10px 13px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:var(--r);color:var(--text);font-size:13px;outline:none;"><option value="">💳 Todos los métodos</option></select>
             <button class="btn btn-ghost btn-sm" onclick="exportarResumenPDF()" style="margin-left:auto;">📄 Exportar PDF</button>
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px;">
@@ -564,14 +448,10 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           <div class="card"><div class="card-title" style="font-size:13px;">📅 Desglose por Mes</div><div id="resMeses"></div></div>
           <div class="card" style="margin-top:16px;">
             <div class="card-title" style="font-size:13px;">📋 Historial Completo de Pagos</div>
-            <div class="tbl-wrap">
-              <table><thead><tr><th>Fecha</th><th>Cotización</th><th>Proveedor</th><th>Método</th><th>Monto</th><th>Ref. TX</th><th>Registrado por</th><th>Comp.</th></tr></thead>
-              <tbody id="resTblPagos"></tbody></table>
-            </div>
+            <div class="tbl-wrap"><table><thead><tr><th>Fecha</th><th>Cotización</th><th>Proveedor</th><th>Método</th><th>Monto</th><th>Ref. TX</th><th>Registrado por</th><th>Comp.</th></tr></thead><tbody id="resTblPagos"></tbody></table></div>
           </div>
         </div>
 
-        <!-- PAGOS -->
         <div id="tab-pagos" class="tab-pane">
           <div class="card">
             <div class="card-title">💰 Gestión de Pagos</div>
@@ -581,7 +461,6 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- WHATSAPP -->
         <div id="tab-whatsapp" class="tab-pane">
           <div class="card">
             <div class="card-title">📲 Enviar al Grupo de WhatsApp</div>
@@ -619,13 +498,9 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
             <div class="field" style="margin-bottom:13px;"><label>Mensaje</label><textarea id="msgManual" rows="3" placeholder="Escribe el mensaje..."></textarea></div>
             <button class="btn btn-wa" onclick="enviarMsgManual()">📲 Enviar al Grupo</button>
           </div>
-          <div class="card">
-            <div class="card-title">📋 Historial</div>
-            <div id="historialWa" style="max-height:280px;overflow-y:auto;"></div>
-          </div>
+          <div class="card"><div class="card-title">📋 Historial</div><div id="historialWa" style="max-height:280px;overflow-y:auto;"></div></div>
         </div>
 
-        <!-- APROBACIONES -->
         <div id="tab-aprobaciones" class="tab-pane">
           <div class="card">
             <div class="card-title">✅ Panel de Aprobaciones</div>
@@ -634,7 +509,6 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- PAPELERA -->
         <div id="tab-papelera" class="tab-pane">
           <div class="card">
             <div class="card-title">🗑️ Papelera</div>
@@ -650,7 +524,6 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
           </div>
         </div>
 
-        <!-- USUARIOS -->
         <div id="tab-usuarios" class="tab-pane">
           <div class="card">
             <div class="card-title">👥 Gestión de Usuarios</div>
@@ -658,13 +531,7 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
               <div class="field"><label>Nombre Completo *</label><input type="text" id="uNombre"></div>
               <div class="field"><label>Usuario *</label><input type="text" id="uUser"></div>
               <div class="field"><label>Contraseña *</label><input type="password" id="uPass"></div>
-              <div class="field"><label>Rol *</label>
-                <select id="uRol">
-                  <option value="admin">👨‍💼 Administrador</option>
-                  <option value="contadora">💼 Contadora</option>
-                  <option value="jefe">👔 Jefe</option>
-                </select>
-              </div>
+              <div class="field"><label>Rol *</label><select id="uRol"><option value="admin">👨‍💼 Administrador</option><option value="contadora">💼 Contadora</option><option value="jefe">👔 Jefe</option></select></div>
             </div>
             <button class="btn btn-gold" onclick="crearUsuario()">+ Crear Usuario</button>
             <hr class="divider">
@@ -676,100 +543,21 @@ hr.divider{border:none;border-top:1px solid var(--border-soft);margin:16px 0}
   </div>
 </div>
 
-<!-- ════ MODALES ════ -->
+<!-- MODALES -->
 <div class="notif-overlay" id="notifOverlay" onclick="toggleNotif()"></div>
 <div class="notif-panel" id="notifPanel">
   <div class="notif-header"><h3>🔔 Notificaciones</h3><span class="notif-close" onclick="toggleNotif()">✕</span></div>
   <div class="notif-body" id="notifBody"></div>
 </div>
-
 <div id="mDetalles" class="modal-overlay"><div class="modal-box lg"><div id="mDetallesBody"></div><button class="btn btn-ghost" onclick="closeModal('mDetalles')" style="margin-top:16px;">Cerrar</button></div></div>
-
-<div id="mProvDetalle" class="modal-overlay">
-  <div class="modal-box lg">
-    <div id="mProvDetalleBody"></div>
-    <button class="btn btn-ghost" onclick="closeModal('mProvDetalle')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button>
-  </div>
-</div>
-
+<div id="mProvDetalle" class="modal-overlay"><div class="modal-box lg"><div id="mProvDetalleBody"></div><button class="btn btn-ghost" onclick="closeModal('mProvDetalle')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button></div></div>
 <div id="mPago" class="modal-overlay"><div class="modal-box"><div class="modal-title">💰 Registrar Pago</div><div id="mPagoBody"></div></div></div>
-
-<div id="mCatalogoPicker" class="modal-overlay">
-  <div class="modal-box lg">
-    <div class="modal-title">🗂️ Seleccionar del Catálogo</div>
-    <input type="text" id="catPickerBuscar" placeholder="🔍 Buscar producto..." style="width:100%;margin-bottom:12px;" oninput="renderCatalogoPicker()">
-    <div id="catPickerLista" style="max-height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;"></div>
-    <button class="btn btn-ghost" onclick="closeModal('mCatalogoPicker')" style="margin-top:14px;width:100%;">Cancelar</button>
-  </div>
-</div>
-
-<div id="mComprobante" class="modal-overlay">
-  <div class="modal-box lg">
-    <div class="modal-title">🧾 Comprobante de Pago</div>
-    <div id="mComprobanteBody"></div>
-    <button class="btn btn-ghost" onclick="closeModal('mComprobante')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button>
-  </div>
-</div>
-
-<div id="mResumen" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-title">💰 Resumen Financiero</div>
-    <div id="mResumenRef" style="color:var(--text-muted);font-size:12px;margin-bottom:16px;"></div>
-    <div class="fin-rows" id="mResumenRows"></div>
-    <div class="prog-wrap"><div class="prog-fill" id="mResumenProg" style="width:0%"></div></div>
-    <div class="prog-label" id="mResumenPct">0% pagado</div>
-    <div style="display:flex;gap:8px;margin-top:16px;">
-      <button class="btn btn-gold" id="mResumenBtnPagar" onclick="abrirPagoDesdeResumen()" style="flex:1;justify-content:center;">💳 Registrar Pago</button>
-      <button class="btn btn-ghost" onclick="closeModal('mResumen')" style="flex:1;justify-content:center;">Cerrar</button>
-    </div>
-  </div>
-</div>
-
-<div id="mRechazo" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-title">❌ Rechazar Cotización</div>
-    <div id="mRechazoInfo"></div>
-    <div class="field" style="margin-top:13px;"><label>Motivo *</label><textarea id="mRechazoMotivo" rows="4" placeholder="Explique el motivo…"></textarea></div>
-    <div style="display:flex;gap:8px;margin-top:13px;">
-      <button class="btn btn-danger" onclick="confirmarRechazo()" style="flex:1;justify-content:center;">❌ Confirmar Rechazo</button>
-      <button class="btn btn-ghost" onclick="closeModal('mRechazo')" style="flex:1;justify-content:center;">Cancelar</button>
-    </div>
-  </div>
-</div>
-
-<div id="mConfirmElim" class="modal-overlay">
-  <div class="modal-box sm">
-    <div class="confirm-icon">🗑️</div>
-    <div class="confirm-title" id="cElimTitle">¿Mover a la papelera?</div>
-    <div class="confirm-info" id="cElimInfo"></div>
-    <div class="confirm-note" id="cElimNote">Podrás restaurarlo desde Papelera.</div>
-    <div class="confirm-btns">
-      <button class="btn btn-danger" id="cElimBtn" style="flex:1;justify-content:center;">🗑️ Eliminar</button>
-      <button class="btn btn-ghost" onclick="closeModal('mConfirmElim')" style="flex:1;justify-content:center;">Cancelar</button>
-    </div>
-  </div>
-</div>
-
-<div id="mWAInstr" class="modal-overlay">
-  <div class="modal-box lg">
-    <div style="font-size:36px;margin-bottom:8px;">📲</div>
-    <div class="confirm-title" style="color:#25D366;">Enviar Cotización por WhatsApp</div>
-    <div style="background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.3);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text-muted);text-align:left;">
-      💡 Al hacer clic en <strong style="color:#25D366;">Enviar por WhatsApp</strong>, se abrirá WhatsApp con el mensaje <strong>ya escrito</strong>. Solo seleccione el grupo o contacto y presione <strong>Enviar ▶</strong>.
-    </div>
-    <div id="waEnlaceApro" style="background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:12px;padding:12px 14px;margin-bottom:14px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--success);margin-bottom:6px;">🔗 Enlace de Aprobación</div>
-      <div id="waEnlaceTexto" style="font-size:10px;color:var(--text-muted);font-family:var(--mono);word-break:break-all;line-height:1.4;margin-bottom:8px;"></div>
-      <button class="btn btn-success btn-sm" onclick="copiarEnlaceApro()">📋 Copiar enlace</button>
-    </div>
-    <div style="background:var(--dark2);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:11px;text-align:left;border:1px solid var(--border-soft);max-height:160px;overflow-y:auto;white-space:pre-wrap;font-family:var(--mono);color:var(--gold);" id="waPreviewMsg"></div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;">
-      <button class="btn btn-info btn-sm" onclick="copiarMsgWA()" style="flex:1;justify-content:center;padding:11px;">📋 Solo copiar</button>
-      <button class="btn btn-wa" id="btnAbrirWA" style="flex:2;justify-content:center;padding:13px;font-size:14px;font-weight:800;">📲 Enviar por WhatsApp</button>
-      <button class="btn btn-ghost btn-sm" onclick="closeModal('mWAInstr')" style="padding:11px 14px;">Cerrar</button>
-    </div>
-  </div>
-</div>
+<div id="mCatalogoPicker" class="modal-overlay"><div class="modal-box lg"><div class="modal-title">🗂️ Seleccionar del Catálogo</div><input type="text" id="catPickerBuscar" placeholder="🔍 Buscar producto..." style="width:100%;margin-bottom:12px;" oninput="renderCatalogoPicker()"><div id="catPickerLista" style="max-height:380px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;"></div><button class="btn btn-ghost" onclick="closeModal('mCatalogoPicker')" style="margin-top:14px;width:100%;">Cancelar</button></div></div>
+<div id="mComprobante" class="modal-overlay"><div class="modal-box lg"><div class="modal-title">🧾 Comprobante de Pago</div><div id="mComprobanteBody"></div><button class="btn btn-ghost" onclick="closeModal('mComprobante')" style="margin-top:16px;width:100%;justify-content:center;">Cerrar</button></div></div>
+<div id="mResumen" class="modal-overlay"><div class="modal-box"><div class="modal-title">💰 Resumen Financiero</div><div id="mResumenRef" style="color:var(--text-muted);font-size:12px;margin-bottom:16px;"></div><div class="fin-rows" id="mResumenRows"></div><div class="prog-wrap"><div class="prog-fill" id="mResumenProg" style="width:0%"></div></div><div class="prog-label" id="mResumenPct">0% pagado</div><div style="display:flex;gap:8px;margin-top:16px;"><button class="btn btn-gold" id="mResumenBtnPagar" onclick="abrirPagoDesdeResumen()" style="flex:1;justify-content:center;">💳 Registrar Pago</button><button class="btn btn-ghost" onclick="closeModal('mResumen')" style="flex:1;justify-content:center;">Cerrar</button></div></div></div>
+<div id="mRechazo" class="modal-overlay"><div class="modal-box"><div class="modal-title">❌ Rechazar Cotización</div><div id="mRechazoInfo"></div><div class="field" style="margin-top:13px;"><label>Motivo *</label><textarea id="mRechazoMotivo" rows="4" placeholder="Explique el motivo…"></textarea></div><div style="display:flex;gap:8px;margin-top:13px;"><button class="btn btn-danger" onclick="confirmarRechazo()" style="flex:1;justify-content:center;">❌ Confirmar Rechazo</button><button class="btn btn-ghost" onclick="closeModal('mRechazo')" style="flex:1;justify-content:center;">Cancelar</button></div></div></div>
+<div id="mConfirmElim" class="modal-overlay"><div class="modal-box sm"><div class="confirm-icon">🗑️</div><div class="confirm-title" id="cElimTitle">¿Mover a la papelera?</div><div class="confirm-info" id="cElimInfo"></div><div class="confirm-note" id="cElimNote">Podrás restaurarlo desde Papelera.</div><div class="confirm-btns"><button class="btn btn-danger" id="cElimBtn" style="flex:1;justify-content:center;">🗑️ Eliminar</button><button class="btn btn-ghost" onclick="closeModal('mConfirmElim')" style="flex:1;justify-content:center;">Cancelar</button></div></div></div>
+<div id="mWAInstr" class="modal-overlay"><div class="modal-box lg"><div style="font-size:36px;margin-bottom:8px;">📲</div><div class="confirm-title" style="color:#25D366;">Enviar Cotización por WhatsApp</div><div style="background:rgba(37,211,102,.08);border:1px solid rgba(37,211,102,.3);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:12px;color:var(--text-muted);text-align:left;">💡 Al hacer clic en <strong style="color:#25D366;">Enviar por WhatsApp</strong>, se abrirá WhatsApp con el mensaje <strong>ya escrito</strong>. Solo seleccione el grupo o contacto y presione <strong>Enviar ▶</strong>.</div><div id="waEnlaceApro" style="background:rgba(46,204,113,.08);border:1px solid rgba(46,204,113,.3);border-radius:12px;padding:12px 14px;margin-bottom:14px;"><div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--success);margin-bottom:6px;">🔗 Enlace de Aprobación</div><div id="waEnlaceTexto" style="font-size:10px;color:var(--text-muted);font-family:var(--mono);word-break:break-all;line-height:1.4;margin-bottom:8px;"></div><button class="btn btn-success btn-sm" onclick="copiarEnlaceApro()">📋 Copiar enlace</button></div><div style="background:var(--dark2);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:11px;text-align:left;border:1px solid var(--border-soft);max-height:160px;overflow-y:auto;white-space:pre-wrap;font-family:var(--mono);color:var(--gold);" id="waPreviewMsg"></div><div style="display:flex;gap:8px;flex-wrap:wrap;"><button class="btn btn-info btn-sm" onclick="copiarMsgWA()" style="flex:1;justify-content:center;padding:11px;">📋 Solo copiar</button><button class="btn btn-wa" id="btnAbrirWA" style="flex:2;justify-content:center;padding:13px;font-size:14px;font-weight:800;">📲 Enviar por WhatsApp</button><button class="btn btn-ghost btn-sm" onclick="closeModal('mWAInstr')" style="padding:11px 14px;">Cerrar</button></div></div></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
@@ -785,22 +573,15 @@ const DB_DEFAULT = {
   config:{waLink:'',waNombre:''}
 };
 
-function guardarDB(){
-  try{localStorage.setItem('oroconstruccion_db',JSON.stringify(DB));}
-  catch(e){console.warn('Error guardando DB',e);}
-}
+function guardarDB(){try{localStorage.setItem('oroconstruccion_db',JSON.stringify(DB));}catch(e){console.warn('Error guardando DB',e);}}
 
 function cargarDB(){
   try{
     const raw=localStorage.getItem('oroconstruccion_db');
     if(raw){
       const saved=JSON.parse(raw);
-      // Restaurar todo completamente desde localStorage
       const campos=['usuarios','proveedores','cotizaciones','productos','papelera','papProv','papUsr','waHistorial','config'];
-      campos.forEach(k=>{
-        if(saved[k]!==undefined) DB[k]=saved[k];
-      });
-      // Garantizar campos mínimos
+      campos.forEach(k=>{if(saved[k]!==undefined) DB[k]=saved[k];});
       if(!DB.usuarios||!DB.usuarios.length) DB.usuarios=JSON.parse(JSON.stringify(DB_DEFAULT.usuarios));
       if(!DB.productos) DB.productos=[];
       if(!DB.papUsr) DB.papUsr=[];
@@ -824,7 +605,6 @@ const PERMISOS={
 
 function puede(p){return usuario&&PERMISOS[usuario.rol]?.[p]===true;}
 
-// ── Utilidades ──
 function toast(msg,tipo='success',ms=3200){const t=document.createElement('div');t.className=`toast ${tipo}`;t.innerHTML=`${tipo==='success'?'✅':tipo==='error'?'❌':tipo==='warning'?'⚠️':'ℹ️'} ${msg}`;document.getElementById('toastContainer').appendChild(t);setTimeout(()=>t.remove(),ms);}
 function v(id){return document.getElementById(id)?.value?.trim()||'';}
 function openModal(id){document.getElementById(id).classList.add('active');}
@@ -836,9 +616,6 @@ function badgeApro(s){const m={pendiente:'badge-pending',aprobado:'badge-approve
 function badgePago(s){const m={pagado:'badge-paid',abono:'badge-partial',debe:'badge-owes'};const l={pagado:'💚 Pagado',abono:'🔄 Abono',debe:'🔴 Debe'};return `<span class="badge ${m[s]||''}">${l[s]||s}</span>`;}
 function rolBadgeHtml(rol){if(rol==='jefe')return '<span class="badge badge-jefe">👔 Jefe</span>';if(rol==='admin')return '<span class="badge badge-admin">👨‍💼 Admin</span>';return '<span class="badge badge-contadora">💼 Contadora</span>';}
 function confirmarEliminar(titulo,info,nota,fn){document.getElementById('cElimTitle').textContent=titulo;document.getElementById('cElimInfo').innerHTML=info;document.getElementById('cElimNote').textContent=nota||'Podrás restaurarlo desde Papelera.';document.getElementById('cElimBtn').onclick=()=>{fn();closeModal('mConfirmElim');};openModal('mConfirmElim');}
-
-// ── Login / Logout ──
-function autoLogin(u,p){document.getElementById('loginUser').value=u;document.getElementById('loginPass').value=p;login();}
 
 function login(){
   const u=v('loginUser'),p=v('loginPass');
@@ -868,7 +645,6 @@ function mostrarApp(){
   if(window.innerWidth<=800)document.getElementById('menuBtn').style.display='block';
 }
 
-// ── Sidebar ──
 const NAV_ITEMS=[
   {tab:'dashboard',icon:'📊',label:'Dashboard',roles:['jefe','admin','contadora']},
   {tab:'cotizaciones',icon:'📝',label:'Nueva Cotización',roles:['jefe','admin','contadora']},
@@ -932,7 +708,6 @@ function toggleNotif(){
   document.getElementById('notifOverlay').classList.toggle('open');
 }
 
-// ── Notificaciones ──
 function genNotifs(){
   const ns=[];
   DB.cotizaciones.forEach(c=>{
@@ -968,7 +743,6 @@ function updateNotifs(){
     :'<div style="color:var(--text-muted);text-align:center;padding:16px;">Sin notificaciones ✅</div>';
 }
 
-// ── Dashboard ──
 function updateDashboard(){
   const stats=document.getElementById('dashStats');
   const montoTotal=DB.cotizaciones.reduce((s,c)=>s+c.total,0);
@@ -1000,26 +774,17 @@ function renderCatalogoPicker(){
   const el=document.getElementById('catPickerLista');
   el.innerHTML=lista.length?lista.map(p=>`
     <div onclick="seleccionarDesdePicker(${p.id})" style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--dark2);border:1px solid var(--border-soft);border-radius:10px;cursor:pointer;transition:border-color .2s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='var(--border-soft)'">
-      <div>
-        <div style="font-weight:700;font-size:14px;">${p.nombre}</div>
-        ${p.descripcion?`<div style="font-size:11px;color:var(--text-muted);">${p.descripcion}</div>`:''}
-        <div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.unidad}</div>
-      </div>
+      <div><div style="font-weight:700;font-size:14px;">${p.nombre}</div>${p.descripcion?`<div style="font-size:11px;color:var(--text-muted);">${p.descripcion}</div>`:''}<div style="font-size:11px;color:var(--text-muted);margin-top:2px;">${p.unidad}</div></div>
       <div style="font-size:16px;font-weight:900;color:var(--success);">$${p.precio.toLocaleString('es-CO')}</div>
     </div>`).join(''):'<div style="text-align:center;padding:28px;color:var(--text-muted);">Sin resultados</div>';
 }
 function seleccionarDesdePicker(prodId){
   const p=DB.productos.find(x=>Number(x.id)===Number(prodId));if(!p)return;
   const row=document.getElementById(`pr${_catPickerRowId}`);
-  if(row){
-    row.querySelector('.pnom').value=p.nombre;
-    row.querySelector('.ppre').value=p.precio.toLocaleString('es-CO');
-    calcTotal();
-  }
+  if(row){row.querySelector('.pnom').value=p.nombre;row.querySelector('.ppre').value=p.precio.toLocaleString('es-CO');calcTotal();}
   closeModal('mCatalogoPicker');
   toast(`✅ "${p.nombre}" seleccionado`,'success');
 }
-
 
 function crearProductoCat(){
   const nom=document.getElementById('catNombre')?.value?.trim();
@@ -1031,11 +796,11 @@ function crearProductoCat(){
   DB.productos.push({id:Date.now(),nombre:nom,descripcion:desc,unidad,precio,creadoPor:usuario.nombre,fecha:new Date().toISOString()});
   ['catNombre','catDesc','catPrecio'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   document.getElementById('catUnidad').value='Unidad';
-  toast('✅ Producto agregado al catálogo','success');renderCatalogo();
+  toast('✅ Producto agregado al catálogo','success');renderCatalogo();guardarDB();
 }
 function eliminarProductoCat(id){
   const idx=DB.productos.findIndex(p=>Number(p.id)===Number(id));if(idx===-1)return;
-  confirmarEliminar('¿Eliminar producto?',`<strong>${DB.productos[idx].nombre}</strong>`,''  ,()=>{DB.productos.splice(idx,1);toast('Producto eliminado','info');renderCatalogo();});
+  confirmarEliminar('¿Eliminar producto?',`<strong>${DB.productos[idx].nombre}</strong>`,''  ,()=>{DB.productos.splice(idx,1);toast('Producto eliminado','info');renderCatalogo();guardarDB();});
 }
 function editarProductoCat(id){
   const p=DB.productos.find(x=>Number(x.id)===Number(id));if(!p)return;
@@ -1045,7 +810,6 @@ function editarProductoCat(id){
   document.getElementById('catPrecio').value=p.precio.toLocaleString('es-CO');
   DB.productos.splice(DB.productos.indexOf(p),1);
   renderCatalogo();
-  document.querySelector('[data-tab="catalogo"]')&&navTo('catalogo',document.querySelector('[data-tab="catalogo"]'));
 }
 function renderCatalogo(){
   const tb=document.getElementById('tblCatalogo');if(!tb)return;
@@ -1067,7 +831,7 @@ function renderCatalogo(){
 function usarProductoCat(id){
   const p=DB.productos.find(x=>Number(x.id)===Number(id));if(!p)return;
   navTo('cotizaciones',document.querySelector('[data-tab="cotizaciones"]'));
-  setTimeout(()=>{addProdDesde(p);},200);
+  setTimeout(()=>addProdDesde(p),200);
 }
 function addProdDesde(p){
   prodCount++;
@@ -1076,7 +840,6 @@ function addProdDesde(p){
   document.getElementById('prodContainer').appendChild(d);calcTotal();
   toast(`✅ "${p.nombre}" agregado a la cotización`,'success');
 }
-
 
 function crearProveedor(){
   if(!puede('puedeCrearProveedores')){toast('No tienes permiso','error');return;}
@@ -1106,7 +869,6 @@ function eliminarProveedor(id){
 function restaurarProveedor(id){const idx=DB.papProv.findIndex(p=>Number(p.id)===Number(id));if(idx===-1)return;const p=DB.papProv[idx];delete p.eliminadoPor;delete p.fechaEliminacion;DB.proveedores.push(p);DB.papProv.splice(idx,1);toast('Restaurado','success');updateUI();}
 function eliminarPermanenteProv(id){confirmarEliminar('⚠️ Eliminar permanentemente','Irreversible.',''  ,()=>{DB.papProv=DB.papProv.filter(p=>Number(p.id)!==Number(id));toast('Eliminado','error');updateUI();});}
 
-// ── Usuarios ──
 function crearUsuario(){
   if(!puede('puedeGestionarUsuarios')){toast('Solo el jefe','error');return;}
   const n=v('uNombre'),uname=v('uUser'),p=v('uPass'),r=v('uRol');
@@ -1138,7 +900,6 @@ function toggleActivoUsuario(id){
   u.activo=!u.activo;toast(`"${u.nombre}" ${u.activo?'activado':'desactivado'}`,u.activo?'success':'info');updateUI();
 }
 
-// ── Productos / Cotizaciones ──
 function addProd(){
   prodCount++;
   const d=document.createElement('div');d.className='prod-row';d.id=`pr${prodCount}`;
@@ -1243,7 +1004,6 @@ function eliminarCotizacion(id){
 function restaurarCotizacion(id){const idx=DB.papelera.findIndex(c=>Number(c.id)===Number(id));if(idx===-1)return;const c=DB.papelera[idx];delete c.eliminadoPor;delete c.fechaEliminacion;DB.cotizaciones.push(c);DB.papelera.splice(idx,1);toast('Restaurada','success');updateUI();}
 function eliminarPermanenteCot(id){confirmarEliminar('⚠️ Eliminar permanentemente','Irreversible.',''  ,()=>{DB.papelera=DB.papelera.filter(c=>Number(c.id)!==Number(id));toast('Eliminada','error');updateUI();});}
 
-// ── Pagos ──
 function mostrarResumen(id){
   if(!puede('puedePagar')){toast('No tienes permiso','error');return;}
   _resumenId=Number(id);
@@ -1272,48 +1032,8 @@ function abrirPago(id){
   const ops=provPagos.length?provPagos:['Transferencia Bancaria','Efectivo','Cheque','PSE','Nequi','Daviplata'];
   const provFull=DB.proveedores.find(p=>Number(p.id)===Number(c.proveedor.id))||c.proveedor;
   const tieneCuenta=provFull.banco||provFull.numeroCuenta||provFull.tipoCuenta;
-  const cuentaCard=tieneCuenta?`
-    <div style="background:linear-gradient(135deg,rgba(245,166,35,.08),rgba(245,166,35,.03));border:1px solid rgba(245,166,35,.35);border-radius:12px;padding:13px 16px;margin-bottom:14px;">
-      <div style="font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🏦 Datos Bancarios del Proveedor</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;">
-        <div><span style="font-size:10px;color:var(--text-muted);display:block;">Proveedor</span><span style="font-size:13px;font-weight:700;color:var(--text);">${provFull.nombre}</span></div>
-        ${provFull.banco?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Banco</span><span style="font-size:13px;font-weight:700;color:var(--text);">${provFull.banco}</span></div>`:''}
-        ${provFull.tipoCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Tipo de Cuenta</span><span style="font-size:13px;font-weight:700;color:var(--info);">${provFull.tipoCuenta}</span></div>`:''}
-        ${provFull.numeroCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Número de Cuenta</span><span style="font-size:14px;font-weight:800;color:var(--gold);font-family:monospace;letter-spacing:.5px;">${provFull.numeroCuenta}</span></div>`:''}
-        ${provFull.nit?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">NIT</span><span style="font-size:12px;color:var(--text-muted);">${provFull.nit}</span></div>`:''}
-      </div>
-    </div>`:'';
-  document.getElementById('mPagoBody').innerHTML=`
-    ${cuentaCard}
-    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
-      <div class="fin-row total"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div>
-      <div class="fin-row paid"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div>
-      <div class="fin-row owed"><span class="fin-row-label">Pendiente</span><span class="fin-row-val">$${c.montoRestante.toLocaleString()}</span></div>
-    </div>
-    <div class="form-row c2">
-      <div class="field"><label>Monto a Pagar * <span style="font-size:10px;color:var(--text-muted);font-weight:400;">(Pendiente: <strong style="color:var(--gold);">$${c.montoRestante.toLocaleString('es-CO')}</strong>)</span></label><input type="text" id="pMonto" placeholder="0" value="${c.montoRestante.toLocaleString('es-CO')}" oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/\B(?=(\d{3})+(?!\d))/g,'.')"></div>
-      <div class="field"><label>Fecha *</label><input type="date" id="pFecha" value="${new Date().toISOString().split('T')[0]}"></div>
-      <div class="field"><label>Método de Pago *</label><select id="pMetodo">${ops.map(op=>`<option value="${op}">${op}</option>`).join('')}</select></div>
-      <div class="field"><label>No. Referencia</label><input type="text" id="pRef" placeholder="Ej: TXN-2024-001"></div>
-    </div>
-    <div class="field" style="margin-bottom:13px;"><label>Banco / Cuenta</label><input type="text" id="pBanco" value="${[provFull.banco,provFull.tipoCuenta,provFull.numeroCuenta].filter(Boolean).join(' · ')}" placeholder="Ej: Bancolombia 123-456789-00"></div>
-    <div class="field" style="margin-bottom:13px;"><label>Notas</label><textarea id="pNotas" rows="2"></textarea></div>
-    <div style="background:var(--dark2);border:1px dashed rgba(245,166,35,.35);border-radius:12px;padding:14px;margin-bottom:14px;">
-      <div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🧾 Comprobante</div>
-      <div id="compPreview" style="display:none;margin-bottom:10px;">
-        <img id="compImg" style="max-width:100%;max-height:220px;border-radius:9px;border:1px solid var(--border-soft);" />
-        <div id="compNombre" style="font-size:11px;color:var(--success);margin-top:5px;"></div>
-      </div>
-      <label id="compLabel" style="display:flex;align-items:center;gap:9px;cursor:pointer;padding:9px 14px;background:var(--dark3);border:1px solid var(--border-soft);border-radius:9px;">
-        <span style="font-size:20px;">📎</span>
-        <span style="font-size:12px;color:var(--text-muted);">Adjuntar imagen del comprobante</span>
-        <input type="file" id="compFile" accept="image/*" style="display:none;" onchange="cargarComprobante(event,${c.id})">
-      </label>
-    </div>
-    <div style="display:flex;gap:8px;">
-      <button class="btn btn-gold" onclick="registrarPago(${c.id})" style="flex:1;justify-content:center;padding:13px;">💰 Confirmar Pago</button>
-      <button class="btn btn-ghost" onclick="closeModal('mPago')" style="padding:13px 16px;">Cancelar</button>
-    </div>`;
+  const cuentaCard=tieneCuenta?`<div style="background:linear-gradient(135deg,rgba(245,166,35,.08),rgba(245,166,35,.03));border:1px solid rgba(245,166,35,.35);border-radius:12px;padding:13px 16px;margin-bottom:14px;"><div style="font-size:10px;font-weight:700;letter-spacing:.9px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🏦 Datos Bancarios del Proveedor</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;"><div><span style="font-size:10px;color:var(--text-muted);display:block;">Proveedor</span><span style="font-size:13px;font-weight:700;color:var(--text);">${provFull.nombre}</span></div>${provFull.banco?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Banco</span><span style="font-size:13px;font-weight:700;color:var(--text);">${provFull.banco}</span></div>`:''}${provFull.tipoCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Tipo</span><span style="font-size:13px;font-weight:700;color:var(--info);">${provFull.tipoCuenta}</span></div>`:''}${provFull.numeroCuenta?`<div><span style="font-size:10px;color:var(--text-muted);display:block;">Número</span><span style="font-size:14px;font-weight:800;color:var(--gold);font-family:monospace;">${provFull.numeroCuenta}</span></div>`:''}</div></div>`:'';
+  document.getElementById('mPagoBody').innerHTML=`${cuentaCard}<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;"><div class="fin-row total"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div><div class="fin-row paid"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div><div class="fin-row owed"><span class="fin-row-label">Pendiente</span><span class="fin-row-val">$${c.montoRestante.toLocaleString()}</span></div></div><div class="form-row c2"><div class="field"><label>Monto a Pagar *</label><input type="text" id="pMonto" placeholder="0" value="${c.montoRestante.toLocaleString('es-CO')}" oninput="this.value=this.value.replace(/[^0-9]/g,'').replace(/\\B(?=(\\d{3})+(?!\\d))/g,'.')"></div><div class="field"><label>Fecha *</label><input type="date" id="pFecha" value="${new Date().toISOString().split('T')[0]}"></div><div class="field"><label>Método de Pago *</label><select id="pMetodo">${ops.map(op=>`<option value="${op}">${op}</option>`).join('')}</select></div><div class="field"><label>No. Referencia</label><input type="text" id="pRef" placeholder="Ej: TXN-2024-001"></div></div><div class="field" style="margin-bottom:13px;"><label>Banco / Cuenta</label><input type="text" id="pBanco" value="${[provFull.banco,provFull.tipoCuenta,provFull.numeroCuenta].filter(Boolean).join(' · ')}" placeholder="Ej: Bancolombia 123-456789-00"></div><div class="field" style="margin-bottom:13px;"><label>Notas</label><textarea id="pNotas" rows="2"></textarea></div><div style="background:var(--dark2);border:1px dashed rgba(245,166,35,.35);border-radius:12px;padding:14px;margin-bottom:14px;"><div style="font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--gold);margin-bottom:9px;">🧾 Comprobante</div><div id="compPreview" style="display:none;margin-bottom:10px;"><img id="compImg" style="max-width:100%;max-height:220px;border-radius:9px;border:1px solid var(--border-soft);" /><div id="compNombre" style="font-size:11px;color:var(--success);margin-top:5px;"></div></div><label id="compLabel" style="display:flex;align-items:center;gap:9px;cursor:pointer;padding:9px 14px;background:var(--dark3);border:1px solid var(--border-soft);border-radius:9px;"><span style="font-size:20px;">📎</span><span style="font-size:12px;color:var(--text-muted);">Adjuntar imagen del comprobante</span><input type="file" id="compFile" accept="image/*" style="display:none;" onchange="cargarComprobante(event,${c.id})"></label></div><div style="display:flex;gap:8px;"><button class="btn btn-gold" onclick="registrarPago(${c.id})" style="flex:1;justify-content:center;padding:13px;">💰 Confirmar Pago</button><button class="btn btn-ghost" onclick="closeModal('mPago')" style="padding:13px 16px;">Cancelar</button></div>`;
   openModal('mPago');
 }
 
@@ -1362,65 +1082,14 @@ function renderTblPagos(){
   let lista=DB.cotizaciones.filter(c=>c.estadoAprobacion==='aprobado');
   if(buscar)lista=lista.filter(c=>c.referencia.toLowerCase().includes(buscar)||c.proveedor.nombre.toLowerCase().includes(buscar));
   if(!lista.length){tb.innerHTML='<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">No hay cotizaciones aprobadas</td></tr>';return;}
-  tb.innerHTML=lista.slice().reverse().map(c=>`<tr>
-    <td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong></td>
-    <td>${c.proveedor.nombre}</td>
-    <td><strong>$${c.total.toLocaleString()}</strong></td>
-    <td style="color:var(--success);">$${(c.montoPagado||0).toLocaleString()}</td>
-    <td style="color:${(c.montoRestante||0)>0?'var(--gold)':'var(--success)'};">$${(c.montoRestante||0).toLocaleString()}</td>
-    <td>${badgePago(c.estadoPago)}</td>
-    <td><div class="td-actions">
-      <button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button>
-      ${c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm" onclick="abrirPago(${c.id})">💰 Pagar</button>`:'<span style="color:var(--success);font-size:12px;font-weight:700;">✅ Pagado</span>'}
-    </div></td>
-  </tr>`).join('');
+  tb.innerHTML=lista.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong></td><td>${c.proveedor.nombre}</td><td><strong>$${c.total.toLocaleString()}</strong></td><td style="color:var(--success);">$${(c.montoPagado||0).toLocaleString()}</td><td style="color:${(c.montoRestante||0)>0?'var(--gold)':'var(--success)'};">$${(c.montoRestante||0).toLocaleString()}</td><td>${badgePago(c.estadoPago)}</td><td><div class="td-actions"><button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button>${c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm" onclick="abrirPago(${c.id})">💰 Pagar</button>`:'<span style="color:var(--success);font-size:12px;font-weight:700;">✅ Pagado</span>'}</div></td></tr>`).join('');
 }
 
 function verDetalles(id){
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(id));if(!c)return;
-  const pagosHtml=c.pagos&&c.pagos.length?`
-    <div style="margin:16px 0 9px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">🧾 Pagos Registrados</div>
-    ${c.pagos.map((p,i)=>`
-      <div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:12px;padding:13px 16px;margin-bottom:8px;">
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-          <div style="display:flex;align-items:center;gap:10px;">
-            <div style="width:28px;height:28px;border-radius:50%;background:rgba(46,204,113,.2);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;">${i+1}</div>
-            <div>
-              <div style="font-size:15px;font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</div>
-              <div style="font-size:11px;color:var(--text-muted);">${p.metodo} · ${new Date(p.fecha).toLocaleDateString()} · ${p.registradoPor}</div>
-              ${p.refTx?`<div style="font-size:11px;color:var(--info);">Ref: ${p.refTx}</div>`:''}
-            </div>
-          </div>
-          ${p.comprobante?`<button class="btn btn-success btn-sm" onclick="verComprobante(${c.id},${p.id})">🧾 Ver</button>`:'<span style="font-size:11px;color:var(--text-dim);">Sin comp.</span>'}
-        </div>
-      </div>`).join('')}`
+  const pagosHtml=c.pagos&&c.pagos.length?`<div style="margin:16px 0 9px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gold);">🧾 Pagos Registrados</div>${c.pagos.map((p,i)=>`<div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:12px;padding:13px 16px;margin-bottom:8px;"><div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;"><div style="display:flex;align-items:center;gap:10px;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(46,204,113,.2);color:var(--success);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;">${i+1}</div><div><div style="font-size:15px;font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</div><div style="font-size:11px;color:var(--text-muted);">${p.metodo} · ${new Date(p.fecha).toLocaleDateString()} · ${p.registradoPor}</div>${p.refTx?`<div style="font-size:11px;color:var(--info);">Ref: ${p.refTx}</div>`:''}</div></div>${p.comprobante?`<button class="btn btn-success btn-sm" onclick="verComprobante(${c.id},${p.id})">🧾 Ver</button>`:'<span style="font-size:11px;color:var(--text-dim);">Sin comp.</span>'}</div></div>`).join('')}`
     :'<div style="background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.15);border-radius:10px;padding:12px;margin-top:14px;font-size:13px;color:var(--gold);">⚠️ Sin pagos registrados</div>';
-
-  document.getElementById('mDetallesBody').innerHTML=`
-    <div class="modal-title">📄 ${c.referencia}</div>
-    ${c.estadoAprobacion==='rechazado'?`<div class="alert alert-danger"><strong>RECHAZADA</strong> — ${c.motivoRechazo||'Sin motivo'}</div>`:''}
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;font-size:13px;">
-      <div><span style="color:var(--text-muted);">Proveedor</span><br><strong>${c.proveedor.nombre}</strong></div>
-      <div><span style="color:var(--text-muted);">NIT</span><br><strong>${c.proveedor.nit}</strong></div>
-      <div><span style="color:var(--text-muted);">Medio de pago</span><br><strong>${c.medioPago||'–'}</strong></div>
-      <div><span style="color:var(--text-muted);">Creado por</span><br><strong>${c.creadoPor}</strong></div>
-      <div><span style="color:var(--text-muted);">Fecha</span><br><strong>${new Date(c.fecha).toLocaleDateString()}</strong></div>
-      ${c.fechaVencimiento?`<div><span style="color:var(--text-muted);">Vence</span><br><strong style="color:var(--danger);">${new Date(c.fechaVencimiento).toLocaleDateString('es-CO')}</strong></div>`:''}
-    </div>
-    <div class="tbl-wrap"><table><thead><tr><th>#</th><th>Producto</th><th>Cant.</th><th>Precio</th><th>Subtotal</th></tr></thead><tbody>
-      ${c.productos.map((p,i)=>`<tr><td>${i+1}</td><td>${p.nombre}</td><td>${p.cantidad}</td><td>$${p.precio.toLocaleString()}</td><td><strong>$${p.subtotal.toLocaleString()}</strong></td></tr>`).join('')}
-    </tbody></table></div>
-    <div style="display:flex;gap:8px;margin-top:13px;flex-wrap:wrap;">
-      <div class="fin-row total" style="flex:1;"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div>
-      <div class="fin-row paid" style="flex:1;"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div>
-      <div class="fin-row owed" style="flex:1;"><span class="fin-row-label">Pendiente</span><span class="fin-row-val" style="font-size:14px;">$${c.montoRestante.toLocaleString()}</span></div>
-    </div>
-    ${pagosHtml}
-    ${c.notas?`<div style="margin-top:13px;padding:11px;background:var(--dark2);border-radius:10px;font-size:13px;color:var(--text-muted);">📝 ${c.notas}</div>`:''}
-    <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;">
-      <button class="btn" onclick="exportarPDF(${c.id})" style="background:rgba(255,107,107,.12);color:#FF6B6B;border:1px solid rgba(255,107,107,.3);padding:10px 18px;">📄 Exportar PDF</button>
-      ${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal" onclick="closeModal('mDetalles');setTimeout(()=>abrirPago(${c.id}),150)" style="padding:10px 18px;">💰 Registrar Pago</button>`:''}
-    </div>`;
+  document.getElementById('mDetallesBody').innerHTML=`<div class="modal-title">📄 ${c.referencia}</div>${c.estadoAprobacion==='rechazado'?`<div class="alert alert-danger"><strong>RECHAZADA</strong> — ${c.motivoRechazo||'Sin motivo'}</div>`:''}<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;font-size:13px;"><div><span style="color:var(--text-muted);">Proveedor</span><br><strong>${c.proveedor.nombre}</strong></div><div><span style="color:var(--text-muted);">NIT</span><br><strong>${c.proveedor.nit}</strong></div><div><span style="color:var(--text-muted);">Medio de pago</span><br><strong>${c.medioPago||'–'}</strong></div><div><span style="color:var(--text-muted);">Creado por</span><br><strong>${c.creadoPor}</strong></div><div><span style="color:var(--text-muted);">Fecha</span><br><strong>${new Date(c.fecha).toLocaleDateString()}</strong></div>${c.fechaVencimiento?`<div><span style="color:var(--text-muted);">Vence</span><br><strong style="color:var(--danger);">${new Date(c.fechaVencimiento).toLocaleDateString('es-CO')}</strong></div>`:''}</div><div class="tbl-wrap"><table><thead><tr><th>#</th><th>Producto</th><th>Cant.</th><th>Precio</th><th>Subtotal</th></tr></thead><tbody>${c.productos.map((p,i)=>`<tr><td>${i+1}</td><td>${p.nombre}</td><td>${p.cantidad}</td><td>$${p.precio.toLocaleString()}</td><td><strong>$${p.subtotal.toLocaleString()}</strong></td></tr>`).join('')}</tbody></table></div><div style="display:flex;gap:8px;margin-top:13px;flex-wrap:wrap;"><div class="fin-row total" style="flex:1;"><span class="fin-row-label">Total</span><span class="fin-row-val" style="font-size:14px;">$${c.total.toLocaleString()}</span></div><div class="fin-row paid" style="flex:1;"><span class="fin-row-label">Pagado</span><span class="fin-row-val" style="font-size:14px;">$${c.montoPagado.toLocaleString()}</span></div><div class="fin-row owed" style="flex:1;"><span class="fin-row-label">Pendiente</span><span class="fin-row-val" style="font-size:14px;">$${c.montoRestante.toLocaleString()}</span></div></div>${pagosHtml}${c.notas?`<div style="margin-top:13px;padding:11px;background:var(--dark2);border-radius:10px;font-size:13px;color:var(--text-muted);">📝 ${c.notas}</div>`:''}<div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;"><button class="btn" onclick="exportarPDF(${c.id})" style="background:rgba(255,107,107,.12);color:#FF6B6B;border:1px solid rgba(255,107,107,.3);padding:10px 18px;">📄 Exportar PDF</button>${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal" onclick="closeModal('mDetalles');setTimeout(()=>abrirPago(${c.id}),150)" style="padding:10px 18px;">💰 Registrar Pago</button>`:''}</div>`;
   openModal('mDetalles');
 }
 
@@ -1428,20 +1097,10 @@ function verComprobante(cotId,pagoId){
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(cotId));if(!c)return;
   const p=c.pagos?.find(x=>Number(x.id)===Number(pagoId));if(!p||!p.comprobante)return;
   const comp=p.comprobante;
-  document.getElementById('mComprobanteBody').innerHTML=`
-    <div style="font-size:13px;margin-bottom:14px;">
-      <strong style="color:var(--gold);">${c.referencia}</strong> · ${c.proveedor.nombre}<br>
-      <strong style="color:var(--success);">$${p.monto.toLocaleString()}</strong> · ${p.metodo} · ${new Date(p.fecha).toLocaleDateString()}
-    </div>
-    ${comp.tipo&&comp.tipo.startsWith('image/')?
-      `<img src="${comp.dataUrl}" style="max-width:100%;border-radius:9px;border:1px solid var(--border-soft);" />
-       <div style="margin-top:12px;text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre||'comprobante'}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar</a></div>`
-      :`<div style="text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar ${comp.nombre}</a></div>`
-    }`;
+  document.getElementById('mComprobanteBody').innerHTML=`<div style="font-size:13px;margin-bottom:14px;"><strong style="color:var(--gold);">${c.referencia}</strong> · ${c.proveedor.nombre}<br><strong style="color:var(--success);">$${p.monto.toLocaleString()}</strong> · ${p.metodo} · ${new Date(p.fecha).toLocaleDateString()}</div>${comp.tipo&&comp.tipo.startsWith('image/')?`<img src="${comp.dataUrl}" style="max-width:100%;border-radius:9px;border:1px solid var(--border-soft);" /><div style="margin-top:12px;text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre||'comprobante'}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar</a></div>`:`<div style="text-align:center;"><a href="${comp.dataUrl}" download="${comp.nombre}" class="btn btn-gold" style="text-decoration:none;">⬇️ Descargar ${comp.nombre}</a></div>`}`;
   openModal('mComprobante');
 }
 
-// ── Búsqueda ──
 function buscarCot(){
   const t=document.getElementById('buscarRef').value.trim().toUpperCase();
   const tag=document.getElementById('searchTag');
@@ -1454,39 +1113,18 @@ function buscarCot(){
 
 function limpiarBusqueda(){document.getElementById('buscarRef').value='';document.getElementById('searchTag').className='search-tag';renderTblCot(DB.cotizaciones);}
 
-// ── WhatsApp ──
 function renderWASection(){
   const configSec=document.getElementById('waConfigSection'),estadoEl=document.getElementById('waGrupoEstado');
   if(!configSec||!estadoEl)return;
-  if(puede('puedeConfigWA')){
-    configSec.style.display='';
-    const el=document.getElementById('cfgWaLink'),elN=document.getElementById('cfgWaNombre');
-    if(el)el.value=DB.config.waLink||'';if(elN)elN.value=DB.config.waNombre||'';
-  }else configSec.style.display='none';
+  if(puede('puedeConfigWA')){configSec.style.display='';const el=document.getElementById('cfgWaLink'),elN=document.getElementById('cfgWaNombre');if(el)el.value=DB.config.waLink||'';if(elN)elN.value=DB.config.waNombre||'';}else configSec.style.display='none';
   const tieneGrupo=!!DB.config.waLink;
-  estadoEl.innerHTML=tieneGrupo
-    ?`<div style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.25);border-radius:12px;margin-bottom:18px;"><span style="font-size:22px;">🟢</span><div style="flex:1;"><div style="font-weight:700;color:var(--success);">Grupo conectado: ${DB.config.waNombre||'WhatsApp Activo'}</div><div style="font-size:11px;color:var(--text-muted);">${DB.config.waLink}</div></div><a href="${DB.config.waLink}" target="_blank" class="btn btn-success btn-sm" style="text-decoration:none;">Abrir 📲</a></div>`
-    :`<div class="alert alert-warning" style="margin-bottom:18px;">⚠️ No hay grupo configurado. ${puede('puedeConfigWA')?'Configúralo abajo.':'Pídele al jefe que configure el enlace.'}</div>`;
+  estadoEl.innerHTML=tieneGrupo?`<div style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(46,204,113,.1);border:1px solid rgba(46,204,113,.25);border-radius:12px;margin-bottom:18px;"><span style="font-size:22px;">🟢</span><div style="flex:1;"><div style="font-weight:700;color:var(--success);">Grupo conectado: ${DB.config.waNombre||'WhatsApp Activo'}</div><div style="font-size:11px;color:var(--text-muted);">${DB.config.waLink}</div></div><a href="${DB.config.waLink}" target="_blank" class="btn btn-success btn-sm" style="text-decoration:none;">Abrir 📲</a></div>`:`<div class="alert alert-warning" style="margin-bottom:18px;">⚠️ No hay grupo configurado. ${puede('puedeConfigWA')?'Configúralo abajo.':'Pídele al jefe que configure el enlace.'}</div>`;
   renderHistorialWA();poblarSelCotWA();
 }
 
-function validarEnlaceWA(){
-  const inp=document.getElementById('cfgWaLink'),hint=document.getElementById('cfgWaLinkHint');
-  if(!inp||!hint)return;
-  const val=inp.value.trim();
-  if(!val){hint.textContent='Pega el enlace de invitación.';hint.style.color='var(--text-muted)';return;}
-  if(val.startsWith('https://chat.whatsapp.com/')){hint.textContent='✅ Enlace válido';hint.style.color='var(--success)';}
-  else{hint.textContent='⚠️ Debe empezar con https://chat.whatsapp.com/';hint.style.color='var(--danger)';}
-}
+function validarEnlaceWA(){const inp=document.getElementById('cfgWaLink'),hint=document.getElementById('cfgWaLinkHint');if(!inp||!hint)return;const val=inp.value.trim();if(!val){hint.textContent='Pega el enlace de invitación.';hint.style.color='var(--text-muted)';return;}if(val.startsWith('https://chat.whatsapp.com/')){hint.textContent='✅ Enlace válido';hint.style.color='var(--success)';}else{hint.textContent='⚠️ Debe empezar con https://chat.whatsapp.com/';hint.style.color='var(--danger)';}}
 
-function guardarConfigWA(){
-  if(!puede('puedeConfigWA')){toast('Solo el jefe','error');return;}
-  const link=document.getElementById('cfgWaLink').value.trim();
-  if(!link){toast('Pega el enlace del grupo','error');return;}
-  if(!link.startsWith('https://chat.whatsapp.com/')){toast('Enlace inválido','error');return;}
-  DB.config.waLink=link;DB.config.waNombre=document.getElementById('cfgWaNombre').value.trim();
-  guardarDB();toast('✅ Grupo configurado','success');renderWASection();
-}
+function guardarConfigWA(){if(!puede('puedeConfigWA')){toast('Solo el jefe','error');return;}const link=document.getElementById('cfgWaLink').value.trim();if(!link){toast('Pega el enlace del grupo','error');return;}if(!link.startsWith('https://chat.whatsapp.com/')){toast('Enlace inválido','error');return;}DB.config.waLink=link;DB.config.waNombre=document.getElementById('cfgWaNombre').value.trim();guardarDB();toast('✅ Grupo configurado','success');renderWASection();}
 
 function testWa(){if(!DB.config.waLink){toast('Primero guarda el enlace','error');return;}window.open(DB.config.waLink,'_blank');toast('✅ Grupo abierto','success');}
 
@@ -1502,10 +1140,7 @@ function buildMsgCot(cot){
 function poblarSelCotWA(filtro=''){
   const sel=document.getElementById('selCotWA');if(!sel)return;
   const lista=filtro?DB.cotizaciones.filter(c=>c.referencia.toUpperCase().includes(filtro.toUpperCase())):DB.cotizaciones;
-  sel.innerHTML='<option value="">— Seleccione —</option>'+lista.slice().reverse().map(c=>{
-    const est={aprobado:'✅',rechazado:'❌',pendiente:'⏳'}[c.estadoAprobacion]||'';
-    return `<option value="${c.id}">${est} ${c.referencia} — ${c.proveedor.nombre} — $${c.total.toLocaleString()}</option>`;
-  }).join('');
+  sel.innerHTML='<option value="">— Seleccione —</option>'+lista.slice().reverse().map(c=>{const est={aprobado:'✅',rechazado:'❌',pendiente:'⏳'}[c.estadoAprobacion]||'';return `<option value="${c.id}">${est} ${c.referencia} — ${c.proveedor.nombre} — $${c.total.toLocaleString()}</option>`;}).join('');
   if(_cotWAselId){sel.value=_cotWAselId;if(!sel.value){_cotWAselId=null;ocultarPrevCotWA();}}
 }
 
@@ -1552,11 +1187,9 @@ function abrirModalWA(msg,titulo,cotId){
   if(cotId){_enlaceAprobacionActual=generarEnlaceAprobacion(cotId);enlaceTexto.textContent=_enlaceAprobacionActual;enlaceDiv.style.display='';}
   else{_enlaceAprobacionActual='';enlaceDiv.style.display='none';}
   document.getElementById('btnAbrirWA').onclick=()=>{
-    // Abre WhatsApp con el mensaje ya escrito listo para enviar
     const msgCodificado=encodeURIComponent(msg);
     const urlWA=`https://wa.me/?text=${msgCodificado}`;
     window.open(urlWA,'_blank');
-    // También copia al portapapeles como respaldo
     try{navigator.clipboard.writeText(msg);}catch(e){}
     DB.waHistorial.unshift({fecha:new Date().toISOString(),msg:titulo,usuario:usuario?.nombre});
     if(DB.waHistorial.length>50)DB.waHistorial.length=50;
@@ -1575,7 +1208,6 @@ function renderHistorialWA(){
   el.innerHTML=DB.waHistorial.map(n=>`<div style="display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border-soft);"><span style="font-size:18px;">📲</span><div><div style="font-size:12px;color:var(--text);">${n.msg}</div><div style="font-size:10px;color:var(--text-dim);margin-top:2px;">${new Date(n.fecha).toLocaleString()} · ${n.usuario}</div></div></div>`).join('');
 }
 
-// ── Inventario ──
 function iniciarInventario(){
   const selAnio=document.getElementById('invAnio');if(!selAnio)return;
   const anios=[...new Set(DB.cotizaciones.map(c=>new Date(c.fecha).getFullYear()))].sort((a,b)=>b-a);
@@ -1618,47 +1250,15 @@ function renderInventario(){
       const stP={pagado:{cl:'var(--success)',ic:'💚 Pagado'},abono:{cl:'#C39BD3',ic:'🔄 Abono'},debe:{cl:'var(--gold)',ic:'🔴 Debe'}}[c.estadoPago]||{cl:'var(--text-muted)',ic:c.estadoPago};
       const uid=`cot-${g.id}-${c.id}`;
       const prodRows=c.productos.map((p,pi)=>`<tr style="background:rgba(0,0,0,.25);"><td style="padding:7px 13px 7px 36px;font-size:11px;color:var(--text-muted);">${pi+1}</td><td style="padding:7px 13px;font-size:12px;">${p.nombre}</td><td style="padding:7px 13px;text-align:center;color:var(--info);font-weight:700;">${p.cantidad}</td><td style="padding:7px 13px;text-align:right;color:var(--text-muted);">$${p.precio.toLocaleString()}</td><td style="padding:7px 13px;text-align:right;font-weight:700;color:var(--gold);">$${p.subtotal.toLocaleString()}</td><td></td></tr>`).join('');
-      return `<tr id="hdr-${uid}" style="cursor:pointer;border-top:1px solid var(--border-soft);" onclick="toggleCotInv('${uid}')"><td style="padding:11px 13px;"><div style="display:flex;align-items:center;gap:6px;"><span id="arr-${uid}" style="color:var(--text-dim);font-size:10px;transition:transform .2s;">▶</span><strong style="font-family:var(--mono);font-size:12px;color:var(--gold);">${c.referencia}</strong></div></td><td style="padding:11px 13px;font-size:12px;color:var(--text-muted);">${new Date(c.fecha).toLocaleDateString()}</td><td style="padding:11px 13px;text-align:center;"><span style="background:${stA.bg};color:${stA.cl};border:1px solid ${stA.bdr};border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;">${stA.ic}</span></td><td style="padding:11px 13px;text-align:center;font-size:11px;font-weight:700;color:${stP.cl};">${stP.ic}</td><td style="padding:11px 13px;text-align:right;font-size:13px;font-weight:800;">$${c.total.toLocaleString()}</td><td style="padding:11px 13px;"><button class="btn btn-info btn-sm btn-icon" onclick="event.stopPropagation();verDetalles(${c.id})">👁</button></td></tr>
-      <tr id="prods-${uid}" style="display:none;"><td colspan="6" style="padding:0;"><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:rgba(245,166,35,.05);"><th style="padding:6px 13px 6px 36px;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);text-align:left;width:40px;">#</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:left;">Producto</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:center;">Cant.</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Precio</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Subtotal</th><th style="width:32px;"></th></tr></thead><tbody>${prodRows}<tr style="background:rgba(245,166,35,.07);border-top:1px solid rgba(245,166,35,.2);"><td colspan="4" style="padding:8px 13px 8px 36px;font-size:11px;font-weight:700;color:var(--text-muted);text-align:right;">TOTAL</td><td style="padding:8px 13px;font-size:14px;font-weight:900;text-align:right;color:var(--gold);">$${c.total.toLocaleString()}</td><td></td></tr></tbody></table></td></tr>`;
+      return `<tr id="hdr-${uid}" style="cursor:pointer;border-top:1px solid var(--border-soft);" onclick="toggleCotInv('${uid}')"><td style="padding:11px 13px;"><div style="display:flex;align-items:center;gap:6px;"><span id="arr-${uid}" style="color:var(--text-dim);font-size:10px;transition:transform .2s;">▶</span><strong style="font-family:var(--mono);font-size:12px;color:var(--gold);">${c.referencia}</strong></div></td><td style="padding:11px 13px;font-size:12px;color:var(--text-muted);">${new Date(c.fecha).toLocaleDateString()}</td><td style="padding:11px 13px;text-align:center;"><span style="background:${stA.bg};color:${stA.cl};border:1px solid ${stA.bdr};border-radius:20px;padding:3px 8px;font-size:10px;font-weight:700;">${stA.ic}</span></td><td style="padding:11px 13px;text-align:center;font-size:11px;font-weight:700;color:${stP.cl};">${stP.ic}</td><td style="padding:11px 13px;text-align:right;font-size:13px;font-weight:800;">$${c.total.toLocaleString()}</td><td style="padding:11px 13px;"><button class="btn btn-info btn-sm btn-icon" onclick="event.stopPropagation();verDetalles(${c.id})">👁</button></td></tr><tr id="prods-${uid}" style="display:none;"><td colspan="6" style="padding:0;"><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:rgba(245,166,35,.05);"><th style="padding:6px 13px 6px 36px;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--text-dim);text-align:left;width:40px;">#</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:left;">Producto</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:center;">Cant.</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Precio</th><th style="padding:6px 13px;font-size:9px;text-transform:uppercase;color:var(--text-dim);text-align:right;">Subtotal</th><th style="width:32px;"></th></tr></thead><tbody>${prodRows}<tr style="background:rgba(245,166,35,.07);border-top:1px solid rgba(245,166,35,.2);"><td colspan="4" style="padding:8px 13px 8px 36px;font-size:11px;font-weight:700;color:var(--text-muted);text-align:right;">TOTAL</td><td style="padding:8px 13px;font-size:14px;font-weight:900;text-align:right;color:var(--gold);">$${c.total.toLocaleString()}</td><td></td></tr></tbody></table></td></tr>`;
     }).join('');
     const pm={};g.cots.forEach(c=>c.productos.forEach(p=>{const k=p.nombre.toLowerCase().trim();if(!pm[k])pm[k]={nom:p.nombre,qty:0,tot:0};pm[k].qty+=p.cantidad;pm[k].tot+=p.subtotal;}));
-    return `<div style="margin-bottom:20px;border:1px solid var(--border-soft);border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3);">
-      <div style="background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(245,166,35,.03));padding:18px 22px;border-bottom:1px solid var(--border-soft);">
-        <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;">
-          <div style="display:flex;align-items:center;gap:14px;">
-            <div style="width:36px;height:36px;border-radius:50%;background:${rankColor};color:${rankTxt};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div>
-            <div>
-              <div style="font-size:17px;font-weight:900;color:var(--gold);">🏢 ${g.nombre}</div>
-              <div style="font-size:11px;color:var(--text-muted);">NIT: ${g.nit}${g.correo?' · '+g.correo:''}</div>
-              ${(g.mediosPago&&g.mediosPago.length)?`<div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap;">${g.mediosPago.map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}
-            </div>
-          </div>
-          <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;">
-            <div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);">$${montoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Total</div></div>
-            <div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:var(--success);">$${pagadoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Pagado</div></div>
-            <div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">$${pendG_.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Pendiente</div></div>
-            <div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);color:var(--info);">${g.cots.length}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Cotizaciones</div></div>
-          </div>
-        </div>
-        <div style="margin-top:14px;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">${pctG.toFixed(1)}%</span></div><div style="background:var(--dark3);border-radius:20px;height:6px;overflow:hidden;"><div style="width:${pctG}%;height:100%;background:${pendG_<=0?'var(--success)':pctG>60?'var(--gold)':'var(--danger)'};border-radius:20px;transition:width .8s;"></div></div></div>
-      </div>
-      <div style="background:var(--dark2);"><table style="width:100%;border-collapse:collapse;">
-        <thead><tr style="background:var(--dark3);"><th style="padding:10px 13px;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Referencia</th><th style="padding:10px 13px;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Fecha</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Aprobación</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Pago</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:right;">Total</th><th style="padding:10px 13px;width:70px;"></th></tr></thead>
-        <tbody>${cotRows}</tbody>
-      </table></div>
-      <div style="background:var(--dark);border-top:1px solid var(--border-soft);padding:16px 22px;">
-        <div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px;">📦 Productos totales</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;">
-          ${Object.values(pm).sort((a,b)=>b.tot-a.tot).map(p=>`<div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:11px;padding:10px 13px;"><div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:5px;">${p.nom}</div><div style="display:flex;gap:10px;"><span style="font-size:11px;color:var(--info);font-weight:700;">📦 ${p.qty} uds.</span><span style="font-size:11px;color:var(--gold);font-weight:700;">$${p.tot.toLocaleString()}</span></div></div>`).join('')}
-        </div>
-      </div>
-    </div>`;
+    return `<div style="margin-bottom:20px;border:1px solid var(--border-soft);border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.3);"><div style="background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(245,166,35,.03));padding:18px 22px;border-bottom:1px solid var(--border-soft);"><div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px;"><div style="display:flex;align-items:center;gap:14px;"><div style="width:36px;height:36px;border-radius:50%;background:${rankColor};color:${rankTxt};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div><div><div style="font-size:17px;font-weight:900;color:var(--gold);">🏢 ${g.nombre}</div><div style="font-size:11px;color:var(--text-muted);">NIT: ${g.nit}${g.correo?' · '+g.correo:''}</div>${(g.mediosPago&&g.mediosPago.length)?`<div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap;">${g.mediosPago.map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}</div></div><div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;"><div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);">$${montoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Total</div></div><div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:var(--success);">$${pagadoG.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Pagado</div></div><div style="text-align:center;"><div style="font-size:18px;font-weight:800;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">$${pendG_.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Pendiente</div></div><div style="text-align:center;"><div style="font-size:20px;font-weight:900;font-family:var(--mono);color:var(--info);">${g.cots.length}</div><div style="font-size:9px;text-transform:uppercase;letter-spacing:.8px;color:var(--text-muted);">Cotizaciones</div></div></div></div><div style="margin-top:14px;"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;font-family:var(--mono);color:${pendG_<=0?'var(--success)':'var(--gold)'};">${pctG.toFixed(1)}%</span></div><div style="background:var(--dark3);border-radius:20px;height:6px;overflow:hidden;"><div style="width:${pctG}%;height:100%;background:${pendG_<=0?'var(--success)':pctG>60?'var(--gold)':'var(--danger)'};border-radius:20px;transition:width .8s;"></div></div></div></div><div style="background:var(--dark2);"><table style="width:100%;border-collapse:collapse;"><thead><tr style="background:var(--dark3);"><th style="padding:10px 13px;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Referencia</th><th style="padding:10px 13px;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-muted);text-align:left;">Fecha</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Aprobación</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:center;">Pago</th><th style="padding:10px 13px;font-size:9px;text-transform:uppercase;color:var(--text-muted);text-align:right;">Total</th><th style="padding:10px 13px;width:70px;"></th></tr></thead><tbody>${cotRows}</tbody></table></div><div style="background:var(--dark);border-top:1px solid var(--border-soft);padding:16px 22px;"><div style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dim);margin-bottom:10px;">📦 Productos totales</div><div style="display:flex;flex-wrap:wrap;gap:8px;">${Object.values(pm).sort((a,b)=>b.tot-a.tot).map(p=>`<div style="background:var(--dark2);border:1px solid var(--border-soft);border-radius:11px;padding:10px 13px;"><div style="font-size:12px;font-weight:700;color:var(--text);margin-bottom:5px;">${p.nom}</div><div style="display:flex;gap:10px;"><span style="font-size:11px;color:var(--info);font-weight:700;">📦 ${p.qty} uds.</span><span style="font-size:11px;color:var(--gold);font-weight:700;">$${p.tot.toLocaleString()}</span></div></div>`).join('')}</div></div></div>`;
   }).join('');
 }
 
 function toggleCotInv(uid){const body=document.getElementById('prods-'+uid),arr=document.getElementById('arr-'+uid);if(!body)return;const open=body.style.display!=='none'&&body.style.display!=='';body.style.display=open?'none':'table-row';if(arr)arr.style.transform=open?'rotate(0deg)':'rotate(90deg)';}
 
-// ── Excel ──
 function cargarSheetJS(cb){if(window.XLSX){cb();return;}const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';s.onload=cb;s.onerror=()=>toast('No se pudo cargar SheetJS','error');document.head.appendChild(s);}
 
 function exportarExcelInventario(){
@@ -1670,29 +1270,14 @@ function exportarExcelInventario(){
     const ws=XLSX.utils.aoa_to_sheet(resRows);ws['!cols']=[{wch:35},{wch:18},{wch:14},{wch:18},{wch:18},{wch:18}];
     XLSX.utils.book_append_sheet(WB,ws,'RESUMEN');
     const fecha=new Date().toISOString().split('T')[0];XLSX.writeFile(WB,`OROC_Inventario_${fecha}.xlsx`);
-    toast(`✅ Excel descargado`,'success');
+    toast('✅ Excel descargado','success');
   });
 }
 
-// ── Update UI Principal ──
 function renderTblCot(arr){
   const tb=document.getElementById('tblCot');
   if(!arr.length){tb.innerHTML='<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--text-muted);">No hay cotizaciones</td></tr>';return;}
-  tb.innerHTML=arr.slice().reverse().map(c=>`<tr>
-    <td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong>${c.esNotaCredito?'<br><span style="background:rgba(46,204,113,.15);color:var(--success);border-radius:5px;padding:1px 6px;font-size:9px;font-weight:700;">🏷️ NC</span>':''}</td>
-    <td>${c.proveedor.nombre}</td>
-    <td><strong>$${c.total.toLocaleString()}</strong>${(c.descuento&&c.descuento>0)?`<br><span style="font-size:10px;color:var(--success);">-$${c.descuento.toLocaleString()}</span>`:''}</td>
-    <td>${badgeApro(c.estadoAprobacion)}</td>
-    <td>${badgePago(c.estadoPago)}</td>
-    <td style="color:var(--text-muted);font-size:11px;">${new Date(c.fecha).toLocaleDateString()}</td>
-    <td><div class="td-actions">
-      <button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button>
-      <button class="btn btn-sm btn-icon" onclick="exportarPDF(${c.id})" style="color:#FF6B6B;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.1);">📄</button>
-      ${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm btn-icon" onclick="mostrarResumen(${c.id})">💰</button>`:''}
-      ${puede('puedeEnviarWA')?`<button class="btn btn-wa btn-sm btn-icon" onclick="abrirModalWA(buildMsgCot(DB.cotizaciones.find(x=>x.id===${c.id})),'${c.referencia}',${c.id})">📲</button>`:''}
-      ${puede('puedeEliminar')?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarCotizacion(${c.id})">🗑</button>`:''}
-    </div></td>
-  </tr>`).join('');
+  tb.innerHTML=arr.slice().reverse().map(c=>`<tr><td><strong style="color:var(--gold);font-family:var(--mono);font-size:12px;">${c.referencia}</strong>${c.esNotaCredito?'<br><span style="background:rgba(46,204,113,.15);color:var(--success);border-radius:5px;padding:1px 6px;font-size:9px;font-weight:700;">🏷️ NC</span>':''}</td><td>${c.proveedor.nombre}</td><td><strong>$${c.total.toLocaleString()}</strong>${(c.descuento&&c.descuento>0)?`<br><span style="font-size:10px;color:var(--success);">-$${c.descuento.toLocaleString()}</span>`:''}</td><td>${badgeApro(c.estadoAprobacion)}</td><td>${badgePago(c.estadoPago)}</td><td style="color:var(--text-muted);font-size:11px;">${new Date(c.fecha).toLocaleDateString()}</td><td><div class="td-actions"><button class="btn btn-info btn-sm btn-icon" onclick="verDetalles(${c.id})">👁</button><button class="btn btn-sm btn-icon" onclick="exportarPDF(${c.id})" style="color:#FF6B6B;border:1px solid rgba(255,107,107,.3);background:rgba(255,107,107,.1);">📄</button>${puede('puedePagar')&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado'?`<button class="btn btn-teal btn-sm btn-icon" onclick="mostrarResumen(${c.id})">💰</button>`:''}${puede('puedeEnviarWA')?`<button class="btn btn-wa btn-sm btn-icon" onclick="abrirModalWA(buildMsgCot(DB.cotizaciones.find(x=>x.id===${c.id})),'${c.referencia}',${c.id})">📲</button>`:''}${puede('puedeEliminar')?`<button class="btn btn-danger btn-sm btn-icon" onclick="eliminarCotizacion(${c.id})">🗑</button>`:''}</div></td></tr>`).join('');
 }
 
 function updateUI(){
@@ -1725,7 +1310,6 @@ function updateUI(){
   updateNotifs();
 }
 
-// ── PDF Export ──
 function exportarPDF(id){
   if(typeof window.jspdf==='undefined'){toast('Cargando PDF…','info',2000);setTimeout(()=>exportarPDF(id),1500);return;}
   const c=DB.cotizaciones.find(x=>Number(x.id)===Number(id));if(!c){toast('No encontrada','error');return;}
@@ -1773,7 +1357,6 @@ function exportarPDF(id){
   doc.save(`${c.referencia}.pdf`);toast(`📄 PDF "${c.referencia}.pdf" descargado`,'success',4000);
 }
 
-// ── Panel Proveedores ──
 let ppModo='tarjeta';
 function setPPModo(modo){
   ppModo=modo;
@@ -1821,34 +1404,7 @@ function renderPanelProv(){
     const p=d.prov,rC=rankColors[gi]||'var(--dark4)',rT=gi<3?'#000':'var(--text-muted)';
     const estC={deuda:'var(--danger)',abono:'var(--gold)',pagado:'var(--success)'}[d.estadoPago];
     const estL={deuda:'🔴 Con deuda',abono:'🔄 Abono parcial',pagado:'✅ Al día'}[d.estadoPago];
-    return `<div style="background:var(--dark);border:1px solid var(--border-soft);border-radius:20px;overflow:hidden;margin-bottom:18px;box-shadow:var(--sh);">
-      <div style="background:linear-gradient(135deg,rgba(245,166,35,.13),rgba(245,166,35,.03));padding:18px 20px;border-bottom:1px solid var(--border-soft);">
-        <div style="display:flex;align-items:flex-start;gap:12px;">
-          <div style="width:38px;height:38px;border-radius:50%;background:${rC};color:${rT};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div>
-          <div style="flex:1;min-width:0;">
-            <div style="font-size:16px;font-weight:900;color:var(--gold);">🏢 ${p.nombre}</div>
-            <div style="font-size:11px;color:var(--text-muted);">NIT: ${p.nit}${p.telefono?' · '+p.telefono:''}</div>
-            ${(p.mediosPago||[]).length?`<div style="display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;">${(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}
-          </div>
-          <span style="background:${d.deuda>0?'rgba(231,76,60,.15)':'rgba(46,204,113,.15)'};color:${estC};border:1px solid ${d.deuda>0?'rgba(231,76,60,.3)':'rgba(46,204,113,.3)'};border-radius:20px;padding:4px 10px;font-size:10px;font-weight:700;white-space:nowrap;">${estL}</span>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--border-soft);">
-        <div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:20px;font-weight:800;font-family:var(--mono);color:var(--info);">${d.cots.length}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pedidos</div></div>
-        <div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);">$${d.total.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Total</div></div>
-        <div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:var(--success);">$${d.pagado.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pagado</div></div>
-        <div style="padding:13px;text-align:center;"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:${d.deuda>0?'var(--danger)':'var(--success)'};">$${d.deuda.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Deuda</div></div>
-      </div>
-      <div style="padding:10px 20px;border-bottom:1px solid var(--border-soft);background:var(--dark2);">
-        <div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;color:${d.pct>=100?'var(--success)':'var(--gold)'};">${d.pct.toFixed(1)}%</span></div>
-        <div style="background:var(--dark3);border-radius:20px;height:7px;overflow:hidden;"><div style="width:${d.pct}%;height:100%;background:${d.pct>=100?'var(--success)':d.pct>60?'var(--gold)':'var(--danger)'};border-radius:20px;"></div></div>
-      </div>
-      ${d.vctos.length?`<div style="padding:12px 20px;border-bottom:1px solid var(--border-soft);background:rgba(231,76,60,.04);"><div style="font-size:9px;font-weight:700;text-transform:uppercase;color:var(--danger);margin-bottom:8px;">⏰ Vencimientos</div>${d.vctos.slice(0,3).map(v=>{const color=v.dias<=0?'var(--danger)':v.dias<=3?'#FF6B6B':'var(--gold)';const label=v.dias<=0?`Vencida hace ${Math.abs(v.dias)}d`:`${v.dias}d restantes`;return `<div style="display:flex;justify-content:space-between;padding:5px 10px;background:rgba(0,0,0,.2);border-radius:8px;margin-bottom:4px;"><span style="font-size:11px;color:var(--text-muted);font-family:var(--mono);">${v.ref}</span><span style="font-size:11px;font-weight:700;color:${color};">⏰ ${label}</span><span style="font-size:11px;color:var(--gold);">$${v.monto.toLocaleString()}</span></div>`;}).join('')}</div>`:''}
-      <div style="padding:12px 20px;display:flex;gap:8px;flex-wrap:wrap;">
-        <button class="btn btn-info btn-sm" onclick="verProvCots('${p.id}')" style="flex:1;justify-content:center;">👁 Ver cotizaciones</button>
-        ${d.deuda>0&&puede('puedePagar')?`<button class="btn btn-teal btn-sm" onclick="irPagarProv('${p.id}')" style="flex:1;justify-content:center;">💰 Registrar pago</button>`:''}
-      </div>
-    </div>`;
+    return `<div style="background:var(--dark);border:1px solid var(--border-soft);border-radius:20px;overflow:hidden;margin-bottom:18px;box-shadow:var(--sh);"><div style="background:linear-gradient(135deg,rgba(245,166,35,.13),rgba(245,166,35,.03));padding:18px 20px;border-bottom:1px solid var(--border-soft);"><div style="display:flex;align-items:flex-start;gap:12px;"><div style="width:38px;height:38px;border-radius:50%;background:${rC};color:${rT};display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0;">#${gi+1}</div><div style="flex:1;min-width:0;"><div style="font-size:16px;font-weight:900;color:var(--gold);">🏢 ${p.nombre}</div><div style="font-size:11px;color:var(--text-muted);">NIT: ${p.nit}${p.telefono?' · '+p.telefono:''}</div>${(p.mediosPago||[]).length?`<div style="display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;">${(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.25);border-radius:6px;padding:2px 7px;font-size:9px;font-weight:700;">${m}</span>`).join('')}</div>`:''}</div><span style="background:${d.deuda>0?'rgba(231,76,60,.15)':'rgba(46,204,113,.15)'};color:${estC};border:1px solid ${d.deuda>0?'rgba(231,76,60,.3)':'rgba(46,204,113,.3)'};border-radius:20px;padding:4px 10px;font-size:10px;font-weight:700;white-space:nowrap;">${estL}</span></div></div><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--border-soft);"><div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:20px;font-weight:800;font-family:var(--mono);color:var(--info);">${d.cots.length}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pedidos</div></div><div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);">$${d.total.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Total</div></div><div style="padding:13px;text-align:center;border-right:1px solid var(--border-soft);"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:var(--success);">$${d.pagado.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Pagado</div></div><div style="padding:13px;text-align:center;"><div style="font-size:14px;font-weight:800;font-family:var(--mono);color:${d.deuda>0?'var(--danger)':'var(--success)'};">$${d.deuda.toLocaleString()}</div><div style="font-size:9px;text-transform:uppercase;color:var(--text-muted);">Deuda</div></div></div><div style="padding:10px 20px;border-bottom:1px solid var(--border-soft);background:var(--dark2);"><div style="display:flex;justify-content:space-between;margin-bottom:5px;"><span style="font-size:10px;color:var(--text-muted);">Progreso de pago</span><span style="font-size:11px;font-weight:700;color:${d.pct>=100?'var(--success)':'var(--gold)'};">${d.pct.toFixed(1)}%</span></div><div style="background:var(--dark3);border-radius:20px;height:7px;overflow:hidden;"><div style="width:${d.pct}%;height:100%;background:${d.pct>=100?'var(--success)':d.pct>60?'var(--gold)':'var(--danger)'};border-radius:20px;"></div></div></div>${d.vctos.length?`<div style="padding:12px 20px;border-bottom:1px solid var(--border-soft);background:rgba(231,76,60,.04);"><div style="font-size:9px;font-weight:700;text-transform:uppercase;color:var(--danger);margin-bottom:8px;">⏰ Vencimientos</div>${d.vctos.slice(0,3).map(v=>{const color=v.dias<=0?'var(--danger)':v.dias<=3?'#FF6B6B':'var(--gold)';const label=v.dias<=0?`Vencida hace ${Math.abs(v.dias)}d`:`${v.dias}d restantes`;return `<div style="display:flex;justify-content:space-between;padding:5px 10px;background:rgba(0,0,0,.2);border-radius:8px;margin-bottom:4px;"><span style="font-size:11px;color:var(--text-muted);font-family:var(--mono);">${v.ref}</span><span style="font-size:11px;font-weight:700;color:${color};">⏰ ${label}</span><span style="font-size:11px;color:var(--gold);">$${v.monto.toLocaleString()}</span></div>`;}).join('')}</div>`:''}<div style="padding:12px 20px;display:flex;gap:8px;flex-wrap:wrap;"><button class="btn btn-info btn-sm" onclick="verProvCots('${p.id}')" style="flex:1;justify-content:center;">👁 Ver cotizaciones</button>${d.deuda>0&&puede('puedePagar')?`<button class="btn btn-teal btn-sm" onclick="irPagarProv('${p.id}')" style="flex:1;justify-content:center;">💰 Registrar pago</button>`:''}</div></div>`;
   }).join('');
   document.getElementById('ppTblBody').innerHTML=provsDatos.map(d=>{
     const p=d.prov;const medBadges=(p.mediosPago||[]).map(m=>`<span style="background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:5px;padding:1px 5px;font-size:9px;font-weight:700;">${m}</span>`).join(' ');
@@ -1861,7 +1417,6 @@ function renderPanelProv(){
 function verProvCots(provId){const cots=DB.cotizaciones.filter(c=>String(c.proveedor.id)===String(provId));if(!cots.length){toast('Sin cotizaciones','info');return;}verDetalles(cots[cots.length-1].id);}
 function irPagarProv(provId){const cot=DB.cotizaciones.find(c=>String(c.proveedor.id)===String(provId)&&c.estadoAprobacion==='aprobado'&&c.estadoPago!=='pagado');if(!cot){toast('No hay cotizaciones con deuda','info');return;}abrirPago(cot.id);}
 
-// ── Resumen Financiero ──
 function formatMes(mesKey){if(!mesKey||mesKey==='—')return '—';const[y,m]=mesKey.split('-');const n=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];return `${n[parseInt(m,10)-1]||m} ${y}`;}
 
 function renderResumen(){
@@ -1890,12 +1445,11 @@ function renderResumen(){
   const mesOrd=Object.entries(porMes).sort((a,b)=>b[0].localeCompare(a[0])),mesMax=mesOrd[0]?mesOrd[0][1].pagado:1;
   const mesEl=document.getElementById('resMeses');if(mesEl)mesEl.innerHTML=mesOrd.length?`<table style="width:100%;border-collapse:collapse;"><thead><tr><th style="text-align:left;padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);">Mes</th><th style="text-align:right;padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);">Total Pagado</th><th style="text-align:center;padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);"># Pagos</th><th style="padding:9px 12px;font-size:11px;color:var(--gold);border-bottom:1px solid var(--border);min-width:120px;">Barra</th></tr></thead><tbody>${mesOrd.map(([mes,d])=>`<tr style="border-bottom:1px solid var(--border-soft);"><td style="padding:10px 12px;font-weight:700;">${formatMes(mes)}</td><td style="padding:10px 12px;text-align:right;font-weight:800;color:var(--success);">$${d.pagado.toLocaleString()}</td><td style="padding:10px 12px;text-align:center;color:var(--info);font-weight:700;">${d.count}</td><td style="padding:10px 12px;"><div style="background:var(--dark3);border-radius:20px;height:7px;overflow:hidden;"><div style="width:${(d.pagado/mesMax*100).toFixed(0)}%;height:100%;background:var(--gold);border-radius:20px;"></div></div></td></tr>`).join('')}</tbody></table>`:'<div style="padding:24px;text-align:center;color:var(--text-muted);">Sin datos</div>';
   const tblEl=document.getElementById('resTblPagos');
-  if(tblEl)tblEl.innerHTML=pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).length?pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).map(p=>`<tr><td style="font-size:11px;white-space:nowrap;">${new Date(p.fecha).toLocaleDateString('es-CO')}</td><td style="font-family:var(--mono);font-size:11px;color:var(--gold);">${p.cotRef}</td><td style="font-size:12px;">${p.provNombre}</td><td><span style="background:rgba(245,166,35,.1);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;">${p.metodo||'—'}</span></td><td style="font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</td><td style="font-size:10px;color:var(--text-muted);">${p.refTx||'—'}</td><td style="font-size:11px;color:var(--text-muted);">${p.registradoPor}</td><td style="text-align:center;">${p.comprobante?`<button class="btn btn-success btn-sm btn-icon" onclick="verComprobante(${p.cotId},${p.id})">🧾</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--text-muted);">Sin pagos registrados</td></tr>';
+  if(tblEl)tblEl.innerHTML=pagosFiltrados.sort((a,b)=>new Date(b.fecha)-new Date(a.fecha)).length?pagosFiltrados.map(p=>`<tr><td style="font-size:11px;white-space:nowrap;">${new Date(p.fecha).toLocaleDateString('es-CO')}</td><td style="font-family:var(--mono);font-size:11px;color:var(--gold);">${p.cotRef}</td><td style="font-size:12px;">${p.provNombre}</td><td><span style="background:rgba(245,166,35,.1);color:var(--gold);border:1px solid rgba(245,166,35,.2);border-radius:6px;padding:2px 8px;font-size:10px;font-weight:700;">${p.metodo||'—'}</span></td><td style="font-weight:800;color:var(--success);">$${p.monto.toLocaleString()}</td><td style="font-size:10px;color:var(--text-muted);">${p.refTx||'—'}</td><td style="font-size:11px;color:var(--text-muted);">${p.registradoPor}</td><td style="text-align:center;">${p.comprobante?`<button class="btn btn-success btn-sm btn-icon" onclick="verComprobante(${p.cotId},${p.id})">🧾</button>`:'—'}</td></tr>`).join(''):'<tr><td colspan="8" style="text-align:center;padding:24px;color:var(--text-muted);">Sin pagos registrados</td></tr>';
 }
 
 function exportarResumenPDF(){toast('Funcionalidad de exportar PDF disponible en la versión completa','info');}
 
-// ── Notificaciones banners ──
 function mostrarBannerNotif(notif){
   const banner=document.createElement('div');
   banner.style.cssText=`position:fixed;bottom:80px;right:22px;background:var(--dark);border:1px solid var(--border);border-radius:14px;padding:14px 18px;max-width:340px;box-shadow:var(--sh),var(--sh-gold);z-index:9998;animation:toastIn .3s ease;border-left:4px solid ${notif.tipo==='success'?'var(--success)':notif.tipo==='warning'?'var(--gold)':'var(--info)'};`;
@@ -1908,7 +1462,6 @@ function registrarAlarmaVencimiento(cot){if(_alarmasActivas.has(cot.id))return;_
 
 function revisarTodasLasAlarmas(){DB.cotizaciones.forEach(c=>{if(c.fechaVencimiento&&c.estadoPago!=='pagado')registrarAlarmaVencimiento(c);});updateNotifs();}
 
-// ── Tema ──
 let temaActual='oscuro';
 function setTema(tema){
   temaActual=tema;document.body.classList.remove('theme-claro','theme-dorado');
@@ -1922,7 +1475,6 @@ function toggleTemaMenu(){const menu=document.getElementById('temaMenu');if(!men
 function cerrarTemaMenuOutside(e){const menu=document.getElementById('temaMenu'),btn=document.getElementById('btnTema');if(menu&&!menu.contains(e.target)&&e.target!==btn)cerrarTemaMenu();}
 function cerrarTemaMenu(){const menu=document.getElementById('temaMenu');if(menu)menu.style.display='none';}
 
-// ── Eventos ──
 document.getElementById('loginPass').addEventListener('keypress',e=>{if(e.key==='Enter')login();});
 document.getElementById('loginUser').addEventListener('keypress',e=>{if(e.key==='Enter')document.getElementById('loginPass').focus();});
 window.addEventListener('resize',()=>{const mb=document.getElementById('menuBtn');if(mb)mb.style.display=window.innerWidth<=800?'block':'none';});
